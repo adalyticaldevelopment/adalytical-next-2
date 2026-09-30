@@ -753,3 +753,6 @@
 .rvw-badge{position:absolute;top:12px;left:12px;z-index:2;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:1.4px;color:#fff;background:rgba(255,255,255,.18);padding:4px 9px;border-radius:6px}
 @media(max-width:900px){.rvw-wall{columns:2}}
 @media(max-width:560px){.rvw-wall{columns:1}}
+
+/* Remove ALL xmark diamond/frame-corner marks (client: no diamond things on the header) */
+.xmark{display:none !important}
