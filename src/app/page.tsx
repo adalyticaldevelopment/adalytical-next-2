@@ -116,7 +116,7 @@ export default function Home() {
             <span className="revw-text"><strong>Trusted by 100+</strong> brands worldwide</span>
           </span>
         </div>
-        <h1 className="rv">Grow profitably with <span className="accent">Google Ads</span>.</h1>
+        <h1 className="rv">Grow <span className="u-hl">profitably</span> with <span className="accent">Google Ads</span>.</h1>
         <p className="hero-sub rv">Helping brands scale with proven, profitable Google Ads strategies, built on years of insider experience inside Google’s own Ads team. No lock-in contracts, no guesswork.</p>
         <div className="hero-btns rv">
           <a href={`${BASE}/book/`} className="btn-p btn-hero">Book a Strategy Call
@@ -863,16 +863,15 @@ export default function Home() {
         <blockquote>Adalytical <strong>helped us scale our Google spend</strong> by over 300%, all while keeping profitability front and centre.</blockquote>
         <figcaption><span className="rvw-av">S</span><div><strong>Sivan</strong><span>Founder, Bushdoof Lighting</span></div></figcaption>
       </figure>
-      <figure className="rvw-card">
-        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
-        <span className="rvw-tag">Adalytical</span>
-        <blockquote>Jackson&rsquo;s <strong>expertise in Google Ads is unmatched</strong>. He and the team helped us overcome multiple very niche Google Ads challenges.</blockquote>
-        <figcaption><span className="rvw-av">R</span><div><strong>Rachel</strong><span>Founder, Blume</span></div></figcaption>
-      </figure>
       <figure className="rvw-vid">
         <span className="rvw-badge">Video</span>
         <button className="rvw-play" aria-label="Play video review from Nick"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
         <figcaption><strong>Nick</strong><span>Owner, Prime Group</span></figcaption>
+      </figure>
+      <figure className="rvw-vid">
+        <span className="rvw-badge">Video</span>
+        <button className="rvw-play" aria-label="Play video review from Meryl"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <figcaption><strong>Meryl</strong><span>Co-founder, Hadwrld</span></figcaption>
       </figure>
       </div>
       <div className="rvw-col">

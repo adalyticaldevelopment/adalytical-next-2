@@ -768,3 +768,16 @@
 .hcf-arrow{width:62px;height:40px;flex:none;color:var(--brand);transform:rotate(-3deg)}
 .hcf-note{font-size:.96rem;font-weight:600;font-style:italic;color:var(--forest);transform:rotate(-3deg);white-space:nowrap}
 @media(max-width:560px){.hero-cta-flair{display:none}}
+
+/* underlined keyword in hero headline (client) */
+.u-hl{text-decoration:underline;text-decoration-color:var(--brand);text-decoration-thickness:.07em;text-underline-offset:.12em}
+
+/* ============ MEGA MENU: frosted-glass white + dark-green icons (client) ============ */
+.mega-card{background:rgba(255,255,255,.72);backdrop-filter:blur(24px) saturate(1.5);border:1px solid rgba(255,255,255,.7);box-shadow:0 24px 60px rgba(20,40,30,.16)}
+.mega-col a svg{color:var(--forest)}
+.mega-col h4{color:var(--forest)}
+
+/* ============ Remove pulsating dots site-wide (client dislikes) ============ */
+.btn-p::after,.btn-s::after,.nav-cta::after{display:none !important}
+.fcta-dot::before{display:none !important}
+.hp-urgency .hp-dot{animation:none !important;box-shadow:none !important}
