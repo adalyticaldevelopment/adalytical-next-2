@@ -785,9 +785,12 @@
 /* ============ PERF + mega-menu fixes (client: no see-through, less lag) ============ */
 /* Mega menu: keep it painted (clipped, not visibility:hidden) so the backdrop-filter
    layer is never de-allocated -> it reveals fully frosted with zero blur flash. */
-.mega{opacity:1 !important;transform:none !important;transition:none !important}
-.nav-l>li.has-mega:hover .mega,.nav-l>li.has-mega.open .mega{transform:none !important}
-.mega-card{background:rgba(255,255,255,.6) !important;backdrop-filter:blur(26px) saturate(1.7) !important}
+/* Keep panel painted (visibility:visible) and reveal via overflow:hidden + max-height.
+   overflow does NOT create a backdrop root, so blur survives; layer never de-allocates,
+   so there is no reveal flash and no close-time ghost/artifact. */
+.mega{opacity:1 !important;visibility:visible !important;transform:none !important;transition:none !important;overflow:hidden;max-height:0;pointer-events:none !important}
+.nav-l>li.has-mega:hover .mega,.nav-l>li.has-mega.open .mega{max-height:90vh;pointer-events:auto !important}
+.mega-card{background:rgba(255,255,255,.6) !important;backdrop-filter:blur(26px) saturate(1.7) !important;box-shadow:none !important;margin-bottom:10px}
 /* Hero squares static, no twinkle (removes ~16 infinite repaints) */
 .hg-cluster rect{animation:none !important}
 /* Lighter floating-CTA blur for smoother scroll */
