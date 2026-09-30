@@ -783,9 +783,10 @@
 .hp-urgency .hp-dot{animation:none !important;box-shadow:none !important}
 
 /* ============ PERF + mega-menu fixes (client: no see-through, less lag) ============ */
-/* Mega menu appears fully frosted the instant it opens (no opacity fade-through) */
-.mega{opacity:1 !important;transition:transform .2s var(--ease),visibility .18s var(--ease) !important}
-.mega-card{background:rgba(255,255,255,.82)}
+/* Mega menu appears fully frosted in a single frame (no transform/opacity/transition = no blur flash) */
+.mega{opacity:1 !important;transform:none !important;transition:none !important}
+.nav-l>li.has-mega:hover .mega,.nav-l>li.has-mega.open .mega{transform:none !important}
+.mega-card{background:rgba(255,255,255,.85)}
 /* Hero squares static, no twinkle (removes ~16 infinite repaints) */
 .hg-cluster rect{animation:none !important}
 /* Lighter floating-CTA blur for smoother scroll */
