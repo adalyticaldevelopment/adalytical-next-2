@@ -781,3 +781,12 @@
 .btn-p::after,.btn-s::after,.nav-cta::after{display:none !important}
 .fcta-dot::before{display:none !important}
 .hp-urgency .hp-dot{animation:none !important;box-shadow:none !important}
+
+/* ============ PERF + mega-menu fixes (client: no see-through, less lag) ============ */
+/* Mega menu appears fully frosted the instant it opens (no opacity fade-through) */
+.mega{opacity:1 !important;transition:transform .2s var(--ease),visibility .18s var(--ease) !important}
+.mega-card{background:rgba(255,255,255,.82)}
+/* Hero squares static, no twinkle (removes ~16 infinite repaints) */
+.hg-cluster rect{animation:none !important}
+/* Lighter floating-CTA blur for smoother scroll */
+.fcta-bar{backdrop-filter:blur(22px) saturate(1.4)}
