@@ -56,7 +56,7 @@ export default function Contact() {
                 <span className="mf-tag">Free audit</span>
                 <h5>See exactly where your Google Ads account is leaking budget.</h5>
               </div>
-              <a href={`${BASE}/#book`} className="mf-link">Book a strategy call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
+              <a href={`${BASE}/book/`} className="mf-link">Book a strategy call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
             </div>
           </div>
         </div>
@@ -68,7 +68,7 @@ export default function Contact() {
       <li><a href={`${BASE}/contact/`}>Contact</a></li>
     </ul>
     <div className="nav-r">
-      <a href={`${BASE}/#book`} className="nav-cta">Book A Strategy Call</a>
+      <a href={`${BASE}/book/`} className="nav-cta">Book A Strategy Call</a>
       <button className="mob-tog" aria-label="Open menu"><span className="mob-bars"><span></span><span></span><span></span></span><span className="mob-lbl">Menu</span></button>
     </div>
   </div>
@@ -94,8 +94,8 @@ export default function Contact() {
     <li><a href={`${BASE}/contact/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>Contact<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
   </ul>
   <div className="mdrawer-cta">
-    <a href={`${BASE}/#book`} className="mc-quote">Book A Strategy Call</a>
-    <a href={`${BASE}/#audit`} className="mc-audit">Get a Free Audit</a>
+    <a href={`${BASE}/book/`} className="mc-quote">Book A Strategy Call</a>
+    <a href={`${BASE}/book/`} className="mc-audit">Get a Free Audit</a>
   </div>
 </div>
 
@@ -116,28 +116,9 @@ export default function Contact() {
         <span className="revw-text"><strong>Trusted by 100+</strong> brands worldwide</span>
       </span>
     </div>
-    <div className="csp-cta rv"><a href={`${BASE}/#book`} className="btn-p">Book a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a><a href={`${BASE}/#audit`} className="btn-s">Get a Free Audit</a></div>
+    <div className="csp-cta rv"><a href={`${BASE}/book/`} className="btn-p">Book a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a><a href={`${BASE}/book/`} className="btn-s">Get a Free Audit</a></div>
   </div>
 </div>
-
-{/* ============ FOUNDERS INTRO ============ */}
-<section className="founders-wrap rvsec">
-  <div className="founders-card rv">
-    <div className="founders-photos">
-      <img src={`${BASE}/images/jackson-wallace.webp`} alt="Jackson Wallace" width="132" height="132" />
-      <img src={`${BASE}/images/jackson-sharp.webp`} alt="Jackson Sharp" width="132" height="132" />
-    </div>
-    <div className="founders-copy">
-      <span className="founders-eyebrow">The people behind it</span>
-      <h2>Hey, we&rsquo;re <span className="accent">Jackson &amp; Jackson</span>.</h2>
-      <p>We used to be on the Google growth team, but left to start Adalytical together, because we can deliver far better value and results outside of Google. Today we&rsquo;re one of the fastest-growing Google Ads businesses in Australia.</p>
-      <div className="founders-sig">
-        <strong>Jackson Wallace &amp; Jackson Sharp</strong>
-        <span>Founders, Adalytical &middot; Ex-Google growth team</span>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section className="sec framed rvsec" id="enquiry">
   <div className="ctr">
@@ -239,19 +220,19 @@ export default function Contact() {
         <span className="contact-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4" strokeLinecap="round"/></svg></span>
         <h3>Book a strategy call</h3>
         <p>A free, no-obligation 30-minute call. We audit your account live and map out exactly where the growth is.</p>
-        <a href={`${BASE}/#book`} className="contact-link">Book a call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
+        <a href={`${BASE}/book/`} className="contact-link">Book a call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
       </div>
       <div className="contact-card">
         <span className="contact-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3" strokeLinecap="round"/></svg></span>
         <h3>Get a free audit</h3>
         <p>We’ll dig into your account and send back the biggest wins and wasted-spend leaks, yours to keep, whether we work together or not.</p>
-        <a href={`${BASE}/#audit`} className="contact-link">Request an audit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
+        <a href={`${BASE}/book/`} className="contact-link">Request an audit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
       </div>
       <div className="contact-card">
         <span className="contact-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
         <h3>Fast response</h3>
         <p>Every enquiry gets a reply within 24 hours, usually much faster during business hours (AEST). You’ll speak to a senior strategist, never a junior.</p>
-        <a href={`${BASE}/#book`} className="contact-link">Start now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
+        <a href={`${BASE}/book/`} className="contact-link">Start now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
       </div>
     </div>
   </div>
@@ -272,7 +253,7 @@ export default function Contact() {
     <span className="sec-tag">Get started</span>
     <h2>Ready when you are.</h2>
     <p>Book a free strategy call and we’ll map out exactly where your Google Ads can grow, no pitch, no pressure.</p>
-    <div className="cta-btns"><a href={`${BASE}/#book`} className="btn-p">Book a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a><a href={`${BASE}/#audit`} className="btn-s">Get a Free Audit</a></div>
+    <div className="cta-btns"><a href={`${BASE}/book/`} className="btn-p">Book a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a><a href={`${BASE}/book/`} className="btn-s">Get a Free Audit</a></div>
   </div></div>
 </section>
 
@@ -308,7 +289,7 @@ export default function Contact() {
         <ul className="footer-links">
           <li><a href={`${BASE}/about/`}>About</a></li>
           <li><a href={`${BASE}/#faq`}>FAQ</a></li>
-          <li><a href={`${BASE}/#book`}>Book a Strategy Call</a></li>
+          <li><a href={`${BASE}/book/`}>Book a Strategy Call</a></li>
         </ul>
       </div>
     </div>
@@ -324,8 +305,8 @@ export default function Contact() {
     <span className="fcta-dot" aria-hidden="true"></span>
     <p className="fcta-copy">Ready when you are<span>, no obligation either way</span></p>
     <div className="fcta-btns">
-      <a href={`${BASE}/#book`} className="fcta-primary">Book a call</a>
-      <a href={`${BASE}/#audit`} className="fcta-secondary">Free Audit</a>
+      <a href={`${BASE}/book/`} className="fcta-primary">Book a call</a>
+      <a href={`${BASE}/book/`} className="fcta-secondary">Free Audit</a>
     </div>
   </div>
 </div>

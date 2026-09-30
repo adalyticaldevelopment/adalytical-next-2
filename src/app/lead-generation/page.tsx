@@ -57,7 +57,7 @@ export default function LeadGeneration() {
                 <span className="mf-tag">Free audit</span>
                 <h5>See exactly where your Google Ads account is leaking budget.</h5>
               </div>
-              <a href={`${BASE}/#book`} className="mf-link">Book a strategy call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
+              <a href={`${BASE}/book/`} className="mf-link">Book a strategy call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
             </div>
           </div>
         </div>
@@ -69,7 +69,7 @@ export default function LeadGeneration() {
       <li><a href={`${BASE}/contact/`}>Contact</a></li>
     </ul>
     <div className="nav-r">
-      <a href={`${BASE}/#book`} className="nav-cta">Book A Strategy Call</a>
+      <a href={`${BASE}/book/`} className="nav-cta">Book A Strategy Call</a>
       <button className="mob-tog" aria-label="Open menu"><span className="mob-bars"><span></span><span></span><span></span></span><span className="mob-lbl">Menu</span></button>
     </div>
   </div>
@@ -95,8 +95,8 @@ export default function LeadGeneration() {
     <li><a href={`${BASE}/contact/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>Contact<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
   </ul>
   <div className="mdrawer-cta">
-    <a href={`${BASE}/#book`} className="mc-quote">Book A Strategy Call</a>
-    <a href={`${BASE}/#audit`} className="mc-audit">Get a Free Audit</a>
+    <a href={`${BASE}/book/`} className="mc-quote">Book A Strategy Call</a>
+    <a href={`${BASE}/book/`} className="mc-audit">Get a Free Audit</a>
   </div>
 </div>
 
@@ -127,7 +127,7 @@ export default function LeadGeneration() {
         <span className="revw-text"><strong>Trusted by 100+</strong> brands worldwide</span>
       </span>
     </div>
-    <div className="csp-cta rv"><a href={`${BASE}/#book`} className="btn-p">Book a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a><a href={`${BASE}/#audit`} className="btn-s">Get a Free Audit</a></div>
+    <div className="csp-cta rv"><a href={`${BASE}/book/`} className="btn-p">Book a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a><a href={`${BASE}/book/`} className="btn-s">Get a Free Audit</a></div>
     </div>
     <div className="csp-viz rv">
       <div className="leadviz">
@@ -177,25 +177,6 @@ export default function LeadGeneration() {
     </div>
   </div>
 </div>
-
-{/* ============ FOUNDERS INTRO ============ */}
-<section className="founders-wrap rvsec">
-  <div className="founders-card rv">
-    <div className="founders-photos">
-      <img src={`${BASE}/images/jackson-wallace.webp`} alt="Jackson Wallace" width="132" height="132" />
-      <img src={`${BASE}/images/jackson-sharp.webp`} alt="Jackson Sharp" width="132" height="132" />
-    </div>
-    <div className="founders-copy">
-      <span className="founders-eyebrow">The people behind it</span>
-      <h2>Hey, we&rsquo;re <span className="accent">Jackson &amp; Jackson</span>.</h2>
-      <p>We used to be on the Google growth team, but left to start Adalytical together, because we can deliver far better value and results outside of Google. Today we&rsquo;re one of the fastest-growing Google Ads businesses in Australia.</p>
-      <div className="founders-sig">
-        <strong>Jackson Wallace &amp; Jackson Sharp</strong>
-        <span>Founders, Adalytical &middot; Ex-Google growth team</span>
-      </div>
-    </div>
-  </div>
-</section>
 {/* ============ SERVICES (rankify-style card grid) ============ */}
 <section className="sec sec-cream cardgrid rvsec">
   <div className="ctr">
@@ -205,7 +186,7 @@ export default function LeadGeneration() {
       <p>The campaigns, the tracking, the pages and the site itself, built so every dollar is pointed at qualified enquiries, not raw traffic.</p>
     </div>
     <div className="cg-grid">
-      <a href={`${BASE}/#book`} className="cg-card rv" id="google-ads">
+      <a href={`${BASE}/book/`} className="cg-card rv" id="google-ads">
         <div className="cg-top">
           <span className="cg-ico"><LottieIcon file="tracking-and-reporting.json" className="cg-lottie" /></span>
           <span className="cg-num">01</span>
@@ -219,7 +200,7 @@ export default function LeadGeneration() {
         </ul>
         <span className="cg-link">Book a strategy call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
       </a>
-      <a href={`${BASE}/#audit`} className="cg-card rv" id="call-tracking">
+      <a href={`${BASE}/book/`} className="cg-card rv" id="call-tracking">
         <div className="cg-top">
           <span className="cg-ico"><LottieIcon file="communication.json" className="cg-lottie" /></span>
           <span className="cg-num">02</span>
@@ -401,7 +382,7 @@ export default function LeadGeneration() {
     <span className="sec-tag">Get started</span>
     <h2>Turn more of your budget into qualified leads.</h2>
     <p>Book a free audit and we will show you exactly where your lead-gen spend is being wasted and how to fix it.</p>
-    <div className="cta-btns"><a href={`${BASE}/#book`} className="btn-p">Book a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a><a href={`${BASE}/#audit`} className="btn-s">Get a Free Audit</a></div>
+    <div className="cta-btns"><a href={`${BASE}/book/`} className="btn-p">Book a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a><a href={`${BASE}/book/`} className="btn-s">Get a Free Audit</a></div>
     <div className="cta-micro" style={{'justifyContent':'center'}}><span className="cm-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Free &amp; no obligation</span><span className="cm-sep"></span><span className="cm-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>No lock-in contracts</span><span className="cm-sep"></span><span className="cm-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Ex-Google Ads team</span></div>
   </div></div>
 </section>
@@ -437,7 +418,7 @@ export default function LeadGeneration() {
         <ul className="footer-links">
           <li><a href={`${BASE}/about/`}>About</a></li>
           <li><a href={`${BASE}/#faq`}>FAQ</a></li>
-          <li><a href={`${BASE}/#book`}>Book a Strategy Call</a></li>
+          <li><a href={`${BASE}/book/`}>Book a Strategy Call</a></li>
         </ul>
       </div>
     </div>
@@ -453,8 +434,8 @@ export default function LeadGeneration() {
     <span className="fcta-dot" aria-hidden="true"></span>
     <p className="fcta-copy">Ready when you are<span>, no obligation either way</span></p>
     <div className="fcta-btns">
-      <a href={`${BASE}/#book`} className="fcta-primary">Book a call</a>
-      <a href={`${BASE}/#audit`} className="fcta-secondary">Free Audit</a>
+      <a href={`${BASE}/book/`} className="fcta-primary">Book a call</a>
+      <a href={`${BASE}/book/`} className="fcta-secondary">Free Audit</a>
     </div>
   </div>
 </div>

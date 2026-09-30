@@ -1,0 +1,23 @@
+REUSABLE SNIPPET — "Jackson & Jackson" founders intro.
+Removed from live pages 2026-09-30 (client: keep it safe, may reuse elsewhere).
+Requires .founders-* styles in src/styles/lp.css and the two webp images in public/images.
+Paste back as a top-level JSX section. BASE = process.env.NEXT_PUBLIC_BASE_PATH || "".
+
+{/* ============ FOUNDERS INTRO ============ */}
+<section className="founders-wrap rvsec">
+  <div className="founders-card rv">
+    <div className="founders-photos">
+      <img src={`${BASE}/images/jackson-wallace.webp`} alt="Jackson Wallace" width="132" height="132" />
+      <img src={`${BASE}/images/jackson-sharp.webp`} alt="Jackson Sharp" width="132" height="132" />
+    </div>
+    <div className="founders-copy">
+      <span className="founders-eyebrow">The people behind it</span>
+      <h2>Hey, we&rsquo;re <span className="accent">Jackson &amp; Jackson</span>.</h2>
+      <p>We used to be on the Google growth team, but left to start Adalytical together, because we can deliver far better value and results outside of Google. Today we&rsquo;re one of the fastest-growing Google Ads businesses in Australia.</p>
+      <div className="founders-sig">
+        <strong>Jackson Wallace &amp; Jackson Sharp</strong>
+        <span>Founders, Adalytical &middot; Ex-Google growth team</span>
+      </div>
+    </div>
+  </div>
+</section>

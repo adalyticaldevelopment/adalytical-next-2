@@ -48,7 +48,7 @@ export default function Home() {
                 <span className="mf-tag">Free audit</span>
                 <h5>See exactly where your Google Ads account is leaking budget.</h5>
               </div>
-              <a href={`${BASE}/#book`} className="mf-link">Book a strategy call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
+              <a href={`${BASE}/book/`} className="mf-link">Book a strategy call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function Home() {
       <li><a href={`${BASE}/contact/`}>Contact</a></li>
     </ul>
     <div className="nav-r">
-      <a href="#book" className="nav-cta">Book A Strategy Call</a>
+      <a href={`${BASE}/book/`} className="nav-cta">Book A Strategy Call</a>
       <button className="mob-tog" aria-label="Open menu"><span className="mob-bars"><span></span><span></span><span></span></span><span className="mob-lbl">Menu</span></button>
     </div>
   </div>
@@ -86,13 +86,18 @@ export default function Home() {
     <li><a href={`${BASE}/contact/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>Contact<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
   </ul>
   <div className="mdrawer-cta">
-    <a href={`${BASE}/#book`} className="mc-quote">Book A Strategy Call</a>
+    <a href={`${BASE}/book/`} className="mc-quote">Book A Strategy Call</a>
   </div>
 </div>
 
 {/* ============ HERO + LOGO STRIP (shared background) ============ */}
 <div className="hero-wrap">
 <header className="hero rvsec">
+  <div className="hero-grid" aria-hidden="true">
+    <svg className="hg-cluster c1" viewBox="0 0 48 48" fill="currentColor"><rect x="2" y="2" width="12" height="12" rx="2"/><rect x="18" y="2" width="12" height="12" rx="2"/><rect x="34" y="18" width="12" height="12" rx="2"/><rect x="2" y="18" width="12" height="12" rx="2"/><rect x="18" y="34" width="12" height="12" rx="2"/><rect x="34" y="34" width="12" height="12" rx="2"/></svg>
+    <svg className="hg-cluster c2" viewBox="0 0 48 48" fill="currentColor"><rect x="2" y="2" width="12" height="12" rx="2"/><rect x="34" y="2" width="12" height="12" rx="2"/><rect x="18" y="18" width="12" height="12" rx="2"/><rect x="2" y="34" width="12" height="12" rx="2"/><rect x="34" y="34" width="12" height="12" rx="2"/></svg>
+    <svg className="hg-cluster c3" viewBox="0 0 48 48" fill="currentColor"><rect x="2" y="2" width="12" height="12" rx="2"/><rect x="18" y="2" width="12" height="12" rx="2"/><rect x="2" y="18" width="12" height="12" rx="2"/><rect x="18" y="18" width="12" height="12" rx="2"/><rect x="34" y="34" width="12" height="12" rx="2"/></svg>
+  </div>
   <div className="hero-rails" aria-hidden="true"></div>
   <span className="xmark xm-hl" aria-hidden="true"></span>
   <span className="xmark xm-hr" aria-hidden="true"></span>
@@ -114,7 +119,7 @@ export default function Home() {
         <h1 className="rv">Grow profitably with <span className="accent">Google Ads</span>.</h1>
         <p className="hero-sub rv">Helping brands scale with proven, profitable Google Ads strategies, built on years of insider experience inside Google’s own Ads team. No lock-in contracts, no guesswork.</p>
         <div className="hero-btns rv">
-          <a href="#book" className="btn-p">Book a Strategy Call
+          <a href={`${BASE}/book/`} className="btn-p">Book a Strategy Call
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </a>
         </div>
@@ -166,25 +171,6 @@ export default function Home() {
 </div>
 
 {/* ============ FOUNDERS INTRO ============ */}
-{/* PARKED (client simplification) */ false && (
-<section className="founders-wrap rvsec">
-  <div className="founders-card rv">
-    <div className="founders-photos">
-      <img src={`${BASE}/images/jackson-wallace.webp`} alt="Jackson Wallace" width="132" height="132" />
-      <img src={`${BASE}/images/jackson-sharp.webp`} alt="Jackson Sharp" width="132" height="132" />
-    </div>
-    <div className="founders-copy">
-      <span className="founders-eyebrow">The people behind it</span>
-      <h2>Hey, we&rsquo;re <span className="accent">Jackson &amp; Jackson</span>.</h2>
-      <p>We used to be on the Google growth team, but left to start Adalytical together, because we can deliver far better value and results outside of Google. Today we&rsquo;re one of the fastest-growing Google Ads businesses in Australia.</p>
-      <div className="founders-sig">
-        <strong>Jackson Wallace &amp; Jackson Sharp</strong>
-        <span>Founders, Adalytical &middot; Ex-Google growth team</span>
-      </div>
-    </div>
-  </div>
-</section>
-)}
 
 {/* ============ BIG-NUMBER MOMENT ============ */}
 {/* PARKED (client simplification) */ false && (
@@ -262,7 +248,7 @@ export default function Home() {
     </div>
 
     <div className="proj-grid">
-      <a href="#book" className="proj rv">
+      <a href={`${BASE}/book/`} className="proj rv">
         <div className="proj-bar">
           <span className="proj-name">Before You Speak</span>
           <span className="proj-tag">/Coffee</span>
@@ -277,7 +263,7 @@ export default function Home() {
         </div>
       </a>
 
-      <a href="#book" className="proj rv">
+      <a href={`${BASE}/book/`} className="proj rv">
         <div className="proj-bar">
           <span className="proj-name">The Watch Factory</span>
           <span className="proj-tag">/Watches</span>
@@ -292,7 +278,7 @@ export default function Home() {
         </div>
       </a>
 
-      <a href="#book" className="proj rv">
+      <a href={`${BASE}/book/`} className="proj rv">
         <div className="proj-bar">
           <span className="proj-name">Booze &amp; Barrels</span>
           <span className="proj-tag">/Drinks</span>
@@ -307,7 +293,7 @@ export default function Home() {
         </div>
       </a>
 
-      <a href="#book" className="proj proj-cta rv">
+      <a href={`${BASE}/book/`} className="proj proj-cta rv">
         <div className="proj-bar">
           <span className="proj-name">Your Brand</span>
           <span className="proj-tag">/Next</span>
@@ -335,7 +321,7 @@ export default function Home() {
       <h2>Curious what we’d do with your account?</h2>
       <p>Get a free, no-obligation Google Ads audit. We’ll show you exactly where your account is leaking spend, no pitch, no pressure.</p>
     </div>
-    <a href="#book" className="btn-p">Book a free audit
+    <a href={`${BASE}/book/`} className="btn-p">Book a free audit
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg>
     </a>
   </div>
@@ -478,7 +464,7 @@ export default function Home() {
         </div>
       </div>
       <div className="band-cta rv">
-        <a href="#book" className="btn-lite">Get started</a>
+        <a href={`${BASE}/book/`} className="btn-lite">Get started</a>
       </div>
     </div>
   </div>
@@ -859,53 +845,58 @@ export default function Home() {
 <section className="sec sec-cream framed rvsec" id="testimonials">
   <div className="ctr">
     <div className="shead">
-      <span className="shead-chip rv"><span className="chip-plus">+</span> Testimonials</span>
+      <span className="shead-chip rv"><span className="chip-plus">+</span> Client reviews</span>
       <div className="shead-main">
-        <h2 className="shead-t rv">Trusted <span className="dim">by many.</span></h2>
-        <p className="shead-sub rv">Real results from real Google Ads clients across every industry we work in.</p>
+        <h2 className="shead-t rv">Words from the people <span className="dim">behind the work.</span></h2>
+        <p className="shead-sub rv">Real Google Ads clients, real results, in their own words and on camera.</p>
       </div>
     </div>
-    <div className="tst-rows rv">
-      <div className="tst-row"><div className="tst-track">
-      <figure className="tst-card">
-        <div className="tst-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
+    <div className="rvw-wall rv">
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
         <blockquote>Adalytical <strong>helped us scale our Google spend</strong> by over 300%, all while keeping profitability front and centre.</blockquote>
-        <figcaption><span className="tst-avatar">S</span><div><strong>Sivan</strong><span>Founder, Bushdoof Lighting</span></div></figcaption>
-        <div className="tst-foot"><span className="tst-verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Verified review</span><span className="tst-date">Google Ads client</span></div>
+        <figcaption><span className="rvw-av">S</span><div><strong>Sivan</strong><span>Founder, Bushdoof Lighting</span></div></figcaption>
       </figure>
-      <figure className="tst-card">
-        <div className="tst-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
+      <figure className="rvw-vid">
+        <span className="rvw-badge">Video</span>
+        <button className="rvw-play" aria-label="Play video review from Matthew"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <figcaption><strong>Matthew</strong><span>Founder, Personalised Favours</span></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
         <blockquote>Quickly grasped our unique challenges and FMCG space to <strong>deliver an effective Google and YouTube Ads strategy</strong>.</blockquote>
-        <figcaption><span className="tst-avatar">A</span><div><strong>Abdul</strong><span>Founder, Pinkish Pods</span></div></figcaption>
-        <div className="tst-foot"><span className="tst-verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Verified review</span><span className="tst-date">Google Ads client</span></div>
+        <figcaption><span className="rvw-av">A</span><div><strong>Abdul</strong><span>Founder, Pinkish Pods</span></div></figcaption>
       </figure>
-      <figure className="tst-card">
-        <div className="tst-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
-        <blockquote>We saw a <strong>better ROAS straight away</strong> and it helped us expand into other markets! Always have the answers and strats for Google Ads.</blockquote>
-        <figcaption><span className="tst-avatar">A</span><div><strong>Ariana</strong><span>Founder, Aaria London</span></div></figcaption>
-        <div className="tst-foot"><span className="tst-verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Verified review</span><span className="tst-date">Google Ads client</span></div>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>We saw a <strong>better ROAS straight away</strong> and it helped us expand into other markets. Always have the answers and strats for Google Ads.</blockquote>
+        <figcaption><span className="rvw-av">A</span><div><strong>Ariana</strong><span>Founder, Aaria London</span></div></figcaption>
       </figure>
-      </div></div>
-      <div className="tst-row"><div className="tst-track tst-rev">
-      <figure className="tst-card">
-        <div className="tst-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
-        <blockquote>Adalytical helped us with our <strong>biggest Q4 ever</strong>! Revenue was +33% and ROAS +25% YOY. Already seeing massive gains for Q1 and Q2.</blockquote>
-        <figcaption><span className="tst-avatar">M</span><div><strong>Matthew</strong><span>Founder, Personalised Favours</span></div></figcaption>
-        <div className="tst-foot"><span className="tst-verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Verified review</span><span className="tst-date">Google Ads client</span></div>
+      <figure className="rvw-vid">
+        <span className="rvw-badge">Video</span>
+        <button className="rvw-play" aria-label="Play video review from Nick"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <figcaption><strong>Nick</strong><span>Owner, Prime Group</span></figcaption>
       </figure>
-      <figure className="tst-card">
-        <div className="tst-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
-        <blockquote>The team’s <strong>ex-Google brainpower</strong> unlocked heaps of extra insights and fast-tracked support, and helped us hit our biggest Q4.</blockquote>
-        <figcaption><span className="tst-avatar">R</span><div><strong>Rob</strong><span>Marketing Director, Home Make It</span></div></figcaption>
-        <div className="tst-foot"><span className="tst-verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Verified review</span><span className="tst-date">Google Ads client</span></div>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>The team&rsquo;s <strong>ex-Google brainpower</strong> unlocked heaps of extra insights and fast-tracked support, and helped us hit our biggest Q4.</blockquote>
+        <figcaption><span className="rvw-av">R</span><div><strong>Rob</strong><span>Marketing Director, Home Make It</span></div></figcaption>
       </figure>
-      <figure className="tst-card">
-        <div className="tst-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
-        <blockquote>Jackson’s <strong>expertise in Google Ads is unmatched</strong>. He and the team helped us overcome multiple very niche Google Ads challenges.</blockquote>
-        <figcaption><span className="tst-avatar">R</span><div><strong>Rachel</strong><span>Founder, Blume</span></div></figcaption>
-        <div className="tst-foot"><span className="tst-verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Verified review</span><span className="tst-date">Google Ads client</span></div>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>Jackson&rsquo;s <strong>expertise in Google Ads is unmatched</strong>. He and the team helped us overcome multiple very niche Google Ads challenges.</blockquote>
+        <figcaption><span className="rvw-av">R</span><div><strong>Rachel</strong><span>Founder, Blume</span></div></figcaption>
       </figure>
-      </div></div>
+      <figure className="rvw-vid">
+        <span className="rvw-badge">Video</span>
+        <button className="rvw-play" aria-label="Play video review from Gabriella"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <figcaption><strong>Gabriella</strong><span>Hawker Studios</span></figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -1089,7 +1080,7 @@ export default function Home() {
       <span className="sec-tag">Get started</span>
       <h2>Scale your brand with Google Ads.</h2>
       <p>More customers. More profit. Smarter Google Ads. Book a free strategy call and we’ll map out exactly where your account is leaving money on the table.</p>
-      <div className="cta-btns"><a href="#book" className="btn-p">Book a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></div>
+      <div className="cta-btns"><a href={`${BASE}/book/`} className="btn-p">Book a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></div>
       <div className="cta-micro rv" style={{'justifyContent':'center'}}>
         <span className="cm-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Free &amp; no obligation</span>
         <span className="cm-sep"></span>
@@ -1135,7 +1126,7 @@ export default function Home() {
         <ul className="footer-links">
           <li><a href={`${BASE}/about/`}>About</a></li>
           <li><a href={`${BASE}/#faq`}>FAQ</a></li>
-          <li><a href={`${BASE}/#book`}>Book a Strategy Call</a></li>
+          <li><a href={`${BASE}/book/`}>Book a Strategy Call</a></li>
         </ul>
       </div>
     </div>
@@ -1152,7 +1143,7 @@ export default function Home() {
     <span className="fcta-dot" aria-hidden="true"></span>
     <p className="fcta-copy">Ready when you are<span>, no obligation either way</span></p>
     <div className="fcta-btns">
-      <a href={`${BASE}/#book`} className="fcta-primary">Book a Strategy Call</a>
+      <a href={`${BASE}/book/`} className="fcta-primary">Book a Strategy Call</a>
     </div>
   </div>
 </div>

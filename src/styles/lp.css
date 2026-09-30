@@ -711,3 +711,45 @@
 .wwd-title .dim,.shead-t .dim,.cs-title h2 .dim{display:inline;color:var(--g400)}
 .wwd-sub,.shead-sub,.cs-note{margin:16px 0 0;max-width:620px;color:var(--g600);font-size:1rem;line-height:1.6}
 .shead .shead-chip,.cs-head .shead-chip,.wwd-head .shead-chip{justify-content:flex-start}
+
+/* ============ HERO fills first screen on large displays (logo strip at bottom) ============ */
+@media(min-width:1200px){
+  .hero-wrap{min-height:100vh;display:flex;flex-direction:column}
+  .hero{flex:1 0 auto;display:flex;flex-direction:column;justify-content:center;padding-top:132px;padding-bottom:40px}
+  .trust-strip{margin-top:auto}
+}
+
+/* ============ BOOKING PAGE ============ */
+.book-wrap{max-width:840px;margin:0 auto}
+.book-head{margin-bottom:clamp(26px,4vw,42px)}
+.book-cal{border:1px solid var(--g200);border-radius:20px;background:#fff;min-height:440px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-l);padding:clamp(28px,5vw,56px)}
+.book-cal-ph{text-align:center;max-width:440px}
+.book-cal-ico{display:inline-flex;width:60px;height:60px;align-items:center;justify-content:center;border-radius:16px;background:linear-gradient(145deg,#fff,#e9f3ec);border:1px solid var(--g200);color:var(--forest);margin-bottom:18px}
+.book-cal-ico svg{width:28px;height:28px}
+.book-cal-ph strong{display:block;font-size:1.15rem;color:var(--forest);letter-spacing:-.02em;margin-bottom:8px}
+.book-cal-ph p{color:var(--g600);font-size:.95rem;line-height:1.6}
+.book-cal-ph a{color:var(--brand);font-weight:600}
+
+/* ============ REVIEW WALL (masonry: text reviews + video placeholders) ============ */
+.rvw-wall{columns:3;column-gap:20px}
+.rvw-wall>figure{break-inside:avoid;margin:0 0 20px;width:100%;display:inline-block}
+.rvw-card{background:#fff;border:1px solid var(--g200);border-radius:18px;padding:24px 22px;box-shadow:0 1px 2px rgba(20,40,30,.05),0 10px 26px rgba(20,40,30,.05)}
+.rvw-quote{display:block;font-family:Georgia,'Times New Roman',serif;font-size:2.6rem;line-height:.7;color:var(--brand);margin-bottom:10px}
+.rvw-tag{display:inline-block;font-size:.64rem;font-weight:700;text-transform:uppercase;letter-spacing:1.7px;color:var(--brand);margin-bottom:12px}
+.rvw-card blockquote{font-size:.95rem;line-height:1.62;color:var(--g800);margin:0 0 18px}
+.rvw-card blockquote strong{color:var(--forest);font-weight:700}
+.rvw-card figcaption{display:flex;align-items:center;gap:11px}
+.rvw-av{width:38px;height:38px;border-radius:50%;background:linear-gradient(140deg,var(--brand),var(--forest));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex:none}
+.rvw-card figcaption strong{display:block;font-size:.9rem;color:var(--forest);letter-spacing:-.01em}
+.rvw-card figcaption span{font-size:.78rem;color:var(--g500)}
+.rvw-vid{position:relative;aspect-ratio:9/12;border-radius:18px;overflow:hidden;background:linear-gradient(150deg,#17352a 0%,var(--forest-2) 55%,#0d1f15 100%);box-shadow:0 10px 26px rgba(20,40,30,.14);border:1px solid rgba(30,55,40,.1);display:flex;align-items:flex-end}
+.rvw-vid::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.55) 100%)}
+.rvw-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.94);border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2;transition:transform .3s var(--ease);box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.rvw-play:hover{transform:translate(-50%,-50%) scale(1.08)}
+.rvw-play svg{width:20px;height:20px;color:var(--forest);margin-left:2px}
+.rvw-vid figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:16px 18px;color:#fff}
+.rvw-vid figcaption strong{display:block;font-size:.92rem}
+.rvw-vid figcaption span{font-size:.76rem;color:rgba(255,255,255,.78)}
+.rvw-badge{position:absolute;top:12px;left:12px;z-index:2;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:1.4px;color:#fff;background:rgba(255,255,255,.18);padding:4px 9px;border-radius:6px}
+@media(max-width:900px){.rvw-wall{columns:2}}
+@media(max-width:560px){.rvw-wall{columns:1}}

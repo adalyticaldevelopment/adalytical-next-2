@@ -2,16 +2,16 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free tools | Tools to supercharge your Google Ads",
-  description: "Free calculators and tools to supercharge your Google Ads.",
-  alternates: { canonical: "/tools/" },
+  title: "Book a Strategy Call | Adalytical",
+  description: "Pick a time for a 30-minute Google Ads strategy call with Adalytical.",
+  alternates: { canonical: "/book/" },
 };
 
 import Script from "next/script";
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
-export default function Tools() {
+export default function Contact() {
   return (
     <>
 
@@ -101,10 +101,9 @@ export default function Tools() {
 
 <div className="csp">
   <div className="csp-hero rvsec">
-    <span className="csp-eyebrow rv"><span className="chip-plus">+</span> Free tools</span>
-    <h1 className="rv">Tools to supercharge your <span className="accent">Google Ads.</span></h1>
-    <p className="rv">Free dashboards and resources built from what we’ve learned across 1,000+ accounts, download them and put them to work today.</p>
-    <div className="csp-cta rv"><a href={`${BASE}/book/`} className="btn-p">Book a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a><a href={`${BASE}/book/`} className="btn-s">Get a Free Audit</a></div>
+    <span className="csp-eyebrow rv"><span className="chip-plus">+</span> Book a call</span>
+    <h1 className="rv">Book your <span className="accent">strategy call.</span></h1>
+    <p className="rv">Pick a time that suits you below. It’s a straight conversation with the person who’d actually run your account, no pitch, no pressure.</p>
     <div className="revw rv">
       <span className="revw-avs">
         <span className="revw-av"><img src={`${BASE}/images/avatar-1.jpg`} alt="" width="36" height="36" /></span>
@@ -117,64 +116,31 @@ export default function Tools() {
         <span className="revw-text"><strong>Trusted by 100+</strong> brands worldwide</span>
       </span>
     </div>
+    <div className="csp-cta rv"><a href="#calendar" className="btn-p">Pick a time <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M12 5v14M5 13l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></div>
   </div>
 </div>
 
-<section className="sec sec-cream sec-w framed rvsec">
+{/* ============ BOOKING CALENDAR ============ */}
+<section className="sec framed rvsec" id="calendar">
   <div className="ctr">
-    <div className="shead">
-      <span className="shead-chip rv"><span className="chip-plus">+</span> Dashboards</span>
-      <div className="shead-main"><span className="shead-brand rv">Adalytical®</span><h2 className="shead-t rv">Free Google Ads <span className="dim">dashboards.</span></h2></div>
-    </div>
-    <div className="tool-grid rv">
-      <div className="tool-card">
-        <div className="tool-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M3 3v18h18" strokeLinecap="round"/><rect x="7" y="12" width="3" height="5"/><rect x="12" y="8" width="3" height="9"/><rect x="17" y="5" width="3" height="12"/></svg></div>
-        <div className="tool-body">
-          <span className="tool-tag">Dashboard</span>
-          <h3>Total Attainable Market Dashboard</h3>
-          <p>A clear snapshot of total market revenue and ad spend across your key segments, so you can spot growth opportunities by benchmarking your performance against the broader market potential.</p>
-          <a href={`${BASE}/contact/`} className="btn-p" style={{alignSelf:'flex-start'}}>Get the dashboard <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
-        </div>
+    <div className="book-wrap rv">
+      <div className="book-head">
+        <span className="shead-chip"><span className="chip-plus">+</span> Choose a time</span>
+        <h2 className="shead-t">Grab a slot that <span className="dim">works for you.</span></h2>
+        <p className="shead-sub">30 minutes, straight to the point. We’ll look at your account, your goals and where the profit is hiding.</p>
       </div>
-      <div className="tool-card">
-        <div className="tool-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
-        <div className="tool-body">
-          <span className="tool-tag">Dashboard</span>
-          <h3>Pricing Strategy Dashboard</h3>
-          <p>Analyses product pricing concentration for a given keyword, highlighting where most competitors sit and visualising the most-reviewed products, so you can find the price points that align with high-performing listings.</p>
-          <span className="tool-soon">Coming soon</span>
+      <div className="book-cal" role="region" aria-label="Booking calendar">
+        {/* TODO: replace this placeholder with the live Calendly / Cal.com embed once the link is provided */}
+        <div className="book-cal-ph">
+          <span className="book-cal-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 2.5v4M16 2.5v4" strokeLinecap="round"/><path d="M9.5 14.5l1.8 1.8 3.4-3.6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
+          <strong>Booking calendar loads here</strong>
+          <p>Prefer email? Reach us at <a href="mailto:hello@adalytical.io">hello@adalytical.io</a> and we’ll send times back.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
-{/* ============ CTA ============ */}
-{/* ============ REVIEW (demo/placeholder testimonial) ============ */}
-<section className="qband-wrap rvsec">
-  <figure className="qband rv">
-    <div className="qband-stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg></div>
-    <blockquote>&ldquo;Adalytical had our Google Ads restructured and profitable within weeks. We had a flood of qualified enquiries in the first fortnight, one job alone covered the ad spend with plenty left over.&rdquo;</blockquote>
-    <figcaption className="qband-by"><img src={`${BASE}/images/nick-prime-group.webp`} alt="Nick" width="56" height="56" /><div><strong>Nick</strong><span>Owner, Prime Group</span></div></figcaption>
-  </figure>
-</section>
 
-{/* ============ REVIEW (demo/placeholder testimonial) ============ */}
-<section className="qband-wrap rvsec">
-  <figure className="qband rv">
-    <div className="qband-stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg></div>
-    <blockquote>&ldquo;The Adalytical team was incredibly fast and got our campaigns converting. We&rsquo;re really impressed and would highly recommend them to anyone running Google Ads.&rdquo;</blockquote>
-    <figcaption className="qband-by"><img src={`${BASE}/images/gabriella-hawker.webp`} alt="Gabriella Smith" width="56" height="56" /><div><strong>Gabriella Smith</strong><span>Hawker Studios</span></div></figcaption>
-  </figure>
-</section>
-
-<section className="sec sec-cream cta framed rvsec" id="book">
-  <div className="ctr"><div className="cta-card rv">
-    <span className="sec-tag">Get started</span>
-    <h2>Scale your brand with Google Ads that convert.</h2>
-    <p>More customers. More profit. Smarter Google Ads. Book a free strategy call and we’ll show you where to grow.</p>
-    <div className="cta-btns"><a href={`${BASE}/book/`} className="btn-p">Book a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a><a href={`${BASE}/book/`} className="btn-s">Get a Free Audit</a></div>
-  </div></div>
-</section>
 
 {/* ============ FOOTER ============ */}
 
