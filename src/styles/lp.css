@@ -731,8 +731,9 @@
 .book-cal-ph a{color:var(--brand);font-weight:600}
 
 /* ============ REVIEW WALL (masonry: text reviews + video placeholders) ============ */
-.rvw-wall{columns:3;column-gap:20px}
-.rvw-wall>figure{break-inside:avoid;margin:0 0 20px;width:100%;display:inline-block}
+.rvw-wall{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
+.rvw-col{display:flex;flex-direction:column;gap:20px}
+.rvw-wall figure{width:100%;margin:0}
 .rvw-card{background:#fff;border:1px solid var(--g200);border-radius:18px;padding:24px 22px;box-shadow:0 1px 2px rgba(20,40,30,.05),0 10px 26px rgba(20,40,30,.05)}
 .rvw-quote{display:block;font-family:Georgia,'Times New Roman',serif;font-size:2.6rem;line-height:.7;color:var(--brand);margin-bottom:10px}
 .rvw-tag{display:inline-block;font-size:.64rem;font-weight:700;text-transform:uppercase;letter-spacing:1.7px;color:var(--brand);margin-bottom:12px}
@@ -751,8 +752,19 @@
 .rvw-vid figcaption strong{display:block;font-size:.92rem}
 .rvw-vid figcaption span{font-size:.76rem;color:rgba(255,255,255,.78)}
 .rvw-badge{position:absolute;top:12px;left:12px;z-index:2;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:1.4px;color:#fff;background:rgba(255,255,255,.18);padding:4px 9px;border-radius:6px}
-@media(max-width:900px){.rvw-wall{columns:2}}
-@media(max-width:560px){.rvw-wall{columns:1}}
+@media(max-width:900px){.rvw-wall{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.rvw-wall{grid-template-columns:1fr}}
 
 /* Remove ALL xmark diamond/frame-corner marks (client: no diamond things on the header) */
 .xmark{display:none !important}
+
+/* ============ HERO headline bigger + spread out (client: like kia ora ref) ============ */
+.hero h1{font-size:clamp(2.7rem,5.4vw,4.9rem);line-height:1.02;letter-spacing:-.045em;margin-bottom:26px}
+.hero-split{grid-template-columns:1.15fr .85fr}
+.hero-sub{font-size:clamp(1.05rem,1.2vw,1.24rem);max-width:560px}
+/* button flair beside the single CTA */
+.btn-hero{padding:16px 32px;font-size:1.02rem}
+.hero-cta-flair{display:inline-flex;align-items:center;gap:8px;align-self:center;color:var(--brand)}
+.hcf-arrow{width:62px;height:40px;flex:none;color:var(--brand);transform:rotate(-3deg)}
+.hcf-note{font-size:.96rem;font-weight:600;font-style:italic;color:var(--forest);transform:rotate(-3deg);white-space:nowrap}
+@media(max-width:560px){.hero-cta-flair{display:none}}

@@ -119,9 +119,13 @@ export default function Home() {
         <h1 className="rv">Grow profitably with <span className="accent">Google Ads</span>.</h1>
         <p className="hero-sub rv">Helping brands scale with proven, profitable Google Ads strategies, built on years of insider experience inside Google’s own Ads team. No lock-in contracts, no guesswork.</p>
         <div className="hero-btns rv">
-          <a href={`${BASE}/book/`} className="btn-p">Book a Strategy Call
+          <a href={`${BASE}/book/`} className="btn-p btn-hero">Book a Strategy Call
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </a>
+          <span className="hero-cta-flair" aria-hidden="true">
+            <svg className="hcf-arrow" viewBox="0 0 92 58" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"><path d="M88 9C60 3 24 5 12 36"/><path d="M12 36l2-15M12 36l16-4"/></svg>
+            <span className="hcf-note">Free, no obligation</span>
+          </span>
         </div>
       </div>
 
@@ -852,22 +856,36 @@ export default function Home() {
       </div>
     </div>
     <div className="rvw-wall rv">
+      <div className="rvw-col">
       <figure className="rvw-card">
         <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
         <span className="rvw-tag">Adalytical</span>
         <blockquote>Adalytical <strong>helped us scale our Google spend</strong> by over 300%, all while keeping profitability front and centre.</blockquote>
         <figcaption><span className="rvw-av">S</span><div><strong>Sivan</strong><span>Founder, Bushdoof Lighting</span></div></figcaption>
       </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>Jackson&rsquo;s <strong>expertise in Google Ads is unmatched</strong>. He and the team helped us overcome multiple very niche Google Ads challenges.</blockquote>
+        <figcaption><span className="rvw-av">R</span><div><strong>Rachel</strong><span>Founder, Blume</span></div></figcaption>
+      </figure>
       <figure className="rvw-vid">
         <span className="rvw-badge">Video</span>
-        <button className="rvw-play" aria-label="Play video review from Matthew"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
-        <figcaption><strong>Matthew</strong><span>Founder, Personalised Favours</span></figcaption>
+        <button className="rvw-play" aria-label="Play video review from Nick"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <figcaption><strong>Nick</strong><span>Owner, Prime Group</span></figcaption>
       </figure>
+      </div>
+      <div className="rvw-col">
       <figure className="rvw-card">
         <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
         <span className="rvw-tag">Adalytical</span>
         <blockquote>Quickly grasped our unique challenges and FMCG space to <strong>deliver an effective Google and YouTube Ads strategy</strong>.</blockquote>
         <figcaption><span className="rvw-av">A</span><div><strong>Abdul</strong><span>Founder, Pinkish Pods</span></div></figcaption>
+      </figure>
+      <figure className="rvw-vid">
+        <span className="rvw-badge">Video</span>
+        <button className="rvw-play" aria-label="Play video review from Gabriella"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <figcaption><strong>Gabriella</strong><span>Hawker Studios</span></figcaption>
       </figure>
       <figure className="rvw-card">
         <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
@@ -875,10 +893,19 @@ export default function Home() {
         <blockquote>We saw a <strong>better ROAS straight away</strong> and it helped us expand into other markets. Always have the answers and strats for Google Ads.</blockquote>
         <figcaption><span className="rvw-av">A</span><div><strong>Ariana</strong><span>Founder, Aaria London</span></div></figcaption>
       </figure>
-      <figure className="rvw-vid">
-        <span className="rvw-badge">Video</span>
-        <button className="rvw-play" aria-label="Play video review from Nick"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
-        <figcaption><strong>Nick</strong><span>Owner, Prime Group</span></figcaption>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>Adalytical <strong>made Google Ads easy to understand</strong>. We finally had a team focused on real enquiries, with clear explanations of what they were working on.</blockquote>
+        <figcaption><span className="rvw-av">C</span><div><strong>Cam</strong><span>Founder, Seeking Heat Pumps</span></div></figcaption>
+      </figure>
+      </div>
+      <div className="rvw-col">
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>Adalytical helped us land our <strong>biggest Q4 ever</strong>. Revenue was up 33% and ROAS up 25% year on year, with more gains in Q1 and Q2.</blockquote>
+        <figcaption><span className="rvw-av">M</span><div><strong>Matthew</strong><span>Founder, Personalised Favours</span></div></figcaption>
       </figure>
       <figure className="rvw-card">
         <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
@@ -889,14 +916,15 @@ export default function Home() {
       <figure className="rvw-card">
         <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
         <span className="rvw-tag">Adalytical</span>
-        <blockquote>Jackson&rsquo;s <strong>expertise in Google Ads is unmatched</strong>. He and the team helped us overcome multiple very niche Google Ads challenges.</blockquote>
-        <figcaption><span className="rvw-av">R</span><div><strong>Rachel</strong><span>Founder, Blume</span></div></figcaption>
+        <blockquote>Can absolutely vouch for these guys. The <strong>knowledge, persistence and support</strong> has been incredible, they go above and beyond, especially with tricky Google policy issues.</blockquote>
+        <figcaption><span className="rvw-av">K</span><div><strong>Kylie</strong><span>CEO, Health Heroes</span></div></figcaption>
       </figure>
       <figure className="rvw-vid">
         <span className="rvw-badge">Video</span>
-        <button className="rvw-play" aria-label="Play video review from Gabriella"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
-        <figcaption><strong>Gabriella</strong><span>Hawker Studios</span></figcaption>
+        <button className="rvw-play" aria-label="Play video review from Rio"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <figcaption><strong>Rio</strong><span>Founder, G80 Cosmetics</span></figcaption>
       </figure>
+      </div>
     </div>
   </div>
 </section>
