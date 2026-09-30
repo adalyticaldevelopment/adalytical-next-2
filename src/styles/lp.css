@@ -783,9 +783,10 @@
 .hp-urgency .hp-dot{animation:none !important;box-shadow:none !important}
 
 /* ============ PERF + mega-menu fixes (client: no see-through, less lag) ============ */
-/* Mega menu appears fully frosted in a single frame (no transform/opacity/transition = no blur flash) */
-.mega{opacity:1 !important;transform:none !important;transition:none !important}
-.nav-l>li.has-mega:hover .mega,.nav-l>li.has-mega.open .mega{transform:none !important}
+/* Mega menu: keep it painted (clipped, not visibility:hidden) so the backdrop-filter
+   layer is never de-allocated -> it reveals fully frosted with zero blur flash. */
+.mega{opacity:1 !important;visibility:visible !important;transform:none !important;transition:none !important;clip-path:inset(0 0 100% 0);pointer-events:none !important}
+.nav-l>li.has-mega:hover .mega,.nav-l>li.has-mega.open .mega{clip-path:inset(0);pointer-events:auto !important}
 .mega-card{background:rgba(255,255,255,.85)}
 /* Hero squares static, no twinkle (removes ~16 infinite repaints) */
 .hg-cluster rect{animation:none !important}
