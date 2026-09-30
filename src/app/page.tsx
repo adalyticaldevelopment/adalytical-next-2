@@ -94,13 +94,6 @@ export default function Home() {
 {/* ============ HERO + LOGO STRIP (shared background) ============ */}
 <div className="hero-wrap">
 <header className="hero rvsec">
-  <div className="hero-grid" aria-hidden="true">
-    <svg className="hg-spark s1" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="19" stroke="currentColor" strokeWidth="1" opacity=".28"/><path d="M24 13c1.3 6.5 4.2 9.4 10.7 10.7-6.5 1.3-9.4 4.2-10.7 10.7-1.3-6.5-4.2-9.4-10.7-10.7C19.8 22.4 22.7 19.5 24 13z" fill="currentColor"/></svg>
-    <svg className="hg-spark s2" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="19" stroke="currentColor" strokeWidth="1" opacity=".28"/><path d="M24 13c1.3 6.5 4.2 9.4 10.7 10.7-6.5 1.3-9.4 4.2-10.7 10.7-1.3-6.5-4.2-9.4-10.7-10.7C19.8 22.4 22.7 19.5 24 13z" fill="currentColor"/></svg>
-    <svg className="hg-cluster c1" viewBox="0 0 48 48" fill="currentColor"><rect x="2" y="2" width="12" height="12" rx="2"/><rect x="18" y="2" width="12" height="12" rx="2"/><rect x="34" y="18" width="12" height="12" rx="2"/><rect x="2" y="18" width="12" height="12" rx="2"/><rect x="18" y="34" width="12" height="12" rx="2"/><rect x="34" y="34" width="12" height="12" rx="2"/></svg>
-    <svg className="hg-cluster c2" viewBox="0 0 48 48" fill="currentColor"><rect x="2" y="2" width="12" height="12" rx="2"/><rect x="34" y="2" width="12" height="12" rx="2"/><rect x="18" y="18" width="12" height="12" rx="2"/><rect x="2" y="34" width="12" height="12" rx="2"/><rect x="34" y="34" width="12" height="12" rx="2"/></svg>
-    <svg className="hg-cluster c3" viewBox="0 0 48 48" fill="currentColor"><rect x="2" y="2" width="12" height="12" rx="2"/><rect x="18" y="2" width="12" height="12" rx="2"/><rect x="2" y="18" width="12" height="12" rx="2"/><rect x="18" y="18" width="12" height="12" rx="2"/><rect x="34" y="34" width="12" height="12" rx="2"/></svg>
-  </div>
   <div className="hero-rails" aria-hidden="true"></div>
   <span className="xmark xm-hl" aria-hidden="true"></span>
   <span className="xmark xm-hr" aria-hidden="true"></span>
