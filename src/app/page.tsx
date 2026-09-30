@@ -863,15 +863,22 @@ export default function Home() {
         <blockquote>Adalytical <strong>helped us scale our Google spend</strong> by over 300%, all while keeping profitability front and centre.</blockquote>
         <figcaption><span className="rvw-av">S</span><div><strong>Sivan</strong><span>Founder, Bushdoof Lighting</span></div></figcaption>
       </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>Jackson&rsquo;s <strong>expertise in Google Ads is unmatched</strong>. He and the team helped us overcome multiple very niche Google Ads challenges.</blockquote>
+        <figcaption><span className="rvw-av">R</span><div><strong>Rachel</strong><span>Founder, Blume</span></div></figcaption>
+      </figure>
       <figure className="rvw-vid">
         <span className="rvw-badge">Video</span>
         <button className="rvw-play" aria-label="Play video review from Nick"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
         <figcaption><strong>Nick</strong><span>Owner, Prime Group</span></figcaption>
       </figure>
-      <figure className="rvw-vid">
-        <span className="rvw-badge">Video</span>
-        <button className="rvw-play" aria-label="Play video review from Meryl"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
-        <figcaption><strong>Meryl</strong><span>Co-founder, Hadwrld</span></figcaption>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>Genuinely the <strong>best Google Ads decision we&rsquo;ve made</strong>. Straight answers, no fluff, and the enquiries have not stopped since we started.</blockquote>
+        <figcaption><span className="rvw-av">D</span><div><strong>Dylan</strong><span>Director, Coastline Living</span></div></figcaption>
       </figure>
       </div>
       <div className="rvw-col">
