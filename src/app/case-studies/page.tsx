@@ -125,7 +125,7 @@ export default function CaseStudies() {
 <section className="sec sec-cream rvsec" style={{'paddingTop':'clamp(20px,3vw,40px)'}}>
   <div className="ctr">
     <div className="cs-index rv">
-      <a href={`${BASE}/case-study/`} className="csx">
+      <a href={`${BASE}/case-study/before-you-speak/`} className="csx">
         <div className="csx-img"><img src={`${BASE}/images/case-bys.webp`} alt="Before You Speak" /><span className="csx-stat">+65% ROAS</span></div>
         <div className="csx-body">
           <span className="csx-tag">E-commerce · Coffee</span>
@@ -134,7 +134,7 @@ export default function CaseStudies() {
           <span className="csx-more">Read story <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
         </div>
       </a>
-      <a href={`${BASE}/case-study/`} className="csx">
+      <a href={`${BASE}/case-study/the-watch-factory/`} className="csx">
         <div className="csx-img"><img src={`${BASE}/images/case-watch-factory.webp`} alt="The Watch Factory" /><span className="csx-stat">+2,966%</span></div>
         <div className="csx-body">
           <span className="csx-tag">E-commerce · Watches</span>
@@ -143,7 +143,7 @@ export default function CaseStudies() {
           <span className="csx-more">Read story <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
         </div>
       </a>
-      <a href={`${BASE}/case-study/`} className="csx">
+      <a href={`${BASE}/case-study/booze-and-barrels/`} className="csx">
         <div className="csx-img"><img src={`${BASE}/images/case-booze-barrels.webp`} alt="Booze &amp; Barrels" /><span className="csx-stat">$16K → $68K</span></div>
         <div className="csx-body">
           <span className="csx-tag">E-commerce · Drinks</span>

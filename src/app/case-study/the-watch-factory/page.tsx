@@ -1,9 +1,12 @@
-// AUTO-GENERATED from ../adalytical/case-study.html, do not hand-edit; regenerate via scripts/gen_page.py
+// Individual case study page (generated from the case-study template).
 import Script from "next/script";
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
+import type { Metadata } from "next";
+export const metadata: Metadata = { title: "The Watch Factory Case Study | Adalytical" };
 
-export default function CaseStudy() {
+
+export default function CaseStudyTheWatchFactory() {
   return (
     <>
 
@@ -97,12 +100,11 @@ export default function CaseStudy() {
 {/* ============ CASE STUDY ============ */}
 <main className="csp">
   <div className="csp-hero">
-    <span className="csp-eyebrow"><span className="chip-plus">+</span> Case Study · Before You Speak</span>
-    <h1>How Before You Speak scaled coffee profitably on the <span className="accent">same ad budget</span>.</h1>
-    <p>A functional coffee brand hitting a ceiling on Google Ads. We rebuilt tracking, restructured campaigns and unlocked profitable scale, here's exactly what changed.</p>
+    <span className="csp-eyebrow"><span className="chip-plus">+</span> Case Study · The Watch Factory</span>
+    <h1>How The Watch Factory turned a stalled account into a <span className="accent">29x revenue engine</span>.</h1>
+    <p>A premium watch retailer with a flatlined Google Ads account. We rebuilt the structure and tracking and unlocked a near-30x lift in tracked revenue, here's exactly what changed.</p>
   </div>
 
-  {/* featured case study video */}
   <div className="csp-vid">
     <div className="vid-panel" data-yt="">
       <button className="vid-play" aria-label="Play case study video">
@@ -110,16 +112,15 @@ export default function CaseStudy() {
       </button>
       <div className="vid-tag">CASE STUDY VIDEO · 2:14</div>
       <div className="vid-stats">
-        <div className="vid-stat up"><strong>+65%</strong><span>ROAS increase</span></div>
-        <div className="vid-stat up"><strong>+144%</strong><span>Daily ad spend</span></div>
-        <div className="vid-stat up"><strong>+64%</strong><span>Trackable LTV revenue</span></div>
+        <div className="vid-stat up"><strong>+2,966%</strong><span>Tracked revenue</span></div>
+        <div className="vid-stat up"><strong>4.9x</strong><span>Blended ROAS</span></div>
+        <div className="vid-stat up"><strong>+180%</strong><span>Conversion rate</span></div>
         <div className="vid-stat"><strong>100%</strong><span>Conversion accuracy</span></div>
       </div>
     </div>
   </div>
   <div className="vid-foot">FULL WALKTHROUGH · 2 MIN</div>
 
-  {/* body */}
   <div className="csp-body">
     <div className="csp-phone">
       <div className="phone-frame" data-yt="">
@@ -130,30 +131,30 @@ export default function CaseStudy() {
         <div className="phone-tag">CLIENT TESTIMONIAL · 0:58</div>
       </div>
       <div className="csp-author">
-        <strong>The Before You Speak Team</strong>
-        <span>Founders, Before You Speak Coffee</span>
+        <strong>The Watch Factory Team</strong>
+        <span>Founders, The Watch Factory</span>
       </div>
     </div>
 
     <div className="csp-prose">
       <span className="lbl first">The Challenge</span>
-      <h3>Spending more didn't mean earning more.</h3>
-      <p>Before You Speak was investing heavily in Google Ads but couldn't confidently scale. A single overloaded Performance Max campaign was absorbing most of the budget, brand and non-brand traffic were tangled together, and tracking gaps meant no one could see which spend was actually driving profitable sales.</p>
-      <p>The demand was clearly there. The account just wasn't turning it into predictable, profitable growth, so every attempt to spend more felt like a gamble.</p>
-      <blockquote>"We knew the product converted. We just couldn't prove which ads were making us money."</blockquote>
+      <h3>Plenty of demand, almost none of it tracked.</h3>
+      <p>The Watch Factory had strong interest in its range but a Google Ads account that had stalled. Campaigns were set-and-forget, conversion tracking fired inconsistently, and high-value models were buried next to low-margin ones, so paid search looked unprofitable even when it wasn't.</p>
+      <p>The audience was there and buying. The account simply wasn't structured to capture it, so spend stayed flat and cautious.</p>
+      <blockquote>"We'd basically written off Google Ads. Now it's our single biggest growth channel."</blockquote>
 
       <span className="lbl">What We Did</span>
-      <h3>Rebuilt the account around clean data and intent.</h3>
-      <p>We started with tracking, fixing the measurement so every conversion was attributed accurately, giving us 100% confidence in the numbers before touching spend. Then we separated brand from non-brand so we could finally see what paid demand was worth on its own.</p>
-      <p>From there we restructured campaigns around the products and segments with the best margins, optimised the Merchant Center feed for visibility and compliance, and cut the spend feeding low-intent placements. Every dollar was pointed at demand we could prove was profitable.</p>
+      <h3>Rebuilt tracking, then rebuilt the account around margin.</h3>
+      <p>We fixed conversion tracking end to end so every sale was attributed correctly, then rebuilt the account around the models and collections with the best margins. Shopping and Search were separated so each could be bid and budgeted on its own merit.</p>
+      <p>We fed a clean, compliant Merchant Center feed, cut wasted spend on low-intent terms, and pushed budget toward the high-intent queries that actually converted into watch sales.</p>
 
       <span className="lbl">The Results</span>
-      <h3>Profitable scale on the same budget.</h3>
-      <p>With clean tracking and a sharper structure, we scaled daily spend by 144% while lifting ROAS 65%, growing the account profitably instead of just spending more. Trackable lifetime-value revenue climbed 64% as the right customers found the right products.</p>
+      <h3>A near-30x lift in tracked revenue.</h3>
+      <p>With accurate tracking and a margin-first structure, tracked revenue from paid search climbed 2,966% while blended ROAS settled at a healthy 4.9x, turning a dormant channel into the brand's biggest growth engine.</p>
       <div className="csp-results">
-        <div className="csp-result"><strong>+65%</strong><span>ROAS increase</span></div>
-        <div className="csp-result"><strong>+144%</strong><span>Daily ad spend growth</span></div>
-        <div className="csp-result"><strong>+64%</strong><span>Trackable LTV revenue lift</span></div>
+        <div className="csp-result"><strong>+2,966%</strong><span>Tracked revenue</span></div>
+        <div className="csp-result"><strong>4.9x</strong><span>Blended ROAS</span></div>
+        <div className="csp-result"><strong>+180%</strong><span>Conversion rate</span></div>
         <div className="csp-result"><strong>100%</strong><span>Conversion accuracy</span></div>
       </div>
     </div>
@@ -167,7 +168,7 @@ export default function CaseStudy() {
       <span className="sec-tag">Get started</span>
       <h2>Want results like this?</h2>
       <p>Book a free strategy call and we'll map out exactly where your Google Ads account is leaving money on the table.</p>
-      <div className="cta-btns"><a href={`${BASE}/book/`} className="btn-p">Book a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a><a href={`${BASE}/book/`} className="btn-s">Get a Free Audit</a></div>
+      <div className="cta-btns"><a href={`${BASE}/book/`} className="btn-p">Book a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></div>
     </div>
   </div>
 </section>

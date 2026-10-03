@@ -252,7 +252,7 @@ export default function Home() {
     </div>
 
     <div className="proj-grid">
-      <a href={`${BASE}/book/`} className="proj rv">
+      <a href={`${BASE}/case-study/before-you-speak/`} className="proj rv">
         <div className="proj-bar">
           <span className="proj-name">Before You Speak</span>
           <span className="proj-tag">/Coffee</span>
@@ -267,7 +267,7 @@ export default function Home() {
         </div>
       </a>
 
-      <a href={`${BASE}/book/`} className="proj rv">
+      <a href={`${BASE}/case-study/the-watch-factory/`} className="proj rv">
         <div className="proj-bar">
           <span className="proj-name">The Watch Factory</span>
           <span className="proj-tag">/Watches</span>
@@ -282,7 +282,7 @@ export default function Home() {
         </div>
       </a>
 
-      <a href={`${BASE}/book/`} className="proj rv">
+      <a href={`${BASE}/case-study/booze-and-barrels/`} className="proj rv">
         <div className="proj-bar">
           <span className="proj-name">Booze &amp; Barrels</span>
           <span className="proj-tag">/Drinks</span>
