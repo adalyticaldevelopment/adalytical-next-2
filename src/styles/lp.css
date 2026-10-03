@@ -795,3 +795,8 @@
 .hg-cluster rect{animation:none !important}
 /* Lighter floating-CTA blur for smoother scroll */
 .fcta-bar{backdrop-filter:blur(22px) saturate(1.4)}
+
+/* ============ CASE STUDY pages: hero + body match other pages (container width, left-aligned); single video ============ */
+.csp-hero:not(.has-fig){max-width:var(--ctr-max)}
+.csp-hero:not(.has-fig) h1{font-weight:500}
+.csp-body{grid-template-columns:1fr}

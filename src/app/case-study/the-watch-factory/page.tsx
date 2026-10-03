@@ -110,31 +110,10 @@ export default function CaseStudyTheWatchFactory() {
       <button className="vid-play" aria-label="Play case study video">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
       </button>
-      <div className="vid-tag">CASE STUDY VIDEO · 2:14</div>
-      <div className="vid-stats">
-        <div className="vid-stat up"><strong>+2,966%</strong><span>Tracked revenue</span></div>
-        <div className="vid-stat up"><strong>4.9x</strong><span>Blended ROAS</span></div>
-        <div className="vid-stat up"><strong>+180%</strong><span>Conversion rate</span></div>
-        <div className="vid-stat"><strong>100%</strong><span>Conversion accuracy</span></div>
-      </div>
     </div>
   </div>
-  <div className="vid-foot">FULL WALKTHROUGH · 2 MIN</div>
 
   <div className="csp-body">
-    <div className="csp-phone">
-      <div className="phone-frame" data-yt="">
-        <span className="phone-notch"></span>
-        <button className="phone-play" aria-label="Play client testimonial">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-        </button>
-        <div className="phone-tag">CLIENT TESTIMONIAL · 0:58</div>
-      </div>
-      <div className="csp-author">
-        <strong>The Watch Factory Team</strong>
-        <span>Founders, The Watch Factory</span>
-      </div>
-    </div>
 
     <div className="csp-prose">
       <span className="lbl first">The Challenge</span>
