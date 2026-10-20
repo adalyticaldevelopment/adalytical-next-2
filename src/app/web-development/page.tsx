@@ -56,7 +56,7 @@ export default function WebDevelopment() {
                 <span className="mf-tag">Free audit</span>
                 <h5>See exactly where your Google Ads account is leaking budget.</h5>
               </div>
-              <a href={`${BASE}/book/`} className="mf-link">Book a strategy call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
+              <a href={`${BASE}/book/`} className="mf-link">Get Your Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
             </div>
           </div>
         </div>
@@ -65,10 +65,9 @@ export default function WebDevelopment() {
       <li><a href={`${BASE}/blog/`}>Blog</a></li>
       <li><a href={`${BASE}/tools/`}>Tools</a></li>
       <li><a href={`${BASE}/about/`}>About</a></li>
-      <li><a href={`${BASE}/contact/`}>Contact</a></li>
     </ul>
     <div className="nav-r">
-      <a href={`${BASE}/book/`} className="nav-cta">Book A Strategy Call</a>
+      <a href={`${BASE}/book/`} className="nav-cta">Get Your Growth Plan</a>
       <button className="mob-tog" aria-label="Open menu"><span className="mob-bars"><span></span><span></span><span></span></span><span className="mob-lbl">Menu</span></button>
     </div>
   </div>
@@ -91,11 +90,9 @@ export default function WebDevelopment() {
     <li><a href={`${BASE}/tools/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.8 2.8-2-2z" strokeLinejoin="round"/></svg></span>Tools<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
     <li><a href={`${BASE}/case-studies/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3v18h18" strokeLinecap="round"/><path d="M7 14l4-4 3 3 5-6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>Case Studies<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
     <li><a href={`${BASE}/about/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5" strokeLinecap="round"/><path d="M16 6a3 3 0 0 1 0 6M21 20c0-2.4-1.4-4-3.4-4.7" strokeLinecap="round"/></svg></span>About<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
-    <li><a href={`${BASE}/contact/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>Contact<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
   </ul>
   <div className="mdrawer-cta">
-    <a href={`${BASE}/book/`} className="mc-quote">Book A Strategy Call</a>
-    <a href={`${BASE}/book/`} className="mc-audit">Get a Free Audit</a>
+    <a href={`${BASE}/book/`} className="mc-quote">Get Your Growth Plan</a>
   </div>
 </div>
 
@@ -127,7 +124,7 @@ export default function WebDevelopment() {
         <span className="revw-text"><strong>Trusted by 100+</strong> brands worldwide</span>
       </span>
     </div>
-    <div className="csp-cta rv"><a href={`${BASE}/book/`} className="btn-p">Book a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a><a href={`${BASE}/book/`} className="btn-s">Get a Free Audit</a></div>
+    <div className="csp-cta rv"><a href={`${BASE}/book/`} className="btn-p">Get Your Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></div>
     </div>
     <div className="csp-hero-wall rv">
       <div className="swall">
@@ -185,12 +182,12 @@ export default function WebDevelopment() {
 </section>
 
 {/* WHAT WE DO */}
-{/* ============ REVIEW (demo/placeholder testimonial) ============ */}
+{/* ============ REVIEW ============ */}
 <section className="qband-wrap rvsec">
   <figure className="qband rv">
     <div className="qband-stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg></div>
-    <blockquote>&ldquo;Adalytical had our Google Ads restructured and profitable within weeks. We had a flood of qualified enquiries in the first fortnight, one job alone covered the ad spend with plenty left over.&rdquo;</blockquote>
-    <figcaption className="qband-by"><img src={`${BASE}/images/nick-prime-group.webp`} alt="Nick" width="56" height="56" /><div><strong>Nick</strong><span>Owner, Prime Group</span></div></figcaption>
+    <blockquote>&ldquo;Adalytical helped us with our biggest Q4 ever! Revenue was +33% and ROAS +25% YOY. Already seeing massive revenue and ROAS gains for Q1 and Q2.&rdquo;</blockquote>
+    <figcaption className="qband-by"><img src={`${BASE}/images/reviews/jay.webp`} alt="Jay" width="56" height="56" /><div><strong>Jay</strong><span>Head of Marketing, The Watch Factory</span></div></figcaption>
   </figure>
 </section>
 
@@ -210,16 +207,12 @@ export default function WebDevelopment() {
       </article>
       <article className="cf-fc"><h4>Blazing fast</h4><p>Lean, hand-built front-ends that load in under a second, because speed is conversion, and conversion is revenue.</p>
         <div className="pm"><div className="pm-hd">Site performance <span className="pm-chip">SHIPPED</span></div>
-          <div className="pm-row"><span className="pm-l"><b>PageSpeed</b><span>Mobile score</span></span><span className="pm-val up">98</span></div>
-          <div className="pm-row"><span className="pm-l"><b>Largest paint</b><span>Mobile</span></span><span className="pm-val up">0.9s</span></div>
           <div className="pm-row"><span className="pm-l"><b>Core Web Vitals</b><span>All passing</span></span><span className="pm-tag">Green</span></div>
         </div>
       </article>
       <article className="cf-fc"><h4>Tracking baked in</h4><p>Server-side conversion tracking wired from day one, so your Google Ads always know exactly what’s working.</p>
         <div className="pm"><div className="pm-hd">Conversion tracking <span className="pm-chip">LIVE</span></div>
           <div className="pm-row"><span className="pm-l"><b>Server-side tagging</b><span>GA4 + Ads</span></span><span className="pm-tag">Live</span></div>
-          <div className="pm-row"><span className="pm-l"><b>Events mapped</b><span>Full funnel</span></span><span className="pm-val">12</span></div>
-          <div className="pm-row"><span className="pm-l"><b>Attribution</b><span>Click to sale</span></span><span className="pm-val up">100%</span></div>
         </div>
       </article>
     </div>
@@ -227,12 +220,12 @@ export default function WebDevelopment() {
 </section>
 
 {/* PLATFORMS */}
-{/* ============ REVIEW (demo/placeholder testimonial) ============ */}
+{/* ============ REVIEW ============ */}
 <section className="qband-wrap rvsec">
   <figure className="qband rv">
     <div className="qband-stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg></div>
-    <blockquote>&ldquo;The Adalytical team was incredibly fast and got our campaigns converting. We&rsquo;re really impressed and would highly recommend them to anyone running Google Ads.&rdquo;</blockquote>
-    <figcaption className="qband-by"><img src={`${BASE}/images/gabriella-hawker.webp`} alt="Gabriella Smith" width="56" height="56" /><div><strong>Gabriella Smith</strong><span>Hawker Studios</span></div></figcaption>
+    <blockquote>&ldquo;Helped us compete against the giants in the extremely competitive and crowded drinks industry. Highly recommend!&rdquo;</blockquote>
+    <figcaption className="qband-by"><img src={`${BASE}/images/reviews/rachel.webp`} alt="Rachel" width="56" height="56" /><div><strong>Rachel</strong><span>Founder, Blume</span></div></figcaption>
   </figure>
 </section>
 
@@ -255,28 +248,6 @@ export default function WebDevelopment() {
   </div>
 </section>
 
-{/* CASE PLACEHOLDER */}
-<section className="sec sec-cream rvsec">
-  <div className="ctr">
-    <div className="shead">
-      <span className="shead-chip rv"><span className="chip-plus">+</span> Proof</span>
-      <div className="shead-main"><span className="shead-brand rv">Adalytical®</span><h2 className="shead-t rv">A rebuild that <span className="dim">paid for itself.</span></h2></div>
-    </div>
-    <div className="cf-case rv">
-      <div className="cf-case-img"><span className="cf-case-ph">Case study image<br />coming soon</span></div>
-      <div className="cf-case-body">
-        <span className="cf-case-tag">Website rebuild · Home services</span>
-        <h3>A faster site that turned more clicks into calls.</h3>
-        <p>We rebuilt a slow, dated website into a fast, conversion-led site with clean tracking, so every Google Ads dollar could finally be measured, and optimised, against real bookings.</p>
-        <div className="cf-case-stats">
-          <div className="cf-case-stat"><b>98</b><span>pagespeed score</span></div>
-          <div className="cf-case-stat"><b>−26%</b><span>bounce rate</span></div>
-          <div className="cf-case-stat"><b>+40%</b><span>enquiries from ads</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 {/* CTA */}
 <section className="sec sec-cream sec-w cta rvsec" id="book">
@@ -284,7 +255,7 @@ export default function WebDevelopment() {
     <span className="sec-tag">Get started</span>
     <h2>Is your website costing you conversions?</h2>
     <p>Book a free site audit and we’ll show you exactly where your site is losing customers, and what we’d rebuild to fix it. No pitch, no pressure.</p>
-    <div className="cta-btns"><a href={`${BASE}/book/`} className="btn-p">Book a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a><a href={`${BASE}/book/`} className="btn-s">Get a Free Audit</a></div>
+    <div className="cta-btns"><a href={`${BASE}/book/`} className="btn-p">Get Your Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></div>
     <div className="cta-micro" style={{'justifyContent':'center'}}><span className="cm-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Free &amp; no obligation</span><span className="cm-sep"></span><span className="cm-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>No lock-in contracts</span><span className="cm-sep"></span><span className="cm-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Ex-Google Ads team</span></div>
   </div></div>
 </section>
@@ -321,7 +292,8 @@ export default function WebDevelopment() {
         <ul className="footer-links">
           <li><a href={`${BASE}/about/`}>About</a></li>
           <li><a href={`${BASE}/#faq`}>FAQ</a></li>
-          <li><a href={`${BASE}/book/`}>Book a Strategy Call</a></li>
+          <li><a href={`${BASE}/partners/`}>Partners</a></li>
+          <li><a href={`${BASE}/book/`}>Get Your Growth Plan</a></li>
         </ul>
       </div>
     </div>
@@ -337,8 +309,7 @@ export default function WebDevelopment() {
     <span className="fcta-dot" aria-hidden="true"></span>
     <p className="fcta-copy">Ready when you are<span>, no obligation either way</span></p>
     <div className="fcta-btns">
-      <a href={`${BASE}/book/`} className="fcta-primary">Book a call</a>
-      <a href={`${BASE}/book/`} className="fcta-secondary">Free Audit</a>
+      <a href={`${BASE}/book/`} className="fcta-primary">Get Your Growth Plan</a>
     </div>
   </div>
 </div>

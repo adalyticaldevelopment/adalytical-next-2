@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 };
 
 import Script from "next/script";
+import { PageHero } from "@/components/PageHero";
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -56,7 +57,7 @@ export default function Tools() {
                 <span className="mf-tag">Free audit</span>
                 <h5>See exactly where your Google Ads account is leaking budget.</h5>
               </div>
-              <a href={`${BASE}/book/`} className="mf-link">Book a strategy call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
+              <a href={`${BASE}/book/`} className="mf-link">Get Your Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
             </div>
           </div>
         </div>
@@ -65,10 +66,9 @@ export default function Tools() {
       <li><a href={`${BASE}/blog/`}>Blog</a></li>
       <li><a href={`${BASE}/tools/`}>Tools</a></li>
       <li><a href={`${BASE}/about/`}>About</a></li>
-      <li><a href={`${BASE}/contact/`}>Contact</a></li>
     </ul>
     <div className="nav-r">
-      <a href={`${BASE}/book/`} className="nav-cta">Book A Strategy Call</a>
+      <a href={`${BASE}/book/`} className="nav-cta">Get Your Growth Plan</a>
       <button className="mob-tog" aria-label="Open menu"><span className="mob-bars"><span></span><span></span><span></span></span><span className="mob-lbl">Menu</span></button>
     </div>
   </div>
@@ -91,36 +91,24 @@ export default function Tools() {
     <li><a href={`${BASE}/tools/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.8 2.8-2-2z" strokeLinejoin="round"/></svg></span>Tools<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
     <li><a href={`${BASE}/case-studies/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3v18h18" strokeLinecap="round"/><path d="M7 14l4-4 3 3 5-6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>Case Studies<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
     <li><a href={`${BASE}/about/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5" strokeLinecap="round"/><path d="M16 6a3 3 0 0 1 0 6M21 20c0-2.4-1.4-4-3.4-4.7" strokeLinecap="round"/></svg></span>About<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
-    <li><a href={`${BASE}/contact/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>Contact<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
   </ul>
   <div className="mdrawer-cta">
-    <a href={`${BASE}/book/`} className="mc-quote">Book A Strategy Call</a>
-    <a href={`${BASE}/book/`} className="mc-audit">Get a Free Audit</a>
+    <a href={`${BASE}/book/`} className="mc-quote">Get Your Growth Plan</a>
   </div>
 </div>
 
-<div className="csp">
-  <div className="csp-hero rvsec">
-    <span className="csp-eyebrow rv"><span className="chip-plus">+</span> Free tools</span>
-    <h1 className="rv">Tools to supercharge your <span className="accent">Google Ads.</span></h1>
-    <p className="rv">Free dashboards and resources built from what we’ve learned across 1,000+ accounts, download them and put them to work today.</p>
-    <div className="csp-cta rv"><a href={`${BASE}/book/`} className="btn-p">Book a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a><a href={`${BASE}/book/`} className="btn-s">Get a Free Audit</a></div>
-    <div className="revw rv">
-      <span className="revw-avs">
-        <span className="revw-av"><img src={`${BASE}/images/avatar-1.jpg`} alt="" width="36" height="36" /></span>
-        <span className="revw-av"><img src={`${BASE}/images/avatar-2.jpg`} alt="" width="36" height="36" /></span>
-        <span className="revw-av"><img src={`${BASE}/images/avatar-3.jpg`} alt="" width="36" height="36" /></span>
-        <span className="revw-av"><img src={`${BASE}/images/avatar-4.jpg`} alt="" width="36" height="36" /></span>
-      </span>
-      <span className="revw-meta">
-        <span className="revw-stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg></span>
-        <span className="revw-text"><strong>Trusted by 100+</strong> brands worldwide</span>
-      </span>
-    </div>
-  </div>
-</div>
+<PageHero
+  eyebrow="Free tools"
+  media={<div className="hm-stack">
+      <div className="hm-card hm-dash"><div><span className="hm-tag">Dashboard</span><b>Total Attainable Market</b><span className="hm-muted">Market revenue and ad spend by segment</span></div><span className="hm-bars"><i style={{height:"70%"}} className="on"></i><i style={{height:"52%"}} className="on"></i><i style={{height:"88%"}}></i><i style={{height:"40%"}}></i><i style={{height:"62%"}}></i></span></div>
+      <div className="hm-card hm-dash"><div><span className="hm-tag">Coming soon</span><b>Pricing Strategy</b><span className="hm-muted">Price concentration by keyword</span></div><span className="hm-bars"><i style={{height:"22%"}}></i><i style={{height:"46%"}}></i><i style={{height:"95%"}} className="on"></i><i style={{height:"58%"}}></i><i style={{height:"30%"}}></i></span></div>
+    </div>}
+  title={<>Tools to supercharge your <span className="accent">Google Ads.</span></>}
+  sub={<>Free dashboards and resources built from what we’ve learned across 1,000+ accounts, download them and put them to work today.</>}
+  actions={<><a href={`${BASE}/book/`} className="btn-p">Get Your Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></>}
+/>
 
-<section className="sec sec-cream sec-w framed rvsec">
+<section className="sec sec-cream sec-w framed rvsec tl-sec">
   <div className="ctr">
     <div className="shead">
       <span className="shead-chip rv"><span className="chip-plus">+</span> Dashboards</span>
@@ -128,16 +116,16 @@ export default function Tools() {
     </div>
     <div className="tool-grid rv">
       <div className="tool-card">
-        <div className="tool-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M3 3v18h18" strokeLinecap="round"/><rect x="7" y="12" width="3" height="5"/><rect x="12" y="8" width="3" height="9"/><rect x="17" y="5" width="3" height="12"/></svg></div>
+        <div className="tool-thumb has-img"><img src={`${BASE}/images/tools/tam.webp`} alt="Total Attainable Market Dashboard" /></div>
         <div className="tool-body">
           <span className="tool-tag">Dashboard</span>
           <h3>Total Attainable Market Dashboard</h3>
           <p>A clear snapshot of total market revenue and ad spend across your key segments, so you can spot growth opportunities by benchmarking your performance against the broader market potential.</p>
-          <a href={`${BASE}/contact/`} className="btn-p" style={{alignSelf:'flex-start'}}>Get the dashboard <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
+          {/* TODO: rebuild the TAM dashboard download page on this site before the domain switch */}<a href="https://www.adalytical.io/tam-dashboard-lp" className="btn-p" style={{alignSelf:'flex-start'}}>Get the dashboard <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
         </div>
       </div>
       <div className="tool-card">
-        <div className="tool-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
+        <div className="tool-thumb has-img"><img src={`${BASE}/images/tools/pricing.webp`} alt="Pricing Strategy Dashboard" /></div>
         <div className="tool-body">
           <span className="tool-tag">Dashboard</span>
           <h3>Pricing Strategy Dashboard</h3>
@@ -149,30 +137,14 @@ export default function Tools() {
   </div>
 </section>
 {/* ============ CTA ============ */}
-{/* ============ REVIEW (demo/placeholder testimonial) ============ */}
-<section className="qband-wrap rvsec">
-  <figure className="qband rv">
-    <div className="qband-stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg></div>
-    <blockquote>&ldquo;Adalytical had our Google Ads restructured and profitable within weeks. We had a flood of qualified enquiries in the first fortnight, one job alone covered the ad spend with plenty left over.&rdquo;</blockquote>
-    <figcaption className="qband-by"><img src={`${BASE}/images/nick-prime-group.webp`} alt="Nick" width="56" height="56" /><div><strong>Nick</strong><span>Owner, Prime Group</span></div></figcaption>
-  </figure>
-</section>
 
-{/* ============ REVIEW (demo/placeholder testimonial) ============ */}
-<section className="qband-wrap rvsec">
-  <figure className="qband rv">
-    <div className="qband-stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg></div>
-    <blockquote>&ldquo;The Adalytical team was incredibly fast and got our campaigns converting. We&rsquo;re really impressed and would highly recommend them to anyone running Google Ads.&rdquo;</blockquote>
-    <figcaption className="qband-by"><img src={`${BASE}/images/gabriella-hawker.webp`} alt="Gabriella Smith" width="56" height="56" /><div><strong>Gabriella Smith</strong><span>Hawker Studios</span></div></figcaption>
-  </figure>
-</section>
 
-<section className="sec sec-cream cta framed rvsec" id="book">
+<section className="sec sec-cream cta framed rvsec" id="book" style={{paddingTop:"clamp(20px,calc(3 * var(--vw)),40px)"}}>
   <div className="ctr"><div className="cta-card rv">
     <span className="sec-tag">Get started</span>
     <h2>Scale your brand with Google Ads that convert.</h2>
-    <p>More customers. More profit. Smarter Google Ads. Book a free strategy call and we’ll show you where to grow.</p>
-    <div className="cta-btns"><a href={`${BASE}/book/`} className="btn-p">Book a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a><a href={`${BASE}/book/`} className="btn-s">Get a Free Audit</a></div>
+    <p>More customers. More profit. Smarter Google Ads. Get your Growth Plan and we’ll show you where to grow.</p>
+    <div className="cta-btns"><a href={`${BASE}/book/`} className="btn-p">Get Your Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></div>
   </div></div>
 </section>
 
@@ -208,7 +180,8 @@ export default function Tools() {
         <ul className="footer-links">
           <li><a href={`${BASE}/about/`}>About</a></li>
           <li><a href={`${BASE}/#faq`}>FAQ</a></li>
-          <li><a href={`${BASE}/book/`}>Book a Strategy Call</a></li>
+          <li><a href={`${BASE}/partners/`}>Partners</a></li>
+          <li><a href={`${BASE}/book/`}>Get Your Growth Plan</a></li>
         </ul>
       </div>
     </div>
@@ -224,8 +197,7 @@ export default function Tools() {
     <span className="fcta-dot" aria-hidden="true"></span>
     <p className="fcta-copy">Ready when you are<span>, no obligation either way</span></p>
     <div className="fcta-btns">
-      <a href={`${BASE}/book/`} className="fcta-primary">Book a call</a>
-      <a href={`${BASE}/book/`} className="fcta-secondary">Free Audit</a>
+      <a href={`${BASE}/book/`} className="fcta-primary">Get Your Growth Plan</a>
     </div>
   </div>
 </div>

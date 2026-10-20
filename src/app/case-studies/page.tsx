@@ -8,6 +8,8 @@ export const metadata: Metadata = {
 };
 
 import Script from "next/script";
+import { PageHero } from "@/components/PageHero";
+import { CASE_STUDIES } from "./data";
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -56,7 +58,7 @@ export default function CaseStudies() {
                 <span className="mf-tag">Free audit</span>
                 <h5>See exactly where your Google Ads account is leaking budget.</h5>
               </div>
-              <a href={`${BASE}/book/`} className="mf-link">Book a strategy call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
+              <a href={`${BASE}/book/`} className="mf-link">Get Your Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
             </div>
           </div>
         </div>
@@ -65,10 +67,9 @@ export default function CaseStudies() {
       <li><a href={`${BASE}/blog/`}>Blog</a></li>
       <li><a href={`${BASE}/tools/`}>Tools</a></li>
       <li><a href={`${BASE}/about/`}>About</a></li>
-      <li><a href={`${BASE}/contact/`}>Contact</a></li>
     </ul>
     <div className="nav-r">
-      <a href={`${BASE}/book/`} className="nav-cta">Book A Strategy Call</a>
+      <a href={`${BASE}/book/`} className="nav-cta">Get Your Growth Plan</a>
       <button className="mob-tog" aria-label="Open menu"><span className="mob-bars"><span></span><span></span><span></span></span><span className="mob-lbl">Menu</span></button>
     </div>
   </div>
@@ -91,120 +92,158 @@ export default function CaseStudies() {
     <li><a href={`${BASE}/tools/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.8 2.8-2-2z" strokeLinejoin="round"/></svg></span>Tools<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
     <li><a href={`${BASE}/case-studies/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3v18h18" strokeLinecap="round"/><path d="M7 14l4-4 3 3 5-6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>Case Studies<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
     <li><a href={`${BASE}/about/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5" strokeLinecap="round"/><path d="M16 6a3 3 0 0 1 0 6M21 20c0-2.4-1.4-4-3.4-4.7" strokeLinecap="round"/></svg></span>About<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
-    <li><a href={`${BASE}/contact/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>Contact<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
   </ul>
   <div className="mdrawer-cta">
-    <a href={`${BASE}/book/`} className="mc-quote">Book A Strategy Call</a>
-    <a href={`${BASE}/book/`} className="mc-audit">Get a Free Audit</a>
+    <a href={`${BASE}/book/`} className="mc-quote">Get Your Growth Plan</a>
   </div>
 </div>
 
 {/* ============ HERO ============ */}
-<div className="csp">
-  <div className="csp-hero rvsec">
-    <span className="csp-eyebrow rv"><span className="chip-plus">+</span> Case studies</span>
-    <h1 className="rv">Real clients. <span className="accent">Real performance.</span></h1>
-    <p className="rv">We’ve helped brands across e-commerce, lead generation and SaaS grow profitably with Google Ads. Here are a few of the results.</p>
-    <div className="revw rv">
-      <span className="revw-avs">
-        <span className="revw-av"><img src={`${BASE}/images/avatar-1.jpg`} alt="" width="36" height="36" /></span>
-        <span className="revw-av"><img src={`${BASE}/images/avatar-2.jpg`} alt="" width="36" height="36" /></span>
-        <span className="revw-av"><img src={`${BASE}/images/avatar-3.jpg`} alt="" width="36" height="36" /></span>
-        <span className="revw-av"><img src={`${BASE}/images/avatar-4.jpg`} alt="" width="36" height="36" /></span>
-      </span>
-      <span className="revw-meta">
-        <span className="revw-stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg></span>
-        <span className="revw-text"><strong>Trusted by 100+</strong> brands worldwide</span>
-      </span>
-    </div>
-    <div className="csp-cta rv"><a href={`${BASE}/book/`} className="btn-p">Book a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a><a href={`${BASE}/book/`} className="btn-s">Get a Free Audit</a></div>
-  </div>
-</div>
+<PageHero
+  eyebrow="Case studies"
+  media={<div className="hm-stack">
+      <div className="hm-card hm-res"><b>The Watch Factory</b><span className="hm-big">+33%</span><span className="hm-muted">Revenue YoY, biggest Q4 ever, ROAS +25%</span></div>
+      <div className="hm-card hm-res"><b>Personalised Favours</b><span className="hm-big">+$334k</span><span className="hm-muted">Revenue after ad spend in 2025, ROAS 4.8 &rarr; 5.66</span></div>
+      <div className="hm-card hm-res"><b>Lokolash</b><span className="hm-big">5x</span><span className="hm-muted">Return by month 2, from zero Google history</span></div>
+    </div>}
+  title={<>Real clients. <span className="accent">Real performance.</span></>}
+  sub={<>We’ve helped brands across e-commerce, lead generation and SaaS grow profitably with Google Ads. Here are a few of the results.</>}
+  actions={<><a href={`${BASE}/book/`} className="btn-p">Get Your Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></>}
+/>
 
 {/* ============ CASE GRID ============ */}
-<section className="sec sec-cream rvsec" style={{'paddingTop':'clamp(20px,3vw,40px)'}}>
+<section className="sec sec-cream rvsec" style={{'paddingTop':'clamp(20px,calc(3 * var(--vw)),40px)'}}>
   <div className="ctr">
     <div className="cs-index rv">
-      <a href={`${BASE}/case-study/`} className="csx">
-        <div className="csx-img"><img src={`${BASE}/images/case-bys.webp`} alt="Before You Speak" /><span className="csx-stat">+65% ROAS</span></div>
-        <div className="csx-body">
-          <span className="csx-tag">E-commerce · Coffee</span>
-          <h3>Before You Speak</h3>
-          <p>Scaled a functional-coffee brand profitably with a full Search &amp; Shopping rebuild and tight tracking.</p>
-          <span className="csx-more">Read story <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
-        </div>
-      </a>
-      <a href={`${BASE}/case-study/`} className="csx">
-        <div className="csx-img"><img src={`${BASE}/images/case-watch-factory.webp`} alt="The Watch Factory" /><span className="csx-stat">+2,966%</span></div>
-        <div className="csx-body">
-          <span className="csx-tag">E-commerce · Watches</span>
-          <h3>The Watch Factory</h3>
-          <p>Turned a stalled account into a growth engine, a near-30× lift in tracked revenue from paid search.</p>
-          <span className="csx-more">Read story <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
-        </div>
-      </a>
-      <a href={`${BASE}/case-study/`} className="csx">
-        <div className="csx-img"><img src={`${BASE}/images/case-booze-barrels.webp`} alt="Booze &amp; Barrels" /><span className="csx-stat">$16K → $68K</span></div>
-        <div className="csx-body">
-          <span className="csx-tag">E-commerce · Drinks</span>
-          <h3>Booze &amp; Barrels</h3>
-          <p>Quadrupled monthly revenue while holding ROAS, profitable scale, not just more spend.</p>
-          <span className="csx-more">Read story <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
-        </div>
-      </a>
-      <a href={`${BASE}/book/`} className="csx">
-        <div className="csx-img" style={{'background':'linear-gradient(150deg,#17352a,#0d1f15)','display':'flex','alignItems':'center','justifyContent':'center'}}>
-          <span style={{'color':'#fff','fontWeight':'700','fontSize':'1.15rem','letterSpacing':'-.02em','textAlign':'center','padding':'0 20px'}}>Your brand next.</span>
-        </div>
-        <div className="csx-body">
-          <span className="csx-tag">Book a free audit</span>
-          <h3>Let’s map your growth</h3>
-          <p>Book a free strategy call and we’ll show you exactly where your account can grow, profitably.</p>
-          <span className="csx-more">Get started <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
-        </div>
-      </a>
+      {CASE_STUDIES.map((c) => (
+        <a href={`${BASE}/case-studies/${c.slug}/`} className="csx" key={c.slug}>
+          <div className="csx-img"><img src={`${BASE}/images/${c.image}`} alt={c.name} /><span className="csx-stat">{c.cardStat}</span></div>
+          <div className="csx-body">
+            <span className="csx-tag">{c.tag}</span>
+            <h3>{c.name}</h3>
+            <p>{c.cardBlurb}</p>
+            <span className="csx-more">Read story <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
+          </div>
+        </a>
+      ))}
     </div>
   </div>
 </section>
 
-{/* ============ STATS ============ */}
-{/* ============ REVIEW (demo/placeholder testimonial) ============ */}
-<section className="qband-wrap rvsec">
-  <figure className="qband rv">
-    <div className="qband-stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg></div>
-    <blockquote>&ldquo;Adalytical had our Google Ads restructured and profitable within weeks. We had a flood of qualified enquiries in the first fortnight, one job alone covered the ad spend with plenty left over.&rdquo;</blockquote>
-    <figcaption className="qband-by"><img src={`${BASE}/images/nick-prime-group.webp`} alt="Nick" width="56" height="56" /><div><strong>Nick</strong><span>Owner, Prime Group</span></div></figcaption>
-  </figure>
-</section>
-
-<section className="sec sec-cream sec-stats rvsec">
+{/* ============ TESTIMONIALS ============ */}
+<section className="sec sec-cream rvsec" id="testimonials" style={{'paddingTop':'clamp(20px,calc(3 * var(--vw)),40px)'}}>
   <div className="ctr">
-    <div className="stats">
-      <div className="stat rv"><span className="stat-val"><span className="cnt" data-target="1000" data-group="1" data-suffix="+">1,000+</span></span><span className="stat-label">Accounts audited<br />&amp; optimised</span></div>
-      <div className="stat rv"><span className="stat-val"><span className="cnt" data-target="300" data-suffix="%">300%</span></span><span className="stat-label">Ad spend scaled<br />profitably</span></div>
-      <div className="stat rv"><span className="stat-val"><span className="cnt" data-target="4.08" data-decimals="2">4.08</span></span><span className="stat-label">Average ROAS<br />across accounts</span></div>
-      <div className="stat rv"><span className="stat-val"><span className="cnt" data-target="30" data-suffix="+">30+</span></span><span className="stat-label">Agencies trained<br />by our team</span></div>
+    <div className="shead">
+      <span className="shead-chip rv"><span className="chip-plus">+</span> Client reviews</span>
+      <div className="shead-main">
+        <h2 className="shead-t rv">Words from the people <span className="dim">behind the work.</span></h2>
+        <p className="shead-sub rv">Real Google Ads clients, real results, in their own words and on camera.</p>
+      </div>
+    </div>
+    <div className="rvw-wall rv">
+      <div className="rvw-col">
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>Adalytical <strong>helped us scale our Google spend</strong> by over 300%, all while keeping profitability front and centre.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/sivan.webp`} alt="" width="38" height="38" /></span><div><strong>Sivan</strong><span>Founder, Bushdoof Lighting</span></div></figcaption>
+      </figure>
+      <figure className="rvw-vid" data-vimeo="1165554472">
+        <img className="rvw-thumb" src={`${BASE}/images/reviews/vid-matthew.webp`} alt="" />
+        <span className="rvw-badge">Video</span>
+        <button className="rvw-play" type="button" aria-label="Play video review from Matthew"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <figcaption><strong>Matthew</strong><span>CEO, Personalised Favours</span></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote><strong>Helped us compete against the giants</strong> in the extremely competitive and crowded drinks industry. Highly recommend!</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/rachel.webp`} alt="" width="38" height="38" /></span><div><strong>Rachel</strong><span>Founder, Blume</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>Jackson&rsquo;s <strong>expertise in Google Ads is unmatched</strong>. He and the team helped us overcome multiple very niche Google Ads challenges.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/rob.webp`} alt="" width="38" height="38" /></span><div><strong>Rob</strong><span>Marketing Director, Home Make It</span></div></figcaption>
+      </figure>
+      <figure className="rvw-vid" data-vimeo="1232899165">
+        <img className="rvw-thumb" src={`${BASE}/images/reviews/vid-winland.webp`} alt="" />
+        <span className="rvw-badge">Video</span>
+        <button className="rvw-play" type="button" aria-label="Play video review from Rick"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <figcaption><strong>Rick</strong><span>Winland Home &amp; Garden</span></figcaption>
+      </figure>
+      </div>
+      <div className="rvw-col">
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>Adalytical helped us with our <strong>biggest Q4 ever</strong>! Revenue was +33% and ROAS +25% YOY. Already seeing <strong>massive revenue and ROAS gains</strong> for Q1 and Q2.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/jay.webp`} alt="" width="38" height="38" /></span><div><strong>Jay</strong><span>Head of Marketing, The Watch Factory</span></div></figcaption>
+      </figure>
+      <figure className="rvw-vid" data-vimeo="1167218749">
+        <img className="rvw-thumb" src={`${BASE}/images/reviews/vid-rio.webp`} alt="" />
+        <span className="rvw-badge">Video</span>
+        <button className="rvw-play" type="button" aria-label="Play video review from Rio"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <figcaption><strong>Rio</strong><span>Founder, G80 Cosmetics</span></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>Quickly grasped our unique challenges and FMCG space to <strong>deliver an effective Google and YouTube Ads strategy</strong>.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/abdul.webp`} alt="" width="38" height="38" /></span><div><strong>Abdul</strong><span>Founder, Pinkish Pods</span></div></figcaption>
+      </figure>
+      <figure className="rvw-vid" data-vimeo="1170457963">
+        <img className="rvw-thumb" src={`${BASE}/images/reviews/vid-ariana.webp`} alt="" />
+        <span className="rvw-badge">Video</span>
+        <button className="rvw-play" type="button" aria-label="Play video review from Ariana"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <figcaption><strong>Ariana</strong><span>Founder, Aaria London</span></figcaption>
+      </figure>
+      </div>
+      <div className="rvw-col">
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>The team&rsquo;s <strong>ex-Google brainpower</strong> unlocked heaps of extra insights and fast-tracked support, but more importantly, <strong>helped us hit our biggest Q4</strong>.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/matthew.webp`} alt="" width="38" height="38" /></span><div><strong>Matthew</strong><span>CEO, Personalised Favours</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>Adalytical helped us with segmenting our audience which changed how we ran our campaigns and <strong>brought in a wave of new customers</strong>.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/rio.webp`} alt="" width="38" height="38" /></span><div><strong>Rio</strong><span>Founder, G80 Cosmetics</span></div></figcaption>
+      </figure>
+      <figure className="rvw-vid" data-vimeo="1170457933">
+        <img className="rvw-thumb" src={`${BASE}/images/reviews/vid-meryl.webp`} alt="" />
+        <span className="rvw-badge">Video</span>
+        <button className="rvw-play" type="button" aria-label="Play video review from Meryl"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <figcaption><strong>Meryl</strong><span>Co-founder, Hedonist</span></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>We saw a <strong>better ROAS straight away</strong> and helped us expand into other markets! Always have the answers and strats for Google Ads.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/ariana.webp`} alt="" width="38" height="38" /></span><div><strong>Ariana</strong><span>Founder, Aaria London</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>Can absolutely vouch for these guys! We&rsquo;ve worked with Adalytical on our Google Ads and the level of <strong>knowledge, persistence and support</strong> has been incredible. They&rsquo;ve gone above and beyond for our account, especially navigating some very frustrating Google policy issues. Definitely worth having a chat with them if you&rsquo;re running ecommerce ads.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/kylie.webp`} alt="" width="38" height="38" /></span><div><strong>Kylie Alexander</strong><span>CEO, Health Heiress</span></div></figcaption>
+      </figure>
+      </div>
     </div>
   </div>
 </section>
 
 {/* ============ FINAL CTA ============ */}
-{/* ============ REVIEW (demo/placeholder testimonial) ============ */}
-<section className="qband-wrap rvsec">
-  <figure className="qband rv">
-    <div className="qband-stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg></div>
-    <blockquote>&ldquo;The Adalytical team was incredibly fast and got our campaigns converting. We&rsquo;re really impressed and would highly recommend them to anyone running Google Ads.&rdquo;</blockquote>
-    <figcaption className="qband-by"><img src={`${BASE}/images/gabriella-hawker.webp`} alt="Gabriella Smith" width="56" height="56" /><div><strong>Gabriella Smith</strong><span>Hawker Studios</span></div></figcaption>
-  </figure>
-</section>
 
-<section className="sec sec-cream cta rvsec" id="book">
+<section className="sec sec-cream cta rvsec" id="book" style={{'paddingTop':'clamp(20px,calc(3 * var(--vw)),40px)'}}>
   <div className="ctr">
     <div className="cta-card rv">
       <span className="sec-tag">Get started</span>
       <h2>Your account could be the next case study.</h2>
       <p>Book a free audit and we’ll map out exactly where your Google Ads are leaving money on the table.</p>
-      <div className="cta-btns"><a href={`${BASE}/book/`} className="btn-p">Book a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a><a href={`${BASE}/book/`} className="btn-s">Get a Free Audit</a></div>
+      <div className="cta-btns"><a href={`${BASE}/book/`} className="btn-p">Get Your Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></div>
       <div className="cta-micro" style={{'justifyContent':'center'}}>
         <span className="cm-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Free &amp; no obligation</span>
         <span className="cm-sep"></span>
@@ -248,7 +287,8 @@ export default function CaseStudies() {
         <ul className="footer-links">
           <li><a href={`${BASE}/about/`}>About</a></li>
           <li><a href={`${BASE}/#faq`}>FAQ</a></li>
-          <li><a href={`${BASE}/book/`}>Book a Strategy Call</a></li>
+          <li><a href={`${BASE}/partners/`}>Partners</a></li>
+          <li><a href={`${BASE}/book/`}>Get Your Growth Plan</a></li>
         </ul>
       </div>
     </div>
@@ -264,8 +304,7 @@ export default function CaseStudies() {
     <span className="fcta-dot" aria-hidden="true"></span>
     <p className="fcta-copy">Ready when you are<span>, no obligation either way</span></p>
     <div className="fcta-btns">
-      <a href={`${BASE}/book/`} className="fcta-primary">Book a call</a>
-      <a href={`${BASE}/book/`} className="fcta-secondary">Free Audit</a>
+      <a href={`${BASE}/book/`} className="fcta-primary">Get Your Growth Plan</a>
     </div>
   </div>
 </div>

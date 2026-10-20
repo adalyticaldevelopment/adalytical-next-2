@@ -57,7 +57,7 @@ export default function LeadGeneration() {
                 <span className="mf-tag">Free audit</span>
                 <h5>See exactly where your Google Ads account is leaking budget.</h5>
               </div>
-              <a href={`${BASE}/book/`} className="mf-link">Book a strategy call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
+              <a href={`${BASE}/book/`} className="mf-link">Get Your Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
             </div>
           </div>
         </div>
@@ -66,10 +66,9 @@ export default function LeadGeneration() {
       <li><a href={`${BASE}/blog/`}>Blog</a></li>
       <li><a href={`${BASE}/tools/`}>Tools</a></li>
       <li><a href={`${BASE}/about/`}>About</a></li>
-      <li><a href={`${BASE}/contact/`}>Contact</a></li>
     </ul>
     <div className="nav-r">
-      <a href={`${BASE}/book/`} className="nav-cta">Book A Strategy Call</a>
+      <a href={`${BASE}/book/`} className="nav-cta">Get Your Growth Plan</a>
       <button className="mob-tog" aria-label="Open menu"><span className="mob-bars"><span></span><span></span><span></span></span><span className="mob-lbl">Menu</span></button>
     </div>
   </div>
@@ -92,92 +91,163 @@ export default function LeadGeneration() {
     <li><a href={`${BASE}/tools/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.8 2.8-2-2z" strokeLinejoin="round"/></svg></span>Tools<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
     <li><a href={`${BASE}/case-studies/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3v18h18" strokeLinecap="round"/><path d="M7 14l4-4 3 3 5-6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>Case Studies<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
     <li><a href={`${BASE}/about/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5" strokeLinecap="round"/><path d="M16 6a3 3 0 0 1 0 6M21 20c0-2.4-1.4-4-3.4-4.7" strokeLinecap="round"/></svg></span>About<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
-    <li><a href={`${BASE}/contact/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>Contact<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
   </ul>
   <div className="mdrawer-cta">
-    <a href={`${BASE}/book/`} className="mc-quote">Book A Strategy Call</a>
-    <a href={`${BASE}/book/`} className="mc-audit">Get a Free Audit</a>
+    <a href={`${BASE}/book/`} className="mc-quote">Get Your Growth Plan</a>
   </div>
 </div>
 
 
-<div className="csp">
-  <div className="csp-hero has-fig rvsec">
-    <div className="csp-hero-copy">
-    <span className="csp-eyebrow rv"><span className="chip-plus">+</span> Google Ads for Lead Generation</span>
-    <h1 className="rv">More qualified leads, <span className="accent">lower cost per lead.</span></h1>
-    <p className="rv">High-intent Search campaigns with proper call and form tracking, so every lead is measured and every dollar is accountable. No guesswork, no vanity metrics.</p>
-    <ul className="csp-ticks rv">
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Every lead tracked end-to-end</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Ex-Google Ads expertise</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Call &amp; form tracking wired in</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Qualified leads, not clicks</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>No lock-in contracts</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Reply within 24 hours</li>
-    </ul>
-    <div className="revw rv">
-      <span className="revw-avs">
-        <span className="revw-av"><img src={`${BASE}/images/avatar-1.jpg`} alt="" width="36" height="36" /></span>
-        <span className="revw-av"><img src={`${BASE}/images/avatar-2.jpg`} alt="" width="36" height="36" /></span>
-        <span className="revw-av"><img src={`${BASE}/images/avatar-3.jpg`} alt="" width="36" height="36" /></span>
-        <span className="revw-av"><img src={`${BASE}/images/avatar-4.jpg`} alt="" width="36" height="36" /></span>
-      </span>
-      <span className="revw-meta">
-        <span className="revw-stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg></span>
-        <span className="revw-text"><strong>Trusted by 100+</strong> brands worldwide</span>
-      </span>
+{/* Same structure as the homepage: hero + logos, who we help, what we do, results, reviews, CTA */}
+{/* ============ HERO + LOGO STRIP (shared background) ============ */}
+<div className="hero-wrap">
+<header className="hero rvsec">
+  <div className="hero-grid" aria-hidden="true">
+    <svg className="hg-cluster c1" viewBox="0 0 48 48" fill="currentColor"><rect x="2" y="2" width="12" height="12" rx="2"/><rect x="18" y="2" width="12" height="12" rx="2"/><rect x="34" y="18" width="12" height="12" rx="2"/><rect x="2" y="18" width="12" height="12" rx="2"/><rect x="18" y="34" width="12" height="12" rx="2"/><rect x="34" y="34" width="12" height="12" rx="2"/></svg>
+    <svg className="hg-cluster c2" viewBox="0 0 48 48" fill="currentColor"><rect x="2" y="2" width="12" height="12" rx="2"/><rect x="34" y="2" width="12" height="12" rx="2"/><rect x="18" y="18" width="12" height="12" rx="2"/><rect x="2" y="34" width="12" height="12" rx="2"/><rect x="34" y="34" width="12" height="12" rx="2"/></svg>
+    <svg className="hg-cluster c3" viewBox="0 0 48 48" fill="currentColor"><rect x="2" y="2" width="12" height="12" rx="2"/><rect x="18" y="2" width="12" height="12" rx="2"/><rect x="2" y="18" width="12" height="12" rx="2"/><rect x="18" y="18" width="12" height="12" rx="2"/><rect x="34" y="34" width="12" height="12" rx="2"/></svg>
+  </div>
+  <div className="hero-rails" aria-hidden="true"></div>
+  <span className="xmark xm-hl" aria-hidden="true"></span>
+  <span className="xmark xm-hr" aria-hidden="true"></span>
+  <div className="ctr">
+    <div className="hero-split">
+      <div className="hero-copy">
+        <div className="revw rv">
+          <span className="revw-avs">
+            <span className="revw-av"><img src={`${BASE}/images/leadgen/rv-nick.webp`} alt="" width="36" height="36" /></span>
+            <span className="revw-av"><img src={`${BASE}/images/reviews/sivan.webp`} alt="" width="36" height="36" /></span>
+            <span className="revw-av"><img src={`${BASE}/images/leadgen/rv-james-fabre.webp`} alt="" width="36" height="36" /></span>
+            <span className="revw-av"><img src={`${BASE}/images/reviews/ariana.webp`} alt="" width="36" height="36" /></span>
+          </span>
+          <span className="revw-meta">
+            <span className="revw-stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg></span>
+            <span className="revw-text"><strong>24+</strong> 5 star reviews</span>
+          </span>
+        </div>
+        <h1 className="rv">More qualified leads, <span className="accent">lower cost per lead.</span></h1>
+        <p className="hero-sub rv">High-intent Search campaigns with proper call and form tracking, so every lead is measured and every dollar is accountable. No guesswork, no vanity metrics.</p>
+        <div className="hero-btns rv">
+          <a href={`${BASE}/book/`} className="btn-p btn-hero">Get Your Growth Plan
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          </a>
+          <span className="hero-cta-flair" aria-hidden="true">
+            <svg className="hcf-arrow" viewBox="0 0 92 58" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"><path d="M88 9C60 3 24 5 12 36"/><path d="M12 36l2-15M12 36l16-4"/></svg>
+            <span className="hcf-note">Free, no obligation</span>
+          </span>
+        </div>
+      </div>
+
+      <div className="hero-visual rv">
+        <div className="hero-card">
+          <span className="hero-card-eyebrow">Why service businesses choose us</span>
+          <h3>Built to turn clicks into booked jobs.</h3>
+          <ul className="hero-values">
+            <li><span className="hv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path pathLength="1" d="M12 20v-6M6 20v-4M18 20v-9" strokeLinecap="round"/></svg></span> Ex-Google expertise, the levers most agencies never learn</li>
+            <li><span className="hv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path pathLength="1" d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6z" strokeLinecap="round" strokeLinejoin="round"/></svg></span> Optimised to qualified leads, not junk form-fills</li>
+            <li><span className="hv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle pathLength="1" cx="12" cy="12" r="3"/><path pathLength="1" d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l2.5 2.5M16.5 16.5 19 19M19 5l-2.5 2.5M7.5 16.5 5 19" strokeLinecap="round"/></svg></span> Month-to-month, no lock-in contracts</li>
+            <li><span className="hv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path pathLength="1" d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg></span> Direct access to the specialist running your account</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div className="csp-cta rv"><a href={`${BASE}/book/`} className="btn-p">Book a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a><a href={`${BASE}/book/`} className="btn-s">Get a Free Audit</a></div>
-    </div>
-    <div className="csp-viz rv">
-      <div className="leadviz">
-        <div className="lv-phone">
-          <div className="lv-screen">
-            <div className="lv-bar"><span>Leads</span><span>Today</span></div>
-            <div className="lv-feed">
-              <div className="lv-note"><span className="lv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z" strokeLinecap="round" strokeLinejoin="round"/></svg></span><span className="lv-txt"><b>New lead, Sarah M.</b><span>Requested a quote · just now</span></span></div>
-              <div className="lv-note"><span className="lv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5" strokeLinecap="round"/></svg></span><span className="lv-txt"><b>Form submitted</b><span>Kitchen reno enquiry</span></span></div>
-              <div className="lv-note"><span className="lv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z" strokeLinecap="round" strokeLinejoin="round"/></svg></span><span className="lv-txt"><b>Missed call captured</b><span>Callback auto-booked</span></span></div>
-              <div className="lv-note"><span className="lv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6" strokeLinecap="round"/></svg></span><span className="lv-txt"><b>New lead, James T.</b><span>High intent · ready to buy</span></span></div>
-              <div className="lv-note"><span className="lv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg></span><span className="lv-txt"><b>Call tracked · 4m 12s</b><span>Marked as converted</span></span></div>
-              <div className="lv-note"><span className="lv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z" strokeLinecap="round" strokeLinejoin="round"/></svg></span><span className="lv-txt"><b>New lead, Sarah M.</b><span>Requested a quote · just now</span></span></div>
-              <div className="lv-note"><span className="lv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5" strokeLinecap="round"/></svg></span><span className="lv-txt"><b>Form submitted</b><span>Kitchen reno enquiry</span></span></div>
-              <div className="lv-note"><span className="lv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z" strokeLinecap="round" strokeLinejoin="round"/></svg></span><span className="lv-txt"><b>Missed call captured</b><span>Callback auto-booked</span></span></div>
-              <div className="lv-note"><span className="lv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6" strokeLinecap="round"/></svg></span><span className="lv-txt"><b>New lead, James T.</b><span>High intent · ready to buy</span></span></div>
-              <div className="lv-note"><span className="lv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg></span><span className="lv-txt"><b>Call tracked · 4m 12s</b><span>Marked as converted</span></span></div>
+  </div>
+</header>
+
+{/* ============ TRUST STRIP (label + client marquee, symmetric) ============ */}
+<div className="trust-strip trust-leadgen rvsec" aria-label="Brands we work with">
+  <span className="xmark xm-tl" aria-hidden="true"></span>
+  <span className="xmark xm-tr" aria-hidden="true"></span>
+  <span className="xmark xm-bl" aria-hidden="true"></span>
+  <span className="xmark xm-br" aria-hidden="true"></span>
+  <div className="strip-inner">
+  <div className="marquee-track">
+    <span className="mq-item"><img src={`${BASE}/images/leadgen/logo-prime-group.png`} alt="Prime Group Building" width="916" height="183" /></span>
+    <span className="mq-item"><img src={`${BASE}/images/leadgen/logo-cavstruct.png`} alt="Cavstruct Projects" width="863" height="169" /></span>
+    <span className="mq-item"><img src={`${BASE}/images/leadgen/logo-mjb-electrical.png`} alt="MJB Electrical Group" width="690" height="320" /></span>
+    <span className="mq-item"><img src={`${BASE}/images/leadgen/logo-tintek.png`} alt="Tintek Roofing &amp; Cladding" width="1054" height="180" /></span>
+    <span className="mq-item"><img src={`${BASE}/images/leadgen/logo-evosolar.png`} alt="Evosolar" width="1035" height="130" /></span>
+    <span className="mq-item"><img src={`${BASE}/images/leadgen/logo-ottilie-studios.png`} alt="Ottilie Studios" width="972" height="62" /></span>
+    <span className="mq-item mq-sq"><img src={`${BASE}/images/leadgen/logo-hawker-studio.png`} alt="Hawker Studio" width="374" height="393" /></span>
+    <span className="mq-item"><img src={`${BASE}/images/leadgen/logo-into-blinds.png`} alt="Into Blinds" width="800" height="163" /></span>
+    <span className="mq-item mq-sq"><img src={`${BASE}/images/leadgen/logo-onq.png`} alt="ONQ Digital" width="428" height="205" /></span>
+    <span className="mq-item"><img src={`${BASE}/images/leadgen/logo-prime-group.png`} alt="" width="916" height="183" /></span>
+    <span className="mq-item"><img src={`${BASE}/images/leadgen/logo-cavstruct.png`} alt="" width="863" height="169" /></span>
+    <span className="mq-item"><img src={`${BASE}/images/leadgen/logo-mjb-electrical.png`} alt="" width="690" height="320" /></span>
+    <span className="mq-item"><img src={`${BASE}/images/leadgen/logo-tintek.png`} alt="" width="1054" height="180" /></span>
+    <span className="mq-item"><img src={`${BASE}/images/leadgen/logo-evosolar.png`} alt="" width="1035" height="130" /></span>
+    <span className="mq-item"><img src={`${BASE}/images/leadgen/logo-ottilie-studios.png`} alt="" width="972" height="62" /></span>
+    <span className="mq-item mq-sq"><img src={`${BASE}/images/leadgen/logo-hawker-studio.png`} alt="" width="374" height="393" /></span>
+    <span className="mq-item"><img src={`${BASE}/images/leadgen/logo-into-blinds.png`} alt="" width="800" height="163" /></span>
+    <span className="mq-item mq-sq"><img src={`${BASE}/images/leadgen/logo-onq.png`} alt="" width="428" height="205" /></span>
+  </div>
+  </div>
+</div>
+</div>
+
+{/* ============ WHO WE HELP (same accordion band as the homepage) ============ */}
+<section className="band-wrap rvsec" id="who-we-help">
+  <div className="band">
+    <div className="ctr">
+      <div className="band-top rv">
+        <span className="shead-chip lite"><span className="chip-plus lite">+</span> Who this is for</span>
+        <div className="band-title2">
+          <h2>Who We Help.</h2>
+          <span className="band-count">(3)</span>
+        </div>
+      </div>
+      <div className="srows">
+        <div className="srow open rv">
+          <button className="srow-head" type="button" aria-expanded="true">
+            <span className="srow-num">(001)</span>
+            <span className="srow-title">Established service businesses</span>
+            <span className="srow-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path className="ph" d="M5 12h14" strokeLinecap="round"/><path className="pv" d="M12 5v14" strokeLinecap="round"/></svg></span>
+          </button>
+          <div className="srow-body">
+            <div className="srow-inner">
+              <span className="srow-sp" aria-hidden="true"></span>
+              <div className="srow-content">
+                <p className="srow-desc">You&rsquo;ve got demand but your cost per lead is creeping up. We tighten the account around high-intent searches and cut the waste.</p>
+              </div>
             </div>
-            <div className="lv-mask"></div>
+          </div>
+        </div>
+        <div className="srow open rv">
+          <button className="srow-head" type="button" aria-expanded="true">
+            <span className="srow-num">(002)</span>
+            <span className="srow-title">Local &amp; multi-location</span>
+            <span className="srow-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path className="ph" d="M5 12h14" strokeLinecap="round"/><path className="pv" d="M12 5v14" strokeLinecap="round"/></svg></span>
+          </button>
+          <div className="srow-body">
+            <div className="srow-inner">
+              <span className="srow-sp" aria-hidden="true"></span>
+              <div className="srow-content">
+                <p className="srow-desc">You need the phone ringing in every area you serve, local campaigns, call tracking and landing pages mapped to each service.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="srow open rv">
+          <button className="srow-head" type="button" aria-expanded="true">
+            <span className="srow-num">(003)</span>
+            <span className="srow-title">Rescue &amp; turnaround</span>
+            <span className="srow-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path className="ph" d="M5 12h14" strokeLinecap="round"/><path className="pv" d="M12 5v14" strokeLinecap="round"/></svg></span>
+          </button>
+          <div className="srow-body">
+            <div className="srow-inner">
+              <span className="srow-sp" aria-hidden="true"></span>
+              <div className="srow-content">
+                <p className="srow-desc">Wasted spend, junk leads, a messy account from a previous agency. We audit it, fix the tracking and rebuild around qualified enquiries.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-{/* ============ CLIENT LOGO CAROUSEL ============ */}
-<div className="trust-strip rvsec" aria-label="Brands we work with">
-  <div className="strip-inner">
-    <div className="marquee-track">
-      <span className="mq-item"><img src={`${BASE}/images/personalised-favours.png`} alt="Personalised Favours" width="207" height="34" /></span>
-      <span className="mq-item"><img src={`${BASE}/images/before-you-speak.png`} alt="Before You Speak" width="52" height="52" /></span>
-      <span className="mq-item"><img src={`${BASE}/images/hedonist.png`} alt="Hedonist" width="116" height="30" /></span>
-      <span className="mq-item"><img src={`${BASE}/images/pet-supplies-australia.png`} alt="Pet Supplies Australia" width="96" height="34" /></span>
-      <span className="mq-item"><img src={`${BASE}/images/aaria-london.png`} alt="Aaria London" width="110" height="34" /></span>
-      <span className="mq-item"><img src={`${BASE}/images/nadt.png`} alt="NADT" width="90" height="24" /></span>
-      <span className="mq-item"><img src={`${BASE}/images/pinkish-pods.png`} alt="Pinkish Pods" width="64" height="46" /></span>
-      <span className="mq-item"><img src={`${BASE}/images/work-sharp.png`} alt="Work Sharp Sharpeners" width="400" height="71" /></span>
-      <span className="mq-item"><img src={`${BASE}/images/personalised-favours.png`} alt="" width="207" height="34" /></span>
-      <span className="mq-item"><img src={`${BASE}/images/before-you-speak.png`} alt="" width="52" height="52" /></span>
-      <span className="mq-item"><img src={`${BASE}/images/hedonist.png`} alt="" width="116" height="30" /></span>
-      <span className="mq-item"><img src={`${BASE}/images/pet-supplies-australia.png`} alt="" width="96" height="34" /></span>
-      <span className="mq-item"><img src={`${BASE}/images/aaria-london.png`} alt="" width="110" height="34" /></span>
-      <span className="mq-item"><img src={`${BASE}/images/nadt.png`} alt="" width="90" height="24" /></span>
-      <span className="mq-item"><img src={`${BASE}/images/pinkish-pods.png`} alt="" width="64" height="46" /></span>
-      <span className="mq-item"><img src={`${BASE}/images/work-sharp.png`} alt="" width="400" height="71" /></span>
-    </div>
-  </div>
-</div>
-{/* ============ SERVICES (rankify-style card grid) ============ */}
+{/* ============ WHAT WE DO ============ */}
 <section className="sec sec-cream cardgrid rvsec">
   <div className="ctr">
     <div className="cg-head rv">
@@ -198,7 +268,7 @@ export default function LeadGeneration() {
           <li>Smart bidding tuned to lead quality, not volume</li>
           <li>Full-funnel conversion tracking from day one</li>
         </ul>
-        <span className="cg-link">Book a strategy call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
+        <span className="cg-link">Get Your Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
       </a>
       <a href={`${BASE}/book/`} className="cg-card rv" id="call-tracking">
         <div className="cg-top">
@@ -212,7 +282,7 @@ export default function LeadGeneration() {
           <li>Offline conversion import for closed-won leads</li>
           <li>Clean cost-per-qualified-lead reporting</li>
         </ul>
-        <span className="cg-link">Free tracking audit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
+        <span className="cg-link">Get Your Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
       </a>
       <a href={`${BASE}/landing-pages/`} className="cg-card rv" id="landing-pages">
         <div className="cg-top">
@@ -245,147 +315,298 @@ export default function LeadGeneration() {
     </div>
   </div>
 </section>
-{/* ============ WHO WE WORK WITH ============ */}
-<section className="sec sec-cream sec-w rvsec">
-  <div className="ctr">
-    <div className="cg-head rv">
-      <span className="cg-eyebrow">Who this is for</span>
-      <h2>Who we work with, <span className="dim">and where we move the needle.</span></h2>
-      <p>Whether you&rsquo;re scaling, going local or cleaning up a mess left by a previous agency, if you sell a service, we can fill your pipeline.</p>
-    </div>
-    <div className="numgrid">
-      <div className="numcard rv"><div className="numcard-top"><div className="numcard-dots"><i className="on"></i><i></i><i></i></div><span className="numcard-idx">01</span></div><h3>Established service businesses</h3><p>You&rsquo;ve got demand but your cost per lead is creeping up. We tighten the account around high-intent searches and cut the waste.</p></div>
-      <div className="numcard rv"><div className="numcard-top"><div className="numcard-dots"><i className="on"></i><i className="on"></i><i></i></div><span className="numcard-idx">02</span></div><h3>Local &amp; multi-location</h3><p>You need the phone ringing in every area you serve, local campaigns, call tracking and landing pages mapped to each service.</p></div>
-      <div className="numcard rv"><div className="numcard-top"><div className="numcard-dots"><i className="on"></i><i className="on"></i><i className="on"></i></div><span className="numcard-idx">03</span></div><h3>Rescue &amp; turnaround</h3><p>Wasted spend, junk leads, a messy account from a previous agency. We audit it, fix the tracking and rebuild around qualified enquiries.</p></div>
-    </div>
-  </div>
-</section>
 
-{/* ============ WHY ADALYTICAL ============ */}
-{/* ============ REVIEW (demo/placeholder testimonial) ============ */}
-<section className="qband-wrap rvsec">
-  <figure className="qband rv">
-    <div className="qband-stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg></div>
-    <blockquote>&ldquo;Adalytical had our Google Ads restructured and profitable within weeks. We had a flood of qualified enquiries in the first fortnight, one job alone covered the ad spend with plenty left over.&rdquo;</blockquote>
-    <figcaption className="qband-by"><img src={`${BASE}/images/nick-prime-group.webp`} alt="Nick" width="56" height="56" /><div><strong>Nick</strong><span>Owner, Prime Group</span></div></figcaption>
-  </figure>
-</section>
-
-<section className="sec sec-cream rvsec">
+{/* ============ CASE STUDIES, PROJECT CARDS ============ */}
+<section className="sec sec-cream sec-w framed rvsec" id="results">
   <div className="ctr">
-    <div className="cg-head rv">
-      <span className="cg-eyebrow">Why Adalytical</span>
-      <h2>Agency-level results, <span className="dim">without the agency overhead.</span></h2>
+    <div className="cs-head">
+      <span className="shead-chip rv"><span className="chip-plus">+</span> Case studies</span>
+      <h2 className="shead-t rv">Real clients, <span className="dim">real performance.</span></h2>
+      <p className="shead-sub rv">Recent lead-generation results for service businesses. Historical results; outcomes vary by market, budget and offer.</p>
     </div>
-    <div className="numgrid">
-      <div className="numcard rv"><div className="numcard-top"><div className="numcard-dots"><i className="on"></i><i></i><i></i></div><span className="numcard-idx">01</span></div><h3>Ex-Google expertise</h3><p>Insider knowledge from inside Google&rsquo;s own Ads team, the strategies and levers most agencies never learn.</p></div>
-      <div className="numcard rv"><div className="numcard-top"><div className="numcard-dots"><i className="on"></i><i className="on"></i><i></i></div><span className="numcard-idx">02</span></div><h3>Optimised to qualified leads</h3><p>We tune bidding to lead quality and real enquiries, not clicks, impressions or junk form-fills that never close.</p></div>
-      <div className="numcard rv"><div className="numcard-top"><div className="numcard-dots"><i className="on"></i><i className="on"></i><i className="on"></i></div><span className="numcard-idx">03</span></div><h3>No lock-in, no bloat</h3><p>Month-to-month, cancel anytime, and you deal direct with the specialist running your account, never a junior.</p></div>
-    </div>
-  </div>
-</section>
 
-{/* ============ PHONE SHOWCASE, pages that book the job ============ */}
-<section className="sec sec-cream sec-w rvsec">
-  <div className="ctr">
-    <div className="swall-split">
-      <div className="cg-head rv">
-        <span className="cg-eyebrow">Where clicks become enquiries</span>
-        <h2>The ad gets the click. <span className="dim">The page books the job.</span></h2>
-        <p>A slow, generic page kills even the best campaign. We build the fast, conversion-led landing pages and sites that turn clicks into calls and booked jobs.</p>
-      </div>
-      <div className="swall-wrap rv">
-        <div className="swall">
-          <div className="swall-col c1">
-            <img src={`${BASE}/images/showcase-web/01.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/04.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/07.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/10.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/13.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/01.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/04.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/07.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/10.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/13.webp`} alt="" width="420" height="747" loading="eager" />
-          </div>
-          <div className="swall-col c2">
-            <img src={`${BASE}/images/showcase-web/02.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/05.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/08.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/11.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/14.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/02.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/05.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/08.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/11.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/14.webp`} alt="" width="420" height="747" loading="eager" />
-          </div>
-          <div className="swall-col c3">
-            <img src={`${BASE}/images/showcase-web/03.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/06.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/09.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/12.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/15.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/03.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/06.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/09.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/12.webp`} alt="" width="420" height="747" loading="eager" /><img src={`${BASE}/images/showcase-web/15.webp`} alt="" width="420" height="747" loading="eager" />
+    <div className="proj-grid">
+      <div className="proj rv">
+        <div className="proj-bar">
+          <span className="proj-name">Into Blinds</span>
+          <span className="proj-tag">/Blinds</span>
+          <span className="proj-dots"><i></i><i></i><i></i></span>
+        </div>
+        <div className="proj-media">
+          <div className="proj-bg bg1"><img src={`${BASE}/images/leadgen/case-into-blinds.webp`} alt="" /></div>
+          <div className="proj-logo">
+            <strong>38% lower CPL</strong>
+            <span>$80.95 → $50.20 cost per lead, monthly leads 435 → 1,149 (Aug 2025 → Aug 2026)</span>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
 
-{/* ============ REVIEW (demo/placeholder testimonial) ============ */}
-<section className="qband-wrap rvsec">
-  <figure className="qband rv">
-    <div className="qband-stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg></div>
-    <blockquote>&ldquo;The Adalytical team was incredibly fast and got our campaigns converting. We&rsquo;re really impressed and would highly recommend them to anyone running Google Ads.&rdquo;</blockquote>
-    <figcaption className="qband-by"><img src={`${BASE}/images/gabriella-hawker.webp`} alt="Gabriella Smith" width="56" height="56" /><div><strong>Gabriella Smith</strong><span>Hawker Studios</span></div></figcaption>
-  </figure>
-</section>
-
-<section className="sec sec-cream sec-stats rvsec">
-  <div className="ctr"><div className="stats">
-    <div className="stat rv"><span className="stat-val"><span className="cnt" data-target="1000" data-group="1" data-suffix="+">1,000+</span></span><span className="stat-label">Accounts audited<br />&amp; optimised</span></div>
-    <div className="stat rv"><span className="stat-val">&minus;32%</span><span className="stat-label">Cost per qualified<br />lead</span></div>
-    <div className="stat rv"><span className="stat-val">100%</span><span className="stat-label">Lead attribution<br />&amp; tracking</span></div>
-    <div className="stat rv"><span className="stat-val"><span className="cnt" data-target="30" data-suffix="+">30+</span></span><span className="stat-label">Agencies trained<br />by our team</span></div>
-  </div></div>
-</section>
-
-{/* INDUSTRIES SERVED */}
-<section className="sec sec-cream sec-w rvsec">
-  <div className="ctr">
-    <div className="shead">
-      <span className="shead-chip rv"><span className="chip-plus">+</span> Who we help</span>
-      <div className="shead-main"><span className="shead-brand rv">Adalytical®</span><h2 className="shead-t rv">Built for the businesses <span className="dim">that live on leads.</span></h2></div>
-    </div>
-    <div className="cf-verts rv">
-      <span className="cf-vert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14.5 5.5a3.5 3.5 0 0 0-4.9 4.9L4 16v4h4l5.6-5.6a3.5 3.5 0 0 0 4.9-4.9L16 12l-2-2z" strokeLinejoin="round"/></svg><span>Trades &amp; Construction</span></span>
-      <span className="cf-vert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M8 4v5a4 4 0 0 0 8 0V4M12 13v7M8 20h8" strokeLinecap="round" strokeLinejoin="round"/></svg><span>Plumbing</span></span>
-      <span className="cf-vert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M13 2 4 14h6l-1 8 9-12h-6z" strokeLinejoin="round"/></svg><span>Electricians</span></span>
-      <span className="cf-vert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12a9 9 0 0 1 18 0M6 12v6M12 12v6M18 12v6" strokeLinecap="round"/></svg><span>HVAC &amp; Air-con</span></span>
-      <span className="cf-vert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 20l6-6M14 4l6 6-9 9-6-6z" strokeLinejoin="round"/><path d="M14 4l2-2 4 4-2 2" strokeLinejoin="round"/></svg><span>Cleaning Services</span></span>
-      <span className="cf-vert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3v18M7 8c0-3 10-3 10 0M7 16c0 3 10 3 10 0" strokeLinecap="round"/></svg><span>Landscaping</span></span>
-      <span className="cf-vert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3v18h18M7 14l4-4 3 3 5-6" strokeLinecap="round" strokeLinejoin="round"/></svg><span>Accountants</span></span>
-      <span className="cf-vert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3v18M5 7h14M6 7l-2 6a3 3 0 0 0 6 0zM18 7l-2 6a3 3 0 0 0 6 0z" strokeLinejoin="round"/></svg><span>Lawyers &amp; Legal</span></span>
-      <span className="cf-vert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 3v6c0 3-2 4-2 7a5 5 0 0 0 10 0c0-3-2-4-2-7V3z" strokeLinejoin="round"/><path d="M9 3h6" strokeLinecap="round"/></svg><span>Dentists</span></span>
-      <span className="cf-vert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 5v14M5 12h14" strokeLinecap="round"/><circle cx="12" cy="12" r="9"/></svg><span>Medical &amp; Allied Health</span></span>
-      <span className="cf-vert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 20V9l8-5 8 5v11" strokeLinejoin="round"/><path d="M9 20v-6h6v6" strokeLinejoin="round"/></svg><span>Real Estate</span></span>
-      <span className="cf-vert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 21h18M6 21V8l6-4 6 4v13" strokeLinejoin="round"/><path d="M10 21v-5h4v5" strokeLinejoin="round"/></svg><span>Finance &amp; Insurance</span></span>
-    </div>
-  </div>
-</section>
-
-{/* CASE PLACEHOLDER */}
-<section className="sec sec-cream rvsec">
-  <div className="ctr">
-    <div className="shead">
-      <span className="shead-chip rv"><span className="chip-plus">+</span> Proof</span>
-      <div className="shead-main"><span className="shead-brand rv">Adalytical®</span><h2 className="shead-t rv">Lower cost per lead, <span className="dim">higher quality.</span></h2></div>
-    </div>
-    <div className="cf-case rv">
-      <div className="cf-case-img is-fig"><img src={`${BASE}/images/gfx-results.png`} alt="Lead generation results dashboard" width="1536" height="1024" /></div>
-      <div className="cf-case-body">
-        <span className="cf-case-tag">Lead generation · Home services</span>
-        <h3>More booked jobs, at a lower cost per lead.</h3>
-        <p>By cutting wasted spend, sharpening high-intent Search and wiring up proper call &amp; form tracking, we turned a leaky account into a predictable pipeline of qualified enquiries.</p>
-        <div className="cf-case-stats">
-          <div className="cf-case-stat"><b>−32%</b><span>cost per lead</span></div>
-          <div className="cf-case-stat"><b>100%</b><span>lead attribution</span></div>
-          <div className="cf-case-stat"><b>+84%</b><span>form conversion</span></div>
+      <div className="proj rv">
+        <div className="proj-bar">
+          <span className="proj-name">ONQ</span>
+          <span className="proj-tag">/Digital Signage</span>
+          <span className="proj-dots"><i></i><i></i><i></i></span>
         </div>
-        <div style={{'marginTop':'22px'}}><a href={`${BASE}/case-studies/`} className="svc-link">See more case studies <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></div>
+        <div className="proj-media">
+          <div className="proj-bg bg2"><img src={`${BASE}/images/leadgen/case-onq.webp`} alt="" /></div>
+          <div className="proj-logo">
+            <strong>64% lower CPL</strong>
+            <span>$189.64 → $69.03 cost per lead, March → August 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="proj rv">
+        <div className="proj-bar">
+          <span className="proj-name">Prime Group</span>
+          <span className="proj-tag">/Construction</span>
+          <span className="proj-dots"><i></i><i></i><i></i></span>
+        </div>
+        <div className="proj-media">
+          <div className="proj-bg bg3"><img src={`${BASE}/images/leadgen/case-prime-group.webp`} alt="" /></div>
+          <div className="proj-logo">
+            <strong>0 → 31 leads</strong>
+            <span>per month within 60 days, cost per lead $184.77 → $139.49</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="proj rv">
+        <div className="proj-bar">
+          <span className="proj-name">Peninsula Heat Pumps</span>
+          <span className="proj-tag">/Heat Pumps</span>
+          <span className="proj-dots"><i></i><i></i><i></i></span>
+        </div>
+        <div className="proj-media">
+          <div className="proj-bg bg1"><img src={`${BASE}/images/leadgen/case-peninsula.webp`} alt="" /></div>
+          <div className="proj-logo">
+            <strong>60% lower CPL</strong>
+            <span>website results: $87.12 → $34.59 cost per lead, conversion rate 5.6% → 14.6%</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="proj rv">
+        <div className="proj-bar">
+          <span className="proj-name">Geelong Heat Pumps</span>
+          <span className="proj-tag">/Heat Pumps</span>
+          <span className="proj-dots"><i></i><i></i><i></i></span>
+        </div>
+        <div className="proj-media">
+          <div className="proj-bg bg2"><img src={`${BASE}/images/leadgen/case-geelong.webp`} alt="" /></div>
+          <div className="proj-logo">
+            <strong>48% lower CPL</strong>
+            <span>website results: $57.19 → $29.99 cost per lead, conversion rate 4.6% → 12.7%</span>
+          </div>
+        </div>
+      </div>
+
+      <a href={`${BASE}/book/`} className="proj proj-cta rv">
+        <div className="proj-bar">
+          <span className="proj-name">Your Brand</span>
+          <span className="proj-tag">/Next</span>
+          <span className="proj-dots"><i></i><i></i><i></i></span>
+        </div>
+        <div className="proj-media">
+          <div className="proj-bg bg4"></div>
+          <div className="proj-logo">
+            <strong>Your brand next.</strong>
+            <span>Get Your Growth Plan</span>
+            <span className="proj-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+{/* ============ TESTIMONIALS ============ */}
+<section className="sec sec-cream framed rvsec" id="testimonials">
+  <div className="ctr">
+    <div className="shead">
+      <span className="shead-chip rv"><span className="chip-plus">+</span> Client reviews</span>
+      <div className="shead-main">
+        <h2 className="shead-t rv">Words from the people <span className="dim">behind the work.</span></h2>
+        <p className="shead-sub rv">Reviews from Adalytical and Rankify clients, in their own words.</p>
       </div>
     </div>
+    <div className="rvw-wall rv">
+      <div className="rvw-col">
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Rankify</span>
+        <blockquote>Rankify had my website live in 7 days, which I didn&rsquo;t think was possible. I had about 10 enquiries in the first fortnight. One of those turned into a job that covered the website with plenty of money left over.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/leadgen/rv-nick.webp`} alt="" width="38" height="38" /></span><div><strong>Nick</strong><span>Owner, Prime Group</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>Adalytical helped us scale our Google spend by over 300%, all while keeping profitability front and centre.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/sivan.webp`} alt="" width="38" height="38" /></span><div><strong>Sivan</strong><span>Founder, Bushdoof Lighting</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Rankify</span>
+        <blockquote>Rankify did an awesome job on my website. The design looks professional, and the process was super smooth from start to finish. Great communication and attention to detail. Highly recommend their services.</blockquote>
+        <figcaption><span className="rvw-av">BC</span><div><strong>Ben Cavallo</strong><span>Google Review</span></div></figcaption>
+      </figure>
+      </div>
+      <div className="rvw-col">
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>Adalytical made Google Ads easier to understand. We appreciated having a team focused on enquiries for our heat-pump business, with clear explanations of what they were working on.</blockquote>
+        <figcaption><span className="rvw-av">C</span><div><strong>Cam</strong><span>Geelong Heat Pumps</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Rankify</span>
+        <blockquote>Absolutely stoked with our website overhaul by Rankify. We just got it live and Tom was there for every question and every little fix that I desired, without hesitation. Great job, Highly recommend and will definitely use again!</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/leadgen/rv-james-fabre.webp`} alt="" width="38" height="38" /></span><div><strong>James Fabre</strong><span>Myoko Embodied</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>We saw a better ROAS straight away and helped us expand into other markets! Always have the answers and strats for Google Ads.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/ariana.webp`} alt="" width="38" height="38" /></span><div><strong>Ariana</strong><span>Founder, Aaria London</span></div></figcaption>
+      </figure>
+      </div>
+      <div className="rvw-col">
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Rankify</span>
+        <blockquote>The Rankify team worked so fast and produced such a high quality website for us, very impressed and highly recommended to anyone needing web development or marketing!</blockquote>
+        <figcaption><span className="rvw-av">DN</span><div><strong>Dominique Nurtsch</strong><span>Google Review</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>The Adalytical team took the time to understand our business and what a valuable enquiry looks like for us. Their practical approach and clear communication made working together straightforward.</blockquote>
+        <figcaption><span className="rvw-av">J</span><div><strong>John</strong><span>Into Blinds</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Rankify</span>
+        <blockquote>Really happy with the website Rankify built for my electrical business. They made the whole process easy, quick, and professional. The site looks great and already helps bring in new leads. Highly recommend!</blockquote>
+        <figcaption><span className="rvw-av">ME</span><div><strong>MJB Electrical Contractors</strong><span>Electrical Contractor</span></div></figcaption>
+      </figure>
+      </div>
+    </div>
+    <details className="rvw-more">
+      <summary><span className="rvw-more-open">Show all 24 reviews</span><span className="rvw-more-close">Show less</span></summary>
+    <div className="rvw-wall">
+      <div className="rvw-col">
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>We wanted our advertising to connect with the right businesses, not just generate clicks. Adalytical understood that distinction and kept the conversation focused on what matters to us.</blockquote>
+        <figcaption><span className="rvw-av">M</span><div><strong>Miles</strong><span>ONQ</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Rankify</span>
+        <blockquote>Had a quick call and Tom helped me and set all up for my homepage! It has increased my views and engagement on my page as well! Thank you so much again!</blockquote>
+        <figcaption><span className="rvw-av">VS</span><div><strong>Veith Smith</strong><span>Google Review</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>Quickly grasped our unique challenges and FMCG space to deliver an effective Google and YouTube Ads strategy.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/abdul.webp`} alt="" width="38" height="38" /></span><div><strong>Abdul</strong><span>Founder, Pinkish Pods</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Rankify</span>
+        <blockquote>Was great dealing with Tom for our roofing companies website development and SEO. Tom was upfront with costs, and provided updates along each step, wrapped with the outcome. Highly recommend!</blockquote>
+        <figcaption><span className="rvw-av">JG</span><div><strong>Jacob Gregory</strong><span>Roofing</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>Helped us compete against the giants in the extremely competitive and crowded drinks industry. Highly recommend!</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/rachel.webp`} alt="" width="38" height="38" /></span><div><strong>Rachel</strong><span>Founder, Blume</span></div></figcaption>
+      </figure>
+      </div>
+      <div className="rvw-col">
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Rankify</span>
+        <blockquote>I recently had my website built by Rankify and I couldn&rsquo;t be happier with the outcome. From start to finish, the process was seamless, professional, and efficient. Tom took the time to really understand my business and brand, and turned that vision into a clean and user-friendly site. Highly recommend Rankify for anyone needing a standout website that reflects their business perfectly.</blockquote>
+        <figcaption><span className="rvw-av">MB</span><div><strong>Maggie Belford</strong><span>Google Review</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>Working with Adalytical felt collaborative from the start. They explained the advertising in plain English and helped us understand how it fits into our wider plans for the business.</blockquote>
+        <figcaption><span className="rvw-av">S</span><div><strong>Susie</strong><span>Peninsula Heat Pumps</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Rankify</span>
+        <blockquote>Great experience working with Thomas. He instantly understood what I was after, even with some custom Shopify tweaks, and executed everything with precision and speed. Professional, responsive, and super skilled. I couldn&rsquo;t be happier with the result. I&rsquo;ll keep working with him in future projects, highly recommend.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/leadgen/rv-marlen.webp`} alt="" width="38" height="38" /></span><div><strong>Marlen Wolff</strong><span>Wolff Studios</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>Adalytical helped us with our biggest Q4 ever! Revenue was +33% and ROAS +25% YOY. Already seeing massive revenue and ROAS gains for Q1 and Q2.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/jay.webp`} alt="" width="38" height="38" /></span><div><strong>Jay</strong><span>Head of Marketing, The Watch Factory</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>Jackson&rsquo;s expertise in Google Ads is unmatched. He and the team helped us overcome multiple very niche Google Ads challenges.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/rob.webp`} alt="" width="38" height="38" /></span><div><strong>Rob</strong><span>Marketing Director, Home Make It</span></div></figcaption>
+      </figure>
+      </div>
+      <div className="rvw-col">
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>The team&rsquo;s ex-Google brainpower unlocked heaps of extra insights and fast-tracked support, but more importantly, helped us hit our biggest Q4.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/matthew.webp`} alt="" width="38" height="38" /></span><div><strong>Matthew</strong><span>CEO, Personalised Favours</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Rankify</span>
+        <blockquote>Thomas was so helpful and patient. Helped with any issues I had and everything looks great. Very happy and highly recommend.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/leadgen/rv-natalina.webp`} alt="" width="38" height="38" /></span><div><strong>Natalina Hoffman</strong><span>The Sculpted Look</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>Adalytical helped us with segmenting our audience which changed how we ran our campaigns and brought in a wave of new customers.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/rio.webp`} alt="" width="38" height="38" /></span><div><strong>Rio</strong><span>Founder, G80 Cosmetics</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Rankify</span>
+        <blockquote>The Rankify team was incredibly fast and delivered a top-quality website for us. We&rsquo;re really impressed and would highly recommend them to anyone looking for web development or marketing.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/leadgen/rv-gabriella.webp`} alt="" width="38" height="38" /></span><div><strong>Gabriella Smith</strong><span>Hawker Studios</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <span className="rvw-tag">Adalytical</span>
+        <blockquote>Can absolutely vouch for these guys! We&rsquo;ve worked with Adalytical on our Google Ads and the level of knowledge, persistence and support has been incredible. They&rsquo;ve gone above and beyond for our account, especially navigating some very frustrating Google policy issues. Definitely worth having a chat with them if you&rsquo;re running ecommerce ads. 🙌</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/kylie.webp`} alt="" width="38" height="38" /></span><div><strong>Kylie Alexander</strong><span>CEO, Health Heiress</span></div></figcaption>
+      </figure>
+      </div>
+    </div>
+    </details>
   </div>
 </section>
 
+{/* ============ FINAL CTA ============ */}
 <section className="sec sec-cream cta rvsec" id="book">
   <div className="ctr"><div className="cta-card rv">
     <span className="sec-tag">Get started</span>
     <h2>Turn more of your budget into qualified leads.</h2>
-    <p>Book a free audit and we will show you exactly where your lead-gen spend is being wasted and how to fix it.</p>
-    <div className="cta-btns"><a href={`${BASE}/book/`} className="btn-p">Book a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a><a href={`${BASE}/book/`} className="btn-s">Get a Free Audit</a></div>
+    <p>Get your Growth Plan and we&rsquo;ll show you exactly where your lead-gen spend is being wasted and how to fix it.</p>
+    <div className="cta-btns"><a href={`${BASE}/book/`} className="btn-p">Get Your Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></div>
     <div className="cta-micro" style={{'justifyContent':'center'}}><span className="cm-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Free &amp; no obligation</span><span className="cm-sep"></span><span className="cm-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>No lock-in contracts</span><span className="cm-sep"></span><span className="cm-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Ex-Google Ads team</span></div>
   </div></div>
 </section>
+
 {/* ============ FOOTER ============ */}
 
 <footer className="footer" id="contact">
@@ -418,7 +639,8 @@ export default function LeadGeneration() {
         <ul className="footer-links">
           <li><a href={`${BASE}/about/`}>About</a></li>
           <li><a href={`${BASE}/#faq`}>FAQ</a></li>
-          <li><a href={`${BASE}/book/`}>Book a Strategy Call</a></li>
+          <li><a href={`${BASE}/partners/`}>Partners</a></li>
+          <li><a href={`${BASE}/book/`}>Get Your Growth Plan</a></li>
         </ul>
       </div>
     </div>
@@ -434,8 +656,7 @@ export default function LeadGeneration() {
     <span className="fcta-dot" aria-hidden="true"></span>
     <p className="fcta-copy">Ready when you are<span>, no obligation either way</span></p>
     <div className="fcta-btns">
-      <a href={`${BASE}/book/`} className="fcta-primary">Book a call</a>
-      <a href={`${BASE}/book/`} className="fcta-secondary">Free Audit</a>
+      <a href={`${BASE}/book/`} className="fcta-primary">Get Your Growth Plan</a>
     </div>
   </div>
 </div>

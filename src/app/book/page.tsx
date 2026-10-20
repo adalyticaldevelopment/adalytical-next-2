@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 };
 
 import Script from "next/script";
+import { PageHero } from "@/components/PageHero";
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -56,7 +57,7 @@ export default function Contact() {
                 <span className="mf-tag">Free audit</span>
                 <h5>See exactly where your Google Ads account is leaking budget.</h5>
               </div>
-              <a href={`${BASE}/book/`} className="mf-link">Book a strategy call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
+              <a href={`${BASE}/book/`} className="mf-link">Get Your Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
             </div>
           </div>
         </div>
@@ -65,10 +66,9 @@ export default function Contact() {
       <li><a href={`${BASE}/blog/`}>Blog</a></li>
       <li><a href={`${BASE}/tools/`}>Tools</a></li>
       <li><a href={`${BASE}/about/`}>About</a></li>
-      <li><a href={`${BASE}/contact/`}>Contact</a></li>
     </ul>
     <div className="nav-r">
-      <a href={`${BASE}/book/`} className="nav-cta">Book A Strategy Call</a>
+      <a href={`${BASE}/book/`} className="nav-cta">Get Your Growth Plan</a>
       <button className="mob-tog" aria-label="Open menu"><span className="mob-bars"><span></span><span></span><span></span></span><span className="mob-lbl">Menu</span></button>
     </div>
   </div>
@@ -91,52 +91,156 @@ export default function Contact() {
     <li><a href={`${BASE}/tools/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.8 2.8-2-2z" strokeLinejoin="round"/></svg></span>Tools<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
     <li><a href={`${BASE}/case-studies/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3v18h18" strokeLinecap="round"/><path d="M7 14l4-4 3 3 5-6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>Case Studies<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
     <li><a href={`${BASE}/about/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5" strokeLinecap="round"/><path d="M16 6a3 3 0 0 1 0 6M21 20c0-2.4-1.4-4-3.4-4.7" strokeLinecap="round"/></svg></span>About<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
-    <li><a href={`${BASE}/contact/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>Contact<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
   </ul>
   <div className="mdrawer-cta">
-    <a href={`${BASE}/book/`} className="mc-quote">Book A Strategy Call</a>
-    <a href={`${BASE}/book/`} className="mc-audit">Get a Free Audit</a>
+    <a href={`${BASE}/book/`} className="mc-quote">Get Your Growth Plan</a>
   </div>
 </div>
 
-<div className="csp">
-  <div className="csp-hero rvsec">
-    <span className="csp-eyebrow rv"><span className="chip-plus">+</span> Book a call</span>
-    <h1 className="rv">Book your <span className="accent">strategy call.</span></h1>
-    <p className="rv">Pick a time that suits you below. It’s a straight conversation with the person who’d actually run your account, no pitch, no pressure.</p>
-    <div className="revw rv">
-      <span className="revw-avs">
-        <span className="revw-av"><img src={`${BASE}/images/avatar-1.jpg`} alt="" width="36" height="36" /></span>
-        <span className="revw-av"><img src={`${BASE}/images/avatar-2.jpg`} alt="" width="36" height="36" /></span>
-        <span className="revw-av"><img src={`${BASE}/images/avatar-3.jpg`} alt="" width="36" height="36" /></span>
-        <span className="revw-av"><img src={`${BASE}/images/avatar-4.jpg`} alt="" width="36" height="36" /></span>
-      </span>
-      <span className="revw-meta">
-        <span className="revw-stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg></span>
-        <span className="revw-text"><strong>Trusted by 100+</strong> brands worldwide</span>
-      </span>
-    </div>
-    <div className="csp-cta rv"><a href="#calendar" className="btn-p">Pick a time <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M12 5v14M5 13l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></div>
-  </div>
-</div>
+{/* Conversion-focused booking page. All copy/proof comes from adalytical.io + freeaudit.adalytical.io. */}
+<PageHero
+  eyebrow="Free growth plan"
+  title={<>Get your Google Ads <span className="accent">Growth Plan.</span></>}
+  sub={<>Two former Google Ads strategists review your account, then walk you through exactly what to fix, cut and scale. Pick a time below.</>}
+  actions={<ul className="bk-ticks">
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>100% free</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Human-reviewed</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>No obligation</li>
+  </ul>}
+/>
 
-{/* ============ BOOKING CALENDAR ============ */}
-<section className="sec framed rvsec" id="calendar">
+{/* ============ BOOKING CALENDAR (above the fold) ============ */}
+<section className="bk-cal-sec" id="calendar">
   <div className="ctr">
-    <div className="book-wrap rv">
-      <div className="book-head">
-        <span className="shead-chip"><span className="chip-plus">+</span> Choose a time</span>
-        <h2 className="shead-t">Grab a slot that <span className="dim">works for you.</span></h2>
-        <p className="shead-sub">30 minutes, straight to the point. We’ll look at your account, your goals and where the profit is hiding.</p>
+    <div className="bk-cal-grid">
+      <div className="book-cal book-cal-live" role="region" aria-label="Booking calendar">
+        {/* iClosed inline widget: the Google Ads Growth Plan booking flow */}
+        <div className="iclosed-widget" data-url="https://app.iclosed.io/e/adalytical/google-ads-growth-plan" title="Google Ads Growth Plan" style={{ width: "100%", height: "620px" }}></div>
       </div>
-      <div className="book-cal" role="region" aria-label="Booking calendar">
-        {/* TODO: replace this placeholder with the live Calendly / Cal.com embed once the link is provided */}
-        <div className="book-cal-ph">
-          <span className="book-cal-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 2.5v4M16 2.5v4" strokeLinecap="round"/><path d="M9.5 14.5l1.8 1.8 3.4-3.6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
-          <strong>Booking calendar loads here</strong>
-          <p>Prefer email? Reach us at <a href="mailto:hello@adalytical.io">hello@adalytical.io</a> and we’ll send times back.</p>
+      <aside className="bk-next">
+        <span className="bk-next-h">What happens next</span>
+        <ol className="bk-steps">
+          <li><b>Book your call</b><span>Enter your details, then choose a time that suits you.</span></li>
+          <li><b>Give us view-only access</b><span>We review your Google Ads account, tracking and Merchant Center before the call.</span></li>
+          <li><b>Get your plan</b><span>We walk you through exactly what we&rsquo;d fix, cut and scale.</span></li>
+        </ol>
+        <div className="bk-who">
+          <span className="bk-who-avs"><img src={`${BASE}/images/jackson-sharp.webp`} alt="Jackson Sharp" /><img src={`${BASE}/images/jackson-wallace.webp`} alt="Jackson Wallace" /></span>
+          <p>Your account is reviewed by <strong>Jackson Sharp &amp; Jackson Wallace</strong>, former Google Ads strategists.</p>
         </div>
+      </aside>
+    </div>
+    <Script src="https://app.iclosed.io/assets/widget.js" strategy="afterInteractive" />
+  </div>
+</section>
+
+{/* ============ PROOF ============ */}
+<section className="sec sec-cream rvsec bk-sec">
+  <div className="ctr">
+    <div className="bk-stats rv">
+      <div><b>$100M+</b><span>Ad spend managed on Google Ads</span></div>
+      <div><b>1,000+</b><span>Google Ads accounts audited</span></div>
+      <div><b>30+</b><span>Top agencies trained by our team</span></div>
+      <div><b>4+</b><span>Years on Google&rsquo;s Ads team</span></div>
+    </div>
+    <div className="bk-quotes rv">
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <blockquote>Adalytical helped us with our <strong>biggest Q4 ever</strong>! Revenue was +33% and ROAS +25% YOY. Already seeing <strong>massive revenue and ROAS gains</strong> for Q1 and Q2.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/jay.webp`} alt="" width="38" height="38" /></span><div><strong>Jay</strong><span>Head of Marketing, The Watch Factory</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <blockquote>Adalytical <strong>helped us scale our Google spend</strong> by over 300%, all while keeping profitability front and centre.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/sivan.webp`} alt="" width="38" height="38" /></span><div><strong>Sivan</strong><span>Founder, Bushdoof Lighting</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <blockquote>The team&rsquo;s <strong>ex-Google brainpower</strong> unlocked heaps of extra insights and fast-tracked support, but more importantly, <strong>helped us hit our biggest Q4</strong>.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/matthew.webp`} alt="" width="38" height="38" /></span><div><strong>Matthew</strong><span>CEO, Personalised Favours</span></div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+{/* ============ WHAT WE REVIEW ============ */}
+<section className="sec sec-cream rvsec bk-sec">
+  <div className="ctr">
+    <div className="bk-head rv">
+      <span className="sec-tag">What we review</span>
+      <h2>A full Google Ads review, <span className="dim">not just a quick look.</span></h2>
+      <p>We analyse your account, Merchant Center and tracking setup to uncover issues and opportunities that can improve performance and profitability.</p>
+    </div>
+    <div className="bk-review rv">
+      <div><b>Wasted ad spend</b><span>Search terms, campaigns and traffic you&rsquo;re paying for unnecessarily.</span></div>
+      <div><b>Campaign structure</b><span>Whether your Search, Shopping and Performance Max campaigns are structured properly.</span></div>
+      <div><b>Bidding &amp; targets</b><span>Whether Google&rsquo;s automation is actually working toward the right targets.</span></div>
+      <div><b>Conversion tracking</b><span>Duplicate conversions, missing revenue, bad attribution and misleading data.</span></div>
+      <div><b>Merchant Center</b><span>Feed quality, titles, product segmentation and missed Shopping opportunities.</span></div>
+      <div><b>Scaling opportunities</b><span>Where we&rsquo;d confidently put the next $1 of your budget.</span></div>
+    </div>
+  </div>
+</section>
+
+{/* ============ FIT ============ */}
+<section className="sec sec-cream rvsec bk-sec">
+  <div className="ctr">
+    <div className="bk-head rv">
+      <span className="sec-tag">Is it a fit?</span>
+      <h2>Built for businesses <span className="dim">already investing in Google Ads.</span></h2>
+    </div>
+    <div className="bk-fit rv">
+      <div className="bk-fit-yes">
+        <b>Good fit</b>
+        <ul>
+          <li>Already spending meaningful budget on Google Ads</li>
+          <li>Established product or service</li>
+          <li>Performance has plateaued</li>
+          <li>Want to scale without destroying ROAS</li>
+          <li>Unsure whether your agency or internal team is leaving money on the table</li>
+        </ul>
       </div>
+      <div className="bk-fit-no">
+        <b>Probably not a fit</b>
+        <ul>
+          <li>You haven&rsquo;t started advertising yet</li>
+          <li>You&rsquo;re looking for free Google Ads setup</li>
+          <li>You have no budget to invest in growth</li>
+          <li>You&rsquo;re only looking for generic advice</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* ============ FAQ ============ */}
+<section className="sec sec-cream rvsec bk-sec">
+  <div className="ctr">
+    <div className="bk-head rv">
+      <span className="sec-tag">FAQs</span>
+      <h2>A few useful details.</h2>
+    </div>
+    <div className="bk-faq rv">
+      <details><summary>Is it actually free?</summary><p>Yes. The application and review call are free, with no obligation.</p></details>
+      <details><summary>Do you need access to my Google Ads account?</summary><p>To complete a meaningful review, we need view-only access to your Google Ads account and, where relevant, Merchant Center.</p></details>
+      <details><summary>Can you make changes to my account?</summary><p>No. Access is view-only. We cannot make changes unless this is separately agreed with you.</p></details>
+      <details><summary>Will this just be a sales call?</summary><p>No. We use the call to walk through the issues and opportunities found in your account, then you can decide what happens next.</p></details>
+      <details><summary>How long does the review take?</summary><p>We review the account before your scheduled call and use that time to focus on the most material findings.</p></details>
+      <details><summary>Do you also review Merchant Center?</summary><p>Yes. Where Merchant Center is part of your Google Ads activity, we review feed quality, product segmentation and Shopping opportunities.</p></details>
+      <details><summary>What types of businesses do you work with?</summary><p>Established ecommerce and lead generation businesses that are already investing meaningfully in Google Ads.</p></details>
+    </div>
+  </div>
+</section>
+
+{/* ============ FINAL NUDGE: back to the calendar ============ */}
+<section className="sec sec-cream rvsec bk-sec">
+  <div className="ctr">
+    <div className="bk-final rv">
+      <div>
+        <h2>Find out what&rsquo;s really happening inside your Google Ads account.</h2>
+        <p>Get a second opinion from two former Google Ads strategists.</p>
+      </div>
+      <a href="#calendar" className="btn-p">Get Your Growth Plan</a>
     </div>
   </div>
 </section>
@@ -174,7 +278,8 @@ export default function Contact() {
         <ul className="footer-links">
           <li><a href={`${BASE}/about/`}>About</a></li>
           <li><a href={`${BASE}/#faq`}>FAQ</a></li>
-          <li><a href={`${BASE}/book/`}>Book a Strategy Call</a></li>
+          <li><a href={`${BASE}/partners/`}>Partners</a></li>
+          <li><a href={`${BASE}/book/`}>Get Your Growth Plan</a></li>
         </ul>
       </div>
     </div>
@@ -185,16 +290,6 @@ export default function Contact() {
   </div>
 </footer>
 
-<div className="float-cta">
-  <div className="fcta-bar">
-    <span className="fcta-dot" aria-hidden="true"></span>
-    <p className="fcta-copy">Ready when you are<span>, no obligation either way</span></p>
-    <div className="fcta-btns">
-      <a href={`${BASE}/book/`} className="fcta-primary">Book a call</a>
-      <a href={`${BASE}/book/`} className="fcta-secondary">Free Audit</a>
-    </div>
-  </div>
-</div>
 
 
 

@@ -3,6 +3,14 @@ function __onload(fn){if(document.readyState==='complete'){setTimeout(fn,0);}els
 (function () {
   'use strict';
 
+  // The page may be scaled with CSS zoom (desktop renders at 80%, see lp.css). Element rects
+  // come back in zoomed pixels while inline styles are unzoomed, so convert before mixing them.
+  function pageZoom() { var z = parseFloat(getComputedStyle(document.documentElement).zoom); return z > 0 ? z : 1; }
+  function zrect(el) {
+    var r = el.getBoundingClientRect(), z = pageZoom();
+    return { left: r.left / z, right: r.right / z, top: r.top / z, bottom: r.bottom / z, width: r.width / z, height: r.height / z };
+  }
+
   // Nav: shrink / frost on scroll
   var nav = document.querySelector('.nav');
   var floatCta = document.querySelector('.float-cta');
@@ -10,6 +18,8 @@ function __onload(fn){if(document.readyState==='complete'){setTimeout(fn,0);}els
     var y = window.scrollY;
     if (nav) nav.classList.toggle('scrolled', y > 40);
     if (floatCta) floatCta.classList.toggle('show', y > 600);
+    var vslSticky = document.querySelector('.vsl-sticky'), vslCta = document.querySelector('.vsl-cta-row');
+    if (vslSticky && vslCta) vslSticky.classList.toggle('show', vslCta.getBoundingClientRect().bottom < 0);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
@@ -102,7 +112,7 @@ function __onload(fn){if(document.readyState==='complete'){setTimeout(fn,0);}els
   // keeps any two walkers from lighting the same or a neighbouring cube.
   (function setupCubeSequence() {
     var grid = document.querySelector('.hero-grid');
-    var ctr = document.querySelector('.hero .ctr');
+    var ctr = grid && grid.parentElement.querySelector('.ctr'); // homepage hero or a PageHero
     if (!grid || !ctr) return;
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var STEP = 560, MAX_STEPS = 8;
@@ -112,7 +122,7 @@ function __onload(fn){if(document.readyState==='complete'){setTimeout(fn,0);}els
     // derive cell size from the content width so columns align to both rails
     function computeLayout() {
       var cs = getComputedStyle(ctr);
-      var cr = ctr.getBoundingClientRect();
+      var cr = zrect(ctr);
       var gutter = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--gutter')) || 0;
       // round to whole pixels so the vertical lines render as a crisp 1px (not a soft 2px)
       var frameLeft = Math.round(cr.left + parseFloat(cs.paddingLeft) - gutter);
@@ -126,12 +136,12 @@ function __onload(fn){if(document.readyState==='complete'){setTimeout(fn,0);}els
       var heroEl = grid.parentElement;
       var statsEl = heroEl.querySelector('.hero-stats');
       if (statsEl) {
-        var contentBottomRel = statsEl.getBoundingClientRect().bottom - heroEl.getBoundingClientRect().top;
+        var contentBottomRel = zrect(statsEl).bottom - zrect(heroEl).top;
         var k = Math.max(1, Math.ceil((contentBottomRel + 18 - GRID_TOP) / cw));
         heroEl.style.minHeight = (GRID_TOP + k * cw) + 'px';
         heroEl.style.paddingBottom = '0px';
       }
-      var gr = grid.getBoundingClientRect();
+      var gr = zrect(grid);
       var clInGrid = frameLeft - gr.left;            // frame-left within the grid box
       lay = {
         cw: cw,
@@ -276,20 +286,32 @@ function __onload(fn){if(document.readyState==='complete'){setTimeout(fn,0);}els
   })();
 
   // Services accordion (one open at a time)
-  document.querySelectorAll('.srow-head').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var row = btn.closest('.srow');
-      var wasOpen = row.classList.contains('open');
-      document.querySelectorAll('.srow.open').forEach(function (r) {
-        r.classList.remove('open');
-        r.querySelector('.srow-head').setAttribute('aria-expanded', 'false');
-      });
-      if (!wasOpen) {
-        row.classList.add('open');
-        btn.setAttribute('aria-expanded', 'true');
-      }
-    });
+  // Accordion rows: each opens and closes independently (they can all be open at once).
+  // Delegated from the document so rows that are re-rendered later still respond.
+  // Guarded so a second run of this script can't bind it twice (a double toggle looks like no-op).
+  if (!window.__srowBound) document.addEventListener('click', function (e) {
+    var btn = e.target.closest && e.target.closest('.srow-head');
+    if (!btn) return;
+    var row = btn.closest('.srow');
+    var open = row.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
+  window.__srowBound = true;
+
+  // Video testimonials + landing-page VSL: clicking play swaps the thumbnail for the Vimeo player (data-vimeo on the container)
+  if (!window.__rvwBound) document.addEventListener('click', function (e) {
+    var btn = e.target.closest && e.target.closest('.rvw-play, .vsl-play');
+    if (!btn) return;
+    var fig = btn.closest('.rvw-vid, .vsl-panel'), id = fig && fig.getAttribute('data-vimeo');
+    if (!id || fig.classList.contains('playing')) return;
+    var f = document.createElement('iframe');
+    f.src = 'https://player.vimeo.com/video/' + id + '?badge=0&autopause=0&autoplay=1';
+    f.allow = 'autoplay; fullscreen; picture-in-picture';
+    f.title = btn.getAttribute('aria-label') || 'Video review';
+    fig.appendChild(f);
+    fig.classList.add('playing');
+  });
+  window.__rvwBound = true;
 
   // Count-up numbers
   function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
@@ -332,7 +354,9 @@ function __onload(fn){if(document.readyState==='complete'){setTimeout(fn,0);}els
           io.unobserve(e.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    // threshold 0 (any part on screen): a percentage never triggers on sections taller than the
+    // viewport, e.g. the one-column review wall on phones, which then stayed invisible
+    }, { threshold: 0, rootMargin: '0px 0px -60px 0px' });
     secs.forEach(function (sec) { io.observe(sec); });
   } else {
     secs.forEach(function (sec) {
@@ -524,8 +548,13 @@ function __onload(fn){if(document.readyState==='complete'){setTimeout(fn,0);}els
   document.addEventListener('click', function (e) {
     var a = e.target.closest('a'); if (!a) return;
     var href = a.getAttribute('href') || '';
-    if (href.indexOf('#audit') !== -1) { e.preventDefault(); AUDIT.open(); }
-    else if (href.indexOf('#book') !== -1) { e.preventDefault(); BOOK.open(); }
+    // Booking never uses the old pop-up form: scroll to the on-page booking section (the #book/#audit target,
+    // e.g. the Growth Plan form, or an iClosed widget) if the page has one, otherwise open the /book/ page.
+    if (href.indexOf('#audit') === -1 && href.indexOf('#book') === -1) return;
+    e.preventDefault();
+    var cal = document.getElementById(href.split('#')[1] || '') || document.querySelector('.iclosed-widget');
+    if (cal) { (cal.closest('section') || cal).scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    else { var sj = document.querySelector('script[src*="/assets/site.js"]'); window.location.href = (sj ? sj.getAttribute('src').split('/assets/site.js')[0] : '') + '/book/'; }
   });
   window.AdalyticalOpenForm = BOOK.open;
   window.AdalyticalOpenAudit = AUDIT.open;
@@ -544,8 +573,8 @@ function __onload(fn){if(document.readyState==='complete'){setTimeout(fn,0);}els
     card.insertBefore(fx, card.firstChild);
     var raf = null, mx = 0, my = 0;
     card.addEventListener('pointermove', function (e) {
-      var r = card.getBoundingClientRect();
-      mx = e.clientX - r.left; my = e.clientY - r.top;
+      var r = card.getBoundingClientRect(), z = pageZoom();
+      mx = (e.clientX - r.left) / z; my = (e.clientY - r.top) / z;
       if (!raf) raf = requestAnimationFrame(function () {
         raf = null;
         card.style.setProperty('--gx', mx + 'px');
