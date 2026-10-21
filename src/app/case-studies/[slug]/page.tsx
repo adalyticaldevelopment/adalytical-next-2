@@ -46,7 +46,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
   back={{ href: "/case-studies/", text: "All case studies" }}
   title={<>{cs.title.lead} <span className="accent">{cs.title.accent}</span></>}
   sub={cs.summary}
-  actions={<><a href={`${BASE}/book/`} className="btn-p">Get Your Growth Plan</a></>}
+  actions={<><a href={`${BASE}/book/`} className="btn-p">Get Your Free Growth Plan</a></>}
 />
 
 {/* ============ STORY ============ */}
@@ -62,7 +62,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           <div><dt>Timeframe</dt><dd>{cs.timeframe}</dd></div>
           <div><dt>Services</dt><dd>{cs.services.join(", ")}</dd></div>
         </dl>
-        <a href={`${BASE}/book/`} className="btn-p csp-glance-cta">Get Your Growth Plan <Arrow /></a>
+        <a href={`${BASE}/book/`} className="btn-p csp-glance-cta">Get Your Free Growth Plan <Arrow /></a>
       </div>
     </aside>
 
@@ -124,7 +124,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       <span className="sec-tag">Get started</span>
       <h2>Your account could be the next case study.</h2>
       <p>Book a free audit and we’ll map out exactly where your Google Ads are leaving money on the table.</p>
-      <div className="cta-btns"><a href={`${BASE}/book/`} className="btn-p">Get Your Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></div>
+      <div className="cta-btns"><a href={`${BASE}/book/`} className="btn-p">Get Your Free Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></div>
       <div className="cta-micro" style={{'justifyContent':'center'}}>
         <span className="cm-i"><Check />Free &amp; no obligation</span>
         <span className="cm-sep"></span>

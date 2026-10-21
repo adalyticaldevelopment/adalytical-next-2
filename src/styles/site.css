@@ -115,6 +115,24 @@ img,svg{max-width:100%;display:block}
 .mdi{width:38px;height:38px;border-radius:11px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .mdi svg{width:19px;height:19px;color:var(--mint);stroke-width:1.9}
 .mdc{width:18px;height:18px;margin-left:auto;color:rgba(255,255,255,.32);stroke-width:2;flex-shrink:0}
+/* expandable groups (Who We Help / What We Do / Extra) */
+.mgroup summary{display:flex;align-items:center;gap:14px;padding:15px 4px;font-size:1.02rem;font-weight:600;color:#fff;cursor:pointer;list-style:none;transition:color .2s}
+.mgroup summary::-webkit-details-marker{display:none}
+.mgroup[open] summary{color:var(--mint)}
+.mdc-dn{transition:transform .25s var(--ease)}
+.mgroup[open] .mdc-dn{transform:rotate(180deg);color:var(--mint)}
+.msub{list-style:none;padding:0 0 10px 52px}
+.mdrawer-list .msub li{border-bottom:none}
+.mdrawer-list .msub a{padding:10px 4px;font-size:.95rem;font-weight:500;color:rgba(255,255,255,.82)}
+/* Who We Help / What We Do: card per item, matching the desktop megas */
+.msub:has(.msub-tile){padding:2px 0 14px;display:flex;flex-direction:column;gap:8px}
+.mdrawer-list .msub a.msub-tile{align-items:flex-start;gap:14px;padding:14px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#fff}
+.mdrawer-list .msub a.msub-tile:hover,.mdrawer-list .msub a.msub-tile:active{padding-left:14px;background:rgba(255,255,255,.1);color:#fff}
+.mst-ic{flex:none;width:40px;height:40px;border-radius:11px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:var(--mint)}
+.mst-ic svg{width:19px;height:19px}
+.mst-body{display:flex;flex-direction:column;gap:4px;min-width:0}
+.mst-body strong{font-size:.92rem;font-weight:700;letter-spacing:.02em}
+.mst-body>span{font-size:.85rem;font-weight:400;line-height:1.45;color:rgba(255,255,255,.66)}
 .mdrawer-cta{display:flex;flex-direction:column;gap:10px;margin-top:auto}
 .mc-quote{padding:15px;text-align:center;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;border-radius:50px;font-weight:700;display:block;box-shadow:0 8px 24px rgba(38,138,83,.32)}
 .mc-audit{padding:15px;text-align:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#fff;border-radius:50px;font-weight:600;display:block;transition:background .2s}
@@ -137,7 +155,12 @@ img,svg{max-width:100%;display:block}
 .btn-row{display:flex;justify-content:center;gap:12px;margin-top:52px;flex-wrap:wrap}
 
 /* ================ SECTIONS ================ */
-.sec{padding:clamp(70px,calc(8 * var(--vw)),120px) 0;position:relative}
+.sec{padding:clamp(56px,calc(6 * var(--vw)),88px) 0;position:relative}
+/* Stacked sections: the space between two was the first one's bottom padding
+   plus the second one's top padding (up to 240px). Keep the bottom padding and
+   shrink the top of whichever section follows. The bk-sec pages (book, growth
+   plan, lead gen offer) set their own rhythm and are left alone. */
+:is(.sec,.qband-wrap,.csp-more):not(.bk-sec)+:is(.sec,.qband-wrap,.csp-more):not(.bk-sec){padding-top:clamp(20px,calc(2.5 * var(--vw)),36px)}
 .sec-cream{background:var(--cream)}
 .sec-white{background:var(--cream)}
 .sec-tag{font-size:.72rem;text-transform:uppercase;letter-spacing:2.4px;color:var(--brand);font-weight:600;margin-bottom:12px;display:inline-block}
@@ -222,18 +245,21 @@ img,svg{max-width:100%;display:block}
 .hero-float{position:absolute;bottom:-34px;right:-14px;background:#fff;border:1px solid var(--g200);border-radius:16px;padding:14px 18px;box-shadow:var(--shadow-l);display:flex;align-items:center;gap:12px;max-width:250px}
 @media(min-width:941px){.hero-values li:last-child{padding-right:110px}}
 
-/* homepage hero orbit (ported from the old Webflow site): Google Ads in the
-   middle, eight network icons circling it. The ring spins and each icon spins
-   back the other way so the logos stay upright. Sized in cqw so the orbit
-   radius tracks the graphic at every width. */
-.orbit{position:relative;width:100%;max-width:540px;margin:0 auto;aspect-ratio:1;container-type:inline-size}
-.orbit-center{position:absolute;inset:0;width:100%;height:100%}
-.orbit-ring{position:absolute;inset:0;animation:orbit-spin 30s linear infinite}
-.orbit-icon{position:absolute;left:50%;top:50%;width:12cqw;height:12cqw;margin:-6cqw 0 0 -6cqw;transform:rotate(var(--a)) translateY(-43cqw) rotate(calc(-1 * var(--a)))}
-.orbit-icon img{width:100%;height:100%;animation:orbit-spin 30s linear infinite reverse;transition:scale .3s var(--ease)}
-.orbit-icon:hover img{scale:1.2}
-@keyframes orbit-spin{to{transform:rotate(360deg)}}
-@media(prefers-reduced-motion:reduce){.orbit-ring,.orbit-icon img{animation:none}}
+/* homepage hero has no visual: copy spans the full width */
+.hero-split.hero-split--solo{grid-template-columns:1fr}
+/* homepage sub: three fixed lines that never wrap. On narrow screens the font
+   shrinks with the content width (container minus its side padding) so the
+   longest line (~67 chars, ~36em in Inter) still fits. */
+.hero-sub.hero-sub--lines{max-width:none;font-size:min(clamp(1.02rem,calc(1.15 * var(--vw)),1.18rem),calc((100 * var(--vw) - 2 * clamp(22px,calc(4 * var(--vw)),64px)) / 37))}
+.hero-sub--lines>span{display:block;white-space:nowrap}
+/* homepage CTA note: steeper tilt than the shared note */
+.hcf-note.hcf-note--tilt{transform:translateX(-24px) rotate(-10deg)}
+/* with no visual below the copy, the button's margin plus the hero padding
+   left a big empty band above the logo strip on smaller screens */
+@media(max-width:940px){
+  .hero-split--solo .hero-btns{margin-bottom:8px}
+  .hero:has(.hero-split--solo){padding-bottom:8px}
+}
 .hero-float .hf-dot{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--mint),var(--brand));display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0}
 .hero-float .hf-dot svg{width:20px;height:20px}
 .hero-float p{font-size:.8rem;color:var(--g600);line-height:1.4}
@@ -254,7 +280,8 @@ img,svg{max-width:100%;display:block}
 .mq-item{display:flex;align-items:center;white-space:nowrap;margin-right:clamp(38px,calc(5 * var(--vw)),72px)}
 .mq-item img{height:30px;width:auto;opacity:.9;transition:opacity .3s}
 .mq-item:hover img{opacity:1}
-.trust-leadgen .mq-item img{height:auto;max-height:38px;max-width:150px;object-fit:contain}
+.trust-leadgen .mq-item img{height:auto;max-height:38px;max-width:150px;object-fit:contain;transition:opacity .3s,scale .3s var(--ease)}
+.trust-leadgen .mq-item:hover img{scale:1.08}
 .trust-leadgen .mq-sq img{max-height:56px}
 @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
@@ -309,6 +336,16 @@ img,svg{max-width:100%;display:block}
 .srow.open .srow-plus .pv{transform:scaleY(0);opacity:0}
 .srow-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s var(--ease)}
 .srow.open .srow-body{grid-template-rows:1fr}
+/* homepage Who We Help: closed rows give their plus a small periodic wiggle
+   (staggered per row) to hint that they open */
+#who-we-help .srow:not(.open) .srow-plus svg{animation:srow-wiggle 1.6s ease-in-out infinite}
+#who-we-help .srow:not(.open) .srow-plus{animation:srow-glow 1.6s ease-in-out infinite}
+#who-we-help .srow:nth-child(2) .srow-plus,#who-we-help .srow:nth-child(2) .srow-plus svg{animation-delay:.25s}
+#who-we-help .srow:nth-child(3) .srow-plus,#who-we-help .srow:nth-child(3) .srow-plus svg{animation-delay:.5s}
+#who-we-help .srow-head:hover .srow-plus,#who-we-help .srow-head:hover .srow-plus svg{animation:none}
+@keyframes srow-glow{0%,58%,100%{border-color:rgba(255,255,255,.25);box-shadow:0 0 0 rgba(255,255,255,0)}72%,84%{border-color:rgba(255,255,255,.85);box-shadow:0 0 14px rgba(255,255,255,.22)}}
+@keyframes srow-wiggle{0%,62%,100%{transform:rotate(0)}68%{transform:rotate(-12deg)}74%{transform:rotate(10deg)}80%{transform:rotate(-6deg)}86%{transform:rotate(3deg)}92%{transform:rotate(0)}}
+@media(prefers-reduced-motion:reduce){#who-we-help .srow-plus,#who-we-help .srow-plus svg{animation:none}}
 .srow-inner{overflow:hidden;min-height:0;display:grid;grid-template-columns:var(--bandcols);gap:clamp(16px,calc(3 * var(--vw)),40px)}
 .srow-main{grid-column:2;display:flex;gap:22px;align-items:flex-start;padding-bottom:36px}
 .srow-thumb{width:94px;height:70px;border-radius:12px;background:linear-gradient(145deg,#fff,#e6f1ea);color:var(--forest);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 10px 24px rgba(0,0,0,.28)}
@@ -403,7 +440,8 @@ img,svg{max-width:100%;display:block}
 .framed::before{left:var(--frame-left,90px)}
 .framed::after{left:var(--frame-right,calc(100% - 90px))}
 .framed>.ctr{position:relative;z-index:2}
-#results{padding-top:clamp(64px,calc(7 * var(--vw)),96px)}
+/* growth plan + lead gen offer only; elsewhere #results follows the stacked-section spacing */
+.bk-sec#results{padding-top:clamp(64px,calc(7 * var(--vw)),96px)}
 .cs-head{display:grid;grid-template-columns:1fr minmax(220px,280px);gap:clamp(20px,calc(3 * var(--vw)),48px);align-items:end;margin-bottom:clamp(36px,calc(4.5 * var(--vw)),60px)}
 .cs-title h2{font-size:clamp(2.1rem,calc(3.8 * var(--vw)),3.6rem);font-weight:600;letter-spacing:-.04em;line-height:1.08;color:var(--forest);margin:0 0 8px}
 .cs-title h2 .cs-accent{color:var(--brand)}
@@ -511,6 +549,15 @@ img,svg{max-width:100%;display:block}
 .fcta-btns{display:flex;align-items:center;gap:8px;flex:none}
 .fcta-primary{white-space:nowrap;border-radius:50px;background:var(--forest);color:#fff;padding:9px 18px;font-weight:700;font-size:13.5px;box-shadow:0 3px 10px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.14);transition:transform .25s var(--ease)}
 .fcta-primary:hover{transform:skewX(-4deg)}
+/* hero + sticky bar CTAs: every 5s a highlight runs through the text and it
+   glows briefly. Only the lettering animates, the button itself stays still. */
+.cta-shine{display:inline-block;background:linear-gradient(110deg,#fff 0%,#fff 42%,#b9f3cf 50%,#fff 58%,#fff 100%);background-size:250% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent;animation:cta-shine 5s ease-in-out infinite}
+@keyframes cta-shine{
+  0%,76%{background-position:100% 0;filter:drop-shadow(0 0 0 rgba(255,255,255,0))}
+  88%{filter:drop-shadow(0 0 6px rgba(185,243,207,.7))}
+  96%,100%{background-position:0% 0;filter:drop-shadow(0 0 0 rgba(255,255,255,0))}
+}
+@media(prefers-reduced-motion:reduce){.cta-shine{animation:none}}
 .fcta-secondary{white-space:nowrap;border-radius:50px;background:rgba(255,255,255,.55);border:1px solid rgba(30,55,40,.14);color:var(--forest);padding:9px 18px;font-weight:600;font-size:13.5px;transition:background .25s}
 .fcta-secondary:hover{background:#fff}
 @media(max-width:640px){
@@ -522,6 +569,15 @@ img,svg{max-width:100%;display:block}
 }
 
 /* ================ RESPONSIVE ================ */
+/* The desktop nav (two dropdowns + the long CTA) needs ~1200px; below that it
+   wrapped onto two lines, so switch to the phone menu instead. */
+.nav-l>li>a,.nav-cta{white-space:nowrap}
+@media(max-width:1199px){
+  .nav-l{display:none}
+  .nav-r .nav-cta{display:none}
+  .mob-tog{display:flex}
+  .mega,.drop{display:none}
+}
 @media(max-width:940px){
   .hg-cluster,.hg-spark,.hg-tag{display:none} /* hide hero decor on mobile */
   .nav-l{display:none}

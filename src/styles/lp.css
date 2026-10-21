@@ -474,7 +474,7 @@
 .csp-hero.has-fig .csp-hero-copy h1{font-weight:500;line-height:1.03}
 
 /* ============ RANKIFY-STYLE SERVICE CARD GRID ============ */
-.cardgrid{padding:clamp(58px,calc(7 * var(--vw)),100px) 0}
+.cardgrid{padding:clamp(56px,calc(6 * var(--vw)),88px) 0}
 .cg-head{max-width:880px;margin:0 0 clamp(30px,calc(4 * var(--vw)),50px)}
 .cg-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:var(--brand);margin-bottom:16px}
 .cg-head h2{font-size:clamp(1.85rem,calc(2.7 * var(--vw)),2.75rem);color:var(--forest);font-weight:500;letter-spacing:-.03em;line-height:1.08;margin:0}
@@ -753,8 +753,15 @@
 .rvw-vid figcaption strong{display:block;font-size:.92rem}
 .rvw-vid figcaption span{font-size:.76rem;color:rgba(255,255,255,.78)}
 .rvw-badge{position:absolute;top:12px;left:12px;z-index:2;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:1.4px;color:#fff;background:rgba(255,255,255,.18);padding:4px 9px;border-radius:6px}
-@media(max-width:900px){.rvw-wall{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.rvw-wall{grid-template-columns:1fr}}
+/* Below 900px the three hand-built columns can't fit as a 3-col grid, and as
+   a 2-col grid the third column dropped under the first, leaving the right
+   side empty. Flatten the columns and let CSS columns balance the cards. */
+@media(max-width:900px){
+  .rvw-wall{display:block;columns:2;column-gap:20px}
+  .rvw-col{display:contents}
+  .rvw-wall figure{break-inside:avoid;margin-bottom:20px}
+}
+@media(max-width:560px){.rvw-wall{columns:1}}
 
 /* Remove ALL xmark diamond/frame-corner marks (client: no diamond things on the header) */
 .xmark{display:none !important}

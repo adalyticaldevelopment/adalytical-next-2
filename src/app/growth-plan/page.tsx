@@ -174,13 +174,11 @@ export default function GrowthPlan() {
       </figure>
       <figure className="rvw-card">
         <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
-        <span className="rvw-tag">Adalytical</span>
         <blockquote>Adalytical helped us with our <strong>biggest Q4 ever</strong>! Revenue was +33% and ROAS +25% YOY. Already seeing <strong>massive revenue and ROAS gains</strong> for Q1 and Q2.</blockquote>
         <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/jay.webp`} alt="" width="38" height="38" /></span><div><strong>Jay</strong><span>Head of Marketing, The Watch Factory</span></div></figcaption>
       </figure>
       <figure className="rvw-card">
         <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
-        <span className="rvw-tag">Adalytical</span>
         <blockquote><strong>Helped us compete against the giants</strong> in the extremely competitive and crowded drinks industry. Highly recommend!</blockquote>
         <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/rachel.webp`} alt="" width="38" height="38" /></span><div><strong>Rachel</strong><span>Founder, Blume</span></div></figcaption>
       </figure>
@@ -194,15 +192,13 @@ export default function GrowthPlan() {
       <div className="rvw-col">
       <figure className="rvw-card">
         <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
-        <span className="rvw-tag">Adalytical</span>
         <blockquote>Adalytical <strong>helped us scale our Google spend</strong> by over 300%, all while keeping profitability front and centre.</blockquote>
         <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/sivan.webp`} alt="" width="38" height="38" /></span><div><strong>Sivan</strong><span>Founder, Bushdoof Lighting</span></div></figcaption>
       </figure>
       <figure className="rvw-card">
         <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
-        <span className="rvw-tag">Adalytical</span>
         <blockquote>Jackson&rsquo;s <strong>expertise in Google Ads is unmatched</strong>. He and the team helped us overcome multiple very niche Google Ads challenges.</blockquote>
-        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/rob.webp`} alt="" width="38" height="38" /></span><div><strong>Rob</strong><span>Marketing Director, Home Make It</span></div></figcaption>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/rob.webp`} alt="" width="38" height="38" /></span><div><strong>Rob</strong><span>Marketing Director, Beverage Food Group</span></div></figcaption>
       </figure>
       <figure className="rvw-vid" data-vimeo="1167218749">
         <img className="rvw-thumb" src={`${BASE}/images/reviews/vid-rio.webp`} alt="" />
@@ -212,13 +208,11 @@ export default function GrowthPlan() {
       </figure>
       <figure className="rvw-card">
         <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
-        <span className="rvw-tag">Adalytical</span>
         <blockquote>Can absolutely vouch for these guys! We&rsquo;ve worked with Adalytical on our Google Ads and the level of <strong>knowledge, persistence and support</strong> has been incredible. They&rsquo;ve gone above and beyond for our account, especially navigating some very frustrating Google policy issues. Definitely worth having a chat with them if you&rsquo;re running ecommerce ads.</blockquote>
         <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/kylie.webp`} alt="" width="38" height="38" /></span><div><strong>Kylie Alexander</strong><span>CEO, Health Heiress</span></div></figcaption>
       </figure>
       <figure className="rvw-card">
         <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
-        <span className="rvw-tag">Adalytical</span>
         <blockquote>Quickly grasped our unique challenges and FMCG space to <strong>deliver an effective Google and YouTube Ads strategy</strong>.</blockquote>
         <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/abdul.webp`} alt="" width="38" height="38" /></span><div><strong>Abdul</strong><span>Founder, Pinkish Pods</span></div></figcaption>
       </figure>
@@ -226,7 +220,6 @@ export default function GrowthPlan() {
       <div className="rvw-col">
       <figure className="rvw-card">
         <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
-        <span className="rvw-tag">Adalytical</span>
         <blockquote>We saw a <strong>better ROAS straight away</strong> and helped us expand into other markets! Always have the answers and strats for Google Ads.</blockquote>
         <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/ariana.webp`} alt="" width="38" height="38" /></span><div><strong>Ariana</strong><span>Founder, Aaria London</span></div></figcaption>
       </figure>
@@ -238,13 +231,11 @@ export default function GrowthPlan() {
       </figure>
       <figure className="rvw-card">
         <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
-        <span className="rvw-tag">Adalytical</span>
         <blockquote>The team&rsquo;s <strong>ex-Google brainpower</strong> unlocked heaps of extra insights and fast-tracked support, but more importantly, <strong>helped us hit our biggest Q4</strong>.</blockquote>
         <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/matthew.webp`} alt="" width="38" height="38" /></span><div><strong>Matthew</strong><span>CEO, Personalised Favours</span></div></figcaption>
       </figure>
       <figure className="rvw-card">
         <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
-        <span className="rvw-tag">Adalytical</span>
         <blockquote>Adalytical helped us with segmenting our audience which changed how we ran our campaigns and <strong>brought in a wave of new customers</strong>.</blockquote>
         <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/rio.webp`} alt="" width="38" height="38" /></span><div><strong>Rio</strong><span>Founder, G80 Cosmetics</span></div></figcaption>
       </figure>
@@ -268,7 +259,7 @@ export default function GrowthPlan() {
     </div>
     <div className="cs2-grid rv">
       <article className="cs2">
-        <div className="cs2-img"><img src={`${BASE}/images/case-redlight.webp`} alt="Redlight Innovation" style={{ objectPosition: "50% 22%" }} /><span className="cs2-time">~90 days</span></div>
+        <div className="cs2-img"><img src={`${BASE}/images/case-redlight.webp`} alt="Redlight Innovation" style={{ objectPosition: "50% 30%" }} /><span className="cs2-time">~90 days</span></div>
         <div className="cs2-body">
           <span className="cs2-tag">Redlight Innovation &middot; Red light therapy</span>
           <h3 className="cs2-result">ROAS from ~2.0 to 4+</h3>

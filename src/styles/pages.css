@@ -23,7 +23,23 @@
 .mega-feat .mf-tag{font-size:.68rem;text-transform:uppercase;letter-spacing:1.4px;color:var(--mint);font-weight:700;position:relative}
 .mega-feat h5{color:#fff;font-size:1.05rem;line-height:1.35;margin:8px 0 14px;position:relative}
 .mega-feat .mf-link{display:inline-flex;align-items:center;gap:6px;font-size:.85rem;font-weight:700;color:#fff;position:relative}
-.mega-feat .mf-link svg{width:15px;height:15px}
+.mega-feat .mf-link svg{width:15px;height:15px;transition:transform .2s var(--ease)}
+/* the whole Free audit card is the link */
+.mega-feat{transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+.mega-feat:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,30,20,.25)}
+.mega-feat:hover .mf-link svg{transform:translateX(3px)}
+/* Who We Help + What We Do: four whole-card links in a 2x2 grid, the Free audit card down the right */
+:is(.mega--ind,.mega--svc) .mega-card{grid-template-columns:1fr 1fr minmax(240px,.75fr);gap:14px}
+:is(.mega--ind,.mega--svc) .mega-feat{grid-column:3;grid-row:1/3}
+.mega-tile{display:flex;align-items:flex-start;gap:18px;padding:20px 22px;border-radius:16px;background:rgba(255,255,255,.55);border:1px solid rgba(30,55,40,.1);color:var(--forest);transition:background .2s,border-color .2s,transform .25s var(--ease)}
+.mega-tile:hover{background:#fff;border-color:rgba(30,55,40,.18);transform:translateY(-2px)}
+.mt-ic{flex:none;width:52px;height:52px;border-radius:13px;background:#fff;border:1px solid rgba(30,55,40,.1);display:flex;align-items:center;justify-content:center;color:var(--brand)}
+.mt-ic svg{width:22px;height:22px}
+.mt-body{display:flex;flex-direction:column;gap:6px;min-width:0}
+.mt-body strong{font-size:1.02rem;font-weight:700;letter-spacing:.02em;color:var(--forest)}
+.mt-body strong span{display:inline-block;transition:transform .2s var(--ease)}
+.mega-tile:hover .mt-body strong span{transform:translateX(3px)}
+.mt-body>span{font-size:.92rem;line-height:1.5;color:var(--g600)}
 /* simple dropdown */
 .drop{position:absolute;top:calc(100% + 12px);left:-16px;z-index:99;min-width:260px;background:#fff;border:1px solid rgba(30,55,40,.08);border-radius:14px;box-shadow:var(--shadow-l);padding:10px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:all .24s var(--ease)}
 /* invisible bridge so the cursor doesn't drop hover crossing the gap */
@@ -56,7 +72,7 @@
 .vid-stat span{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:600;margin-top:8px;display:block}
 .vid-foot{max-width:var(--ctr-max);margin:12px auto 0;padding:0 clamp(22px,calc(4 * var(--vw)),64px);text-align:center;font-size:.7rem;letter-spacing:.16em;color:var(--g400);font-family:ui-monospace,Menlo,monospace}
 /* body: sticky testimonial + prose */
-.csp-body{max-width:var(--ctr-max);margin:0 auto;padding:clamp(46px,calc(6 * var(--vw)),80px) clamp(22px,calc(4 * var(--vw)),64px);display:grid;grid-template-columns:300px 1fr;gap:clamp(36px,calc(5 * var(--vw)),72px);align-items:start}
+.csp-body{max-width:var(--ctr-max);margin:0 auto;padding:clamp(46px,calc(6 * var(--vw)),80px) clamp(22px,calc(4 * var(--vw)),64px) clamp(24px,calc(3 * var(--vw)),40px);display:grid;grid-template-columns:300px 1fr;gap:clamp(36px,calc(5 * var(--vw)),72px);align-items:start}
 .csp-phone{position:sticky;top:96px}
 .phone-frame{position:relative;aspect-ratio:9/19;border-radius:30px;overflow:hidden;background:linear-gradient(150deg,#17352a 0%,var(--forest-2) 55%,#0d1f15 100%);box-shadow:var(--shadow-l);border:1px solid rgba(30,55,40,.1)}
 .phone-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
@@ -180,6 +196,12 @@ body:has(.phero) .nav:not(.scrolled){background:transparent;border-bottom-color:
 .phero h1{font-size:clamp(2.2rem,calc(4.1 * var(--vw)),3.9rem);font-weight:700;letter-spacing:-.045em;line-height:1.04;color:#fff;max-width:16ch}
 .phero-panel:not(.has-media) h1{max-width:22ch}
 .phero h1 .accent{color:var(--mint)}
+/* titles wrapped in .ph-oneline stay on one line on large screens, shrinking
+   to the copy column's width (~13em of text) rather than wrapping */
+@media(min-width:1200px){
+  .phero-copy:has(.ph-oneline){container-type:inline-size}
+  .phero h1:has(.ph-oneline){max-width:none;white-space:nowrap;font-size:min(3.9rem,7.2cqw)}
+}
 .phero-copy>p{font-size:clamp(1rem,calc(1.25 * var(--vw)),1.15rem);color:rgba(255,255,255,.74);line-height:1.6;max-width:560px;margin-top:18px}
 .phero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
 .phero-cta .btn-p{background:#fff;color:var(--forest);box-shadow:0 8px 26px rgba(0,0,0,.25)}
@@ -190,6 +212,7 @@ body:has(.phero) .nav:not(.scrolled){background:transparent;border-bottom-color:
 .pp-stars{display:inline-flex;gap:2px;color:#f5c542}.pp-stars svg{width:17px;height:17px}
 .pp-sep{width:1px;height:24px;background:rgba(255,255,255,.2)}
 .pp-mint{color:var(--mint)}
+.pp-note{color:rgba(255,255,255,.6)}
 .phero-media{border-radius:22px;overflow:hidden;aspect-ratio:16/10;background:#173326;border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 80px rgba(0,0,0,.45)}
 .phero-media img{width:100%;height:100%;object-fit:cover;display:block}
 .phero-after .post-filters{justify-content:flex-start;margin-top:28px}
@@ -893,7 +916,9 @@ html.gpb-lock,html.gpb-lock body{overflow:hidden}
 @keyframes lgo-left{to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.lgo-logos-track{animation:none}}
 /* result cards: image left with the business name over it, numbers right, one per row */
-#results>.ctr,#reviews>.ctr{max-width:1040px}
+/* scoped to the bk-sec pages (lead gen offer, growth plan): the homepage and
+   industry pages also have a #results section that should stay full width */
+.bk-sec#results>.ctr,.bk-sec#reviews>.ctr{max-width:1040px}
 .lgo-cases{display:flex;flex-direction:column;gap:18px}
 .lgo-case{display:grid;grid-template-columns:minmax(0,42%) minmax(0,1fr);background:#f9fbf7;border:1px solid rgba(30,55,40,.08);border-radius:10px;overflow:hidden;box-shadow:0 10px 30px rgba(20,40,30,.06)}
 .lgo-case-img{position:relative;min-height:200px;background:#dfe3da}

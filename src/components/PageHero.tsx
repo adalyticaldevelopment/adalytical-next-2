@@ -19,12 +19,14 @@ type Props = {
   media?: ReactNode;
   /** stars + "Trusted by 100+ brands" + "Ex-Google founders" under the buttons (on by default) */
   proof?: boolean;
+  /** extra text after "Ex-Google founders" in the proof row */
+  proofNote?: ReactNode;
   children?: ReactNode;
 };
 
 const Star = () => <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.8 5.9 21l1.3-6.7-5-4.6 6.8-.8z"/></svg>;
 
-export function PageHero({ title, sub, actions, back, eyebrow, image, media, proof = true, children }: Props) {
+export function PageHero({ title, sub, actions, back, eyebrow, image, media, proof = true, proofNote, children }: Props) {
   return (
     <div className="phero">
       {/* same animated cube grid as the homepage hero (driven by site.js), recoloured for the dark band */}
@@ -48,7 +50,7 @@ export function PageHero({ title, sub, actions, back, eyebrow, image, media, pro
                 <span className="pp-stars"><Star /><Star /><Star /><Star /><Star /></span>
                 <span>Trusted by <b>100+</b> brands</span>
                 <span className="pp-sep" aria-hidden="true"></span>
-                <span><b className="pp-mint">Ex-Google</b> founders</span>
+                <span><b className="pp-mint">Ex-Google</b> founders{proofNote && <> {proofNote}</>}</span>
               </div>
             )}
           </div>

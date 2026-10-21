@@ -44,13 +44,13 @@ export default function CaseStudyBoozeAndBarrels() {
               <a href={`${BASE}/landing-pages/`}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 8h16M8 13h8M8 17h5" strokeLinecap="round"/></svg> Landing Pages</a>
               <a href={`${BASE}/web-development/`}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 8l-4 4 4 4M15 8l4 4-4 4" strokeLinecap="round" strokeLinejoin="round"/></svg> Web Development</a>
             </div>
-            <div className="mega-feat">
+            <a href={`${BASE}/book/`} className="mega-feat">
               <div>
                 <span className="mf-tag">Free audit</span>
                 <h5>See exactly where your Google Ads account is leaking budget.</h5>
               </div>
-              <a href={`${BASE}/book/`} className="mf-link">Book a strategy call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
-            </div>
+              <span className="mf-link">Book a strategy call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
+            </a>
           </div>
         </div>
       </li>

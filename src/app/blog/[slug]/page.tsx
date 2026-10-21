@@ -52,7 +52,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       <ol>{toc.map((t) => <li key={t}><a href={`#${anchor(t)}`}>{t.replace(/^\d+\.\s*/, "")}</a></li>)}</ol>
       <div className="bp-toc-cta">
         <b>Want this done on your account?</b>
-        <a href={`${BASE}/book/`} className="btn-p">Get Your Growth Plan</a>
+        <a href={`${BASE}/book/`} className="btn-p">Get Your Free Growth Plan</a>
       </div>
     </aside>
     <div className="bp-prose">
@@ -91,7 +91,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       <span className="sec-tag">Get started</span>
       <h2>Want this dialled in on your account?</h2>
       <p>Get your Growth Plan and we&rsquo;ll apply the same playbooks to your Google Ads, tailored to your brand.</p>
-      <div className="cta-btns"><a href={`${BASE}/book/`} className="btn-p">Get Your Growth Plan</a></div>
+      <div className="cta-btns"><a href={`${BASE}/book/`} className="btn-p">Get Your Free Growth Plan</a></div>
     </div>
   </div>
 </section>

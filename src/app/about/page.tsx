@@ -13,13 +13,46 @@ import { PageHero } from "@/components/PageHero";
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
-// Same client logos as the homepage strip
+// Same client logos, in the same order, as the homepage strip (keep the two in sync)
 const CLIENT_LOGOS = [
-  ["redlight-logo-new.png", "Redlight Innovation"], ["watch-factory-logo.png", "The Watch Factory"],
-  ["personalised-favours-logo-new.png", "Personalised Favours"], ["beforeyouspeak-logo-new.png", "BeforeYouSpeak"],
-  ["aaria-logo-new.png", "Aaria London"], ["hedonist-logo-new.png", "Hedonist"], ["loko-logo-new.png", "Loko"],
-  ["health-heiress-logo.png", "Health Heiress"], ["bushdoof-logo.png", "Bushdoof Lighting"], ["vybey-logo-new.png", "Vybey"],
-  ["salty-captain-logo.png", "Salty Captain"], ["winland-logo.png", "Winland Home & Garden"],
+  ["redlight-logo-new.png", "Redlight Innovation"],
+  ["watch-factory-logo.png", "The Watch Factory"],
+  ["work-sharp-logo.png", "Work Sharp Sharpeners"],
+  ["personalised-favours-logo-new.png", "Personalised Favours"],
+  ["beforeyouspeak-logo-new.png", "BeforeYouSpeak"],
+  ["aaria-logo-new.png", "Aaria London"],
+  ["hedonist-logo-new.png", "Hedonist"],
+  ["loko-logo-new.png", "Loko"],
+  ["pet-supplies-australia-logo-new.png", "Pet Supplies Australia"],
+  ["zerobreath-logo-new.png", "ZeroBreath"],
+  ["nadt-logo.png", "NADT"],
+  ["salty-captain-logo.png", "Salty Captain"],
+  ["hydrotech-logo.png", "Hydrotech"],
+  ["vybey-logo-new.png", "Vybey"],
+  ["pinkish-pods-logo.png", "Pinkish Pods"],
+  ["health-heiress-logo.png", "Health Heiress"],
+  ["rover-rituals-logo.png", "Rover Rituals"],
+  ["yeet-seat-logo.png", "Yeet Seat"],
+  ["harry-austin-logo.png", "Harry Austin"],
+  ["kiwi-treats-logo.png", "Kiwi Treats"],
+  ["winland-logo.png", "Winland Home & Garden"],
+  ["bellissima-logo.png", "Bellissima"],
+  ["bushdoof-logo.png", "Bushdoof Lighting"],
+  ["booze-and-barrels-logo.png", "Booze & Barrels"],
+  ["biosx-logo.png", "BIOSx"],
+  ["blume-logo.png", "Blume"],
+  ["bathroom-space-logo.png", "Bathroom Space"],
+  ["home-make-it-logo.png", "Home Make It"],
+  // lead gen clients (from the /lead-generation/ strip), padded to the same canvas
+  ["prime-group-logo.png", "Prime Group Building"],
+  ["cavstruct-logo.png", "Cavstruct Projects"],
+  ["mjb-electrical-logo.png", "MJB Electrical Group"],
+  ["tintek-logo.png", "Tintek Roofing & Cladding"],
+  ["evosolar-logo.png", "Evosolar"],
+  ["ottilie-studios-logo.png", "Ottilie Studios"],
+  ["hawker-studio-logo.png", "Hawker Studio"],
+  ["into-blinds-logo.png", "Into Blinds"],
+  ["onq-logo.png", "ONQ Digital"],
 ];
 
 export default function About() {
@@ -39,36 +72,61 @@ export default function About() {
     <ul className="nav-l">
       <li className="has-mega">
         <a href={`${BASE}/#industries`}>Who We Help <svg className="nav-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
-        <div className="mega">
+        <div className="mega mega--ind">
           <div className="mega-card">
-            <div className="mega-col">
-              <h4><a href={`${BASE}/ecommerce/`}>E-commerce</a></h4>
-              <a href={`${BASE}/ecommerce/`}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg> Google Ads</a>
-              <a href={`${BASE}/ecommerce/#merchant-center`}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 3h8l10 10-8 8L3 11V3z" strokeLinejoin="round"/><circle cx="7.5" cy="7.5" r="1.4"/></svg> Merchant Center</a>
-              <a href={`${BASE}/landing-pages/`}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 8h16M8 13h8M8 17h5" strokeLinecap="round"/></svg> Landing Pages &amp; CRO</a>
-              <a href={`${BASE}/web-development/`}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 8l-4 4 4 4M15 8l4 4-4 4" strokeLinecap="round" strokeLinejoin="round"/></svg> Web Development</a>
-            </div>
-            <div className="mega-col">
-              <h4><a href={`${BASE}/lead-generation/`}>Lead Generation</a></h4>
-              <a href={`${BASE}/lead-generation/`}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg> Google Ads</a>
-              <a href={`${BASE}/lead-generation/#call-tracking`}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z" strokeLinecap="round" strokeLinejoin="round"/></svg> Call &amp; Form Tracking</a>
-              <a href={`${BASE}/landing-pages/`}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 8h16M8 13h8M8 17h5" strokeLinecap="round"/></svg> Landing Pages &amp; CRO</a>
-              <a href={`${BASE}/web-development/`}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 8l-4 4 4 4M15 8l4 4-4 4" strokeLinecap="round" strokeLinejoin="round"/></svg> Web Development</a>
-            </div>
-            <div className="mega-col">
-              <h4><a href={`${BASE}/saas/`}>SaaS</a></h4>
-              <a href={`${BASE}/saas/`}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg> Google Ads</a>
-              <a href={`${BASE}/saas/#demo-funnels`}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 4h18l-7 8v7l-4 2v-9z" strokeLinejoin="round"/></svg> Demo &amp; Trial Funnels</a>
-              <a href={`${BASE}/landing-pages/`}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 8h16M8 13h8M8 17h5" strokeLinecap="round"/></svg> Landing Pages &amp; CRO</a>
-              <a href={`${BASE}/web-development/`}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 8l-4 4 4 4M15 8l4 4-4 4" strokeLinecap="round" strokeLinejoin="round"/></svg> Web Development</a>
-            </div>
-            <div className="mega-feat">
+            <a href={`${BASE}/ecommerce/`} className="mega-tile">
+              <span className="mt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><path d="M6 6h15l-1.5 9h-12z" strokeLinejoin="round"/><path d="M6 6 5 3H2" strokeLinecap="round"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg></span>
+              <span className="mt-body"><strong>E-COMMERCE <span aria-hidden="true">&rarr;</span></strong><span>More profitable sales, higher ROAS and scalable growth across your products.</span></span>
+            </a>
+            <a href={`${BASE}/lead-generation/`} className="mega-tile">
+              <span className="mt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z" strokeLinejoin="round"/></svg></span>
+              <span className="mt-body"><strong>LEAD GENERATION <span aria-hidden="true">&rarr;</span></strong><span>More qualified leads at a lower cost per lead, with every call and form tracked.</span></span>
+            </a>
+            <a href={`${BASE}/saas/`} className="mega-tile">
+              <span className="mt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><path d="M3 4h18l-7 8v7l-4 2v-9z" strokeLinejoin="round"/></svg></span>
+              <span className="mt-body"><strong>SAAS <span aria-hidden="true">&rarr;</span></strong><span>More qualified demos and trials that turn into paying customers, at a lower acquisition cost.</span></span>
+            </a>
+            <a href={`${BASE}/book/`} className="mega-tile">
+              <span className="mt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4" strokeLinecap="round"/></svg></span>
+              <span className="mt-body"><strong>I want to book a strategy call <span aria-hidden="true">&rarr;</span></strong><span>We&rsquo;ll audit your account for free and show you where biggest opportunities are.</span></span>
+            </a>
+            <a href={`${BASE}/book/`} className="mega-feat">
               <div>
                 <span className="mf-tag">Free audit</span>
                 <h5>See exactly where your Google Ads account is leaking budget.</h5>
               </div>
-              <a href={`${BASE}/book/`} className="mf-link">Get Your Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
-            </div>
+              <span className="mf-link">Get Your Free Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
+            </a>
+          </div>
+        </div>
+      </li>
+      <li className="has-mega">
+        <a href={`${BASE}/#what-we-do`}>What We Do <svg className="nav-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
+        <div className="mega mega--svc">
+          <div className="mega-card">
+            <a href={`${BASE}/#what-we-do`} className="mega-tile">
+              <span className="mt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></span>
+              <span className="mt-body"><strong>GOOGLE ADS <span aria-hidden="true">&rarr;</span></strong><span>More customers, lower acquisition costs and profitable growth from every dollar spent.</span></span>
+            </a>
+            <a href={`${BASE}/ecommerce/#merchant-center`} className="mega-tile">
+              <span className="mt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><path d="M3 3h8l10 10-8 8L3 11V3z" strokeLinejoin="round"/><circle cx="7.5" cy="7.5" r="1.4"/></svg></span>
+              <span className="mt-body"><strong>MERCHANT CENTER <span aria-hidden="true">&rarr;</span></strong><span>Optimised product feeds that improve visibility, attract more buyers and increase sales.</span></span>
+            </a>
+            <a href={`${BASE}/landing-pages/`} className="mega-tile">
+              <span className="mt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 8h16M8 13h8M8 17h5" strokeLinecap="round"/></svg></span>
+              <span className="mt-body"><strong>LANDING PAGES &amp; CRO <span aria-hidden="true">&rarr;</span></strong><span>Turn more of your existing traffic into paying customers without spending more on ads.</span></span>
+            </a>
+            <a href={`${BASE}/web-development/`} className="mega-tile">
+              <span className="mt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><path d="M9 8l-4 4 4 4M15 8l4 4-4 4" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
+              <span className="mt-body"><strong>WEB DEVELOPMENT <span aria-hidden="true">&rarr;</span></strong><span>Fast, high-converting websites built to turn visitors into customers.</span></span>
+            </a>
+            <a href={`${BASE}/book/`} className="mega-feat">
+              <div>
+                <span className="mf-tag">Free audit</span>
+                <h5>See exactly where your Google Ads account is leaking budget.</h5>
+              </div>
+              <span className="mf-link">Get Your Free Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
+            </a>
           </div>
         </div>
       </li>
@@ -78,7 +136,7 @@ export default function About() {
       <li><a href={`${BASE}/about/`}>About</a></li>
     </ul>
     <div className="nav-r">
-      <a href={`${BASE}/book/`} className="nav-cta">Get Your Growth Plan</a>
+      <a href={`${BASE}/book/`} className="nav-cta">Get Your Free Growth Plan</a>
       <button className="mob-tog" aria-label="Open menu"><span className="mob-bars"><span></span><span></span><span></span></span><span className="mob-lbl">Menu</span></button>
     </div>
   </div>
@@ -92,18 +150,43 @@ export default function About() {
   </div>
   <ul className="mdrawer-list">
     <li><a href={`${BASE}/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 11l8-6 8 6v9H4z" strokeLinejoin="round"/><path d="M9 20v-6h6v6" strokeLinejoin="round"/></svg></span>Home<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
-    <li><a href={`${BASE}/ecommerce/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 6h15l-1.5 9h-12z" strokeLinejoin="round"/><path d="M6 6 5 3H2" strokeLinecap="round"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg></span>E-commerce<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
-    <li><a href={`${BASE}/lead-generation/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z" strokeLinecap="round" strokeLinejoin="round"/></svg></span>Lead Generation<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
-    <li><a href={`${BASE}/saas/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 8l-4 4 4 4M15 8l4 4-4 4" strokeLinecap="round" strokeLinejoin="round"/></svg></span>SaaS<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
-    <li><a href={`${BASE}/landing-pages/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 8h16M8 13h8M8 17h5" strokeLinecap="round"/></svg></span>Landing Pages &amp; CRO<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
-    <li><a href={`${BASE}/web-development/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M8 4l-4 8 4 8M16 4l4 8-4 8M13 3l-2 18" strokeLinecap="round" strokeLinejoin="round"/></svg></span>Web Development<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
-    <li><a href={`${BASE}/blog/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5" strokeLinecap="round"/></svg></span>Blog<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
-    <li><a href={`${BASE}/tools/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.8 2.8-2-2z" strokeLinejoin="round"/></svg></span>Tools<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
-    <li><a href={`${BASE}/case-studies/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3v18h18" strokeLinecap="round"/><path d="M7 14l4-4 3 3 5-6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>Case Studies<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
+    <li>
+      <details className="mgroup">
+        <summary><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></span>Who We Help<svg className="mdc mdc-dn" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></summary>
+        <ul className="msub">
+          <li><a href={`${BASE}/ecommerce/`} className="msub-tile"><span className="mst-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><path d="M6 6h15l-1.5 9h-12z" strokeLinejoin="round"/><path d="M6 6 5 3H2" strokeLinecap="round"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg></span><span className="mst-body"><strong>E-COMMERCE</strong><span>More profitable sales, higher ROAS and scalable growth across your products.</span></span></a></li>
+          <li><a href={`${BASE}/lead-generation/`} className="msub-tile"><span className="mst-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z" strokeLinejoin="round"/></svg></span><span className="mst-body"><strong>LEAD GENERATION</strong><span>More qualified leads at a lower cost per lead, with every call and form tracked.</span></span></a></li>
+          <li><a href={`${BASE}/saas/`} className="msub-tile"><span className="mst-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><path d="M3 4h18l-7 8v7l-4 2v-9z" strokeLinejoin="round"/></svg></span><span className="mst-body"><strong>SAAS</strong><span>More qualified demos and trials that turn into paying customers, at a lower acquisition cost.</span></span></a></li>
+          <li><a href={`${BASE}/book/`} className="msub-tile"><span className="mst-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4" strokeLinecap="round"/></svg></span><span className="mst-body"><strong>I want to book a strategy call</strong><span>We&rsquo;ll audit your account for free and show you where biggest opportunities are.</span></span></a></li>
+        </ul>
+      </details>
+    </li>
+    <li>
+      <details className="mgroup">
+        <summary><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18" strokeLinecap="round"/></svg></span>What We Do<svg className="mdc mdc-dn" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></summary>
+        <ul className="msub">
+          <li><a href={`${BASE}/#what-we-do`} className="msub-tile"><span className="mst-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></span><span className="mst-body"><strong>GOOGLE ADS</strong><span>More customers, lower acquisition costs and profitable growth from every dollar spent.</span></span></a></li>
+          <li><a href={`${BASE}/ecommerce/#merchant-center`} className="msub-tile"><span className="mst-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><path d="M3 3h8l10 10-8 8L3 11V3z" strokeLinejoin="round"/><circle cx="7.5" cy="7.5" r="1.4"/></svg></span><span className="mst-body"><strong>MERCHANT CENTER</strong><span>Optimised product feeds that improve visibility, attract more buyers and increase sales.</span></span></a></li>
+          <li><a href={`${BASE}/landing-pages/`} className="msub-tile"><span className="mst-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 8h16M8 13h8M8 17h5" strokeLinecap="round"/></svg></span><span className="mst-body"><strong>LANDING PAGES &amp; CRO</strong><span>Turn more of your existing traffic into paying customers without spending more on ads.</span></span></a></li>
+          <li><a href={`${BASE}/web-development/`} className="msub-tile"><span className="mst-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><path d="M9 8l-4 4 4 4M15 8l4 4-4 4" strokeLinecap="round" strokeLinejoin="round"/></svg></span><span className="mst-body"><strong>WEB DEVELOPMENT</strong><span>Fast, high-converting websites built to turn visitors into customers.</span></span></a></li>
+          <li><a href={`${BASE}/book/`} className="msub-tile"><span className="mst-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4" strokeLinecap="round"/></svg></span><span className="mst-body"><strong>Free Strategy Call</strong><span>We&rsquo;ll audit your business for free and show you where biggest opportunities are.</span></span></a></li>
+        </ul>
+      </details>
+    </li>
+    <li>
+      <details className="mgroup">
+        <summary><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></svg></span>Extra<svg className="mdc mdc-dn" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></summary>
+        <ul className="msub">
+          <li><a href={`${BASE}/blog/`}>Blog</a></li>
+          <li><a href={`${BASE}/tools/`}>Tools</a></li>
+          <li><a href={`${BASE}/case-studies/`}>Case Studies</a></li>
+        </ul>
+      </details>
+    </li>
     <li><a href={`${BASE}/about/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5" strokeLinecap="round"/><path d="M16 6a3 3 0 0 1 0 6M21 20c0-2.4-1.4-4-3.4-4.7" strokeLinecap="round"/></svg></span>About<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
   </ul>
   <div className="mdrawer-cta">
-    <a href={`${BASE}/book/`} className="mc-quote">Get Your Growth Plan</a>
+    <a href={`${BASE}/book/`} className="mc-quote">Get Your Free Growth Plan</a>
   </div>
 </div>
 
@@ -120,12 +203,12 @@ export default function About() {
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Google Ads only, nothing else</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Founders across every account</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Month-to-month, no lock-in</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>AU, NZ &amp; UK brands</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>$100m+ ad spend managed</li>
       </ul>
     </div>}
-  title={<>Two ex-Googlers who only do <span className="accent">Google Ads</span>.</>}
-  sub={<>We&rsquo;re Jackson Wallace and Jackson Sharp. We left Google&rsquo;s growth team to start Adalytical, a specialist Google Ads agency for ecommerce and lead gen brands across Australia, New Zealand and the UK.</>}
-  actions={<><a href={`${BASE}/book/`} className="btn-p">Get Your Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></>}
+  title={<span className="ph-oneline">Founded by <span className="accent">2 ex-Googlers</span>.</span>}
+  sub={<>Jackson Wallace and Jackson Sharp left Google&rsquo;s growth team to start Adalytical, a specialist Google Ads agency for ecommerce and lead gen brands. We&rsquo;ve helped brands grow with Google Ads across North America, Europe, Asia, GCC, Australia and NZ.</>}
+  actions={<><a href={`${BASE}/book/`} className="btn-p">Get Your Free Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></>}
 />
 
 {/* ============ CLIENT LOGOS ============ */}
@@ -147,6 +230,8 @@ export default function About() {
       <div className="shead-main">
         <h2 className="shead-t rv">Hey, we&rsquo;re <span className="dim">Jackson &amp; Jackson.</span></h2>
         <p className="shead-sub rv">Two co-founders, both ex-Google, both hands-on in your account.</p>
+        <p className="shead-sub rv">Prior to their years spent at Google, Jackson Wallace built his eCommerce experience with high-growth brands like HiSmile, while Jackson Sharp brought experience across tech startups and global FMCG brands like Reckitt.</p>
+        <p className="shead-sub rv">They left Google to build Adalytical, combining the agility of startups, the strategic thinking of global brands, and their insider Google expertise to help ambitious businesses scale profitably.</p>
       </div>
     </div>
     <div className="ab-founders rv">
@@ -155,8 +240,8 @@ export default function About() {
         <div className="ab-founder-body">
           <span className="ab-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg> Ex-Google growth team</span>
           <h3>Jackson Wallace</h3>
-          <span className="ab-role">Co-founder &middot; Delivery</span>
-          <p>Runs delivery at Adalytical: account management, tracking, feeds and the day-to-day work that keeps every account moving.</p>
+          <span className="ab-role">Co-founder &middot; Strategy</span>
+          <p>Takes the time to understand your brand, market, and growth opportunities to develop a tailored strategy. Most brands first meet Wallace during their Growth Plan Call, and he remains personally involved in overseeing the strategy for every account.</p>
         </div>
       </article>
       <article className="ab-founder">
@@ -164,8 +249,8 @@ export default function About() {
         <div className="ab-founder-body">
           <span className="ab-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg> Ex-Google growth team</span>
           <h3>Jackson Sharp</h3>
-          <span className="ab-role">Co-founder &middot; Growth &amp; strategy</span>
-          <p>Leads strategy and growth. Most brands meet Sharp first, on their growth plan call, and he stays across the strategy on every account.</p>
+          <span className="ab-role">Co-founder &middot; Performance</span>
+          <p>Ensures every account is optimised for maximum profitability and sustainable growth, while proactively adapting strategies to changes in areas such as the wider market, competitor activity, and advertising platforms.</p>
         </div>
       </article>
     </div>
@@ -229,7 +314,7 @@ export default function About() {
       <article className="why-card">
         <span className="why-num">04</span>
         <h4>No lock-in contracts</h4>
-        <p>Month-to-month, with a 60-day money-back guarantee. You stay because it&rsquo;s working, not because you&rsquo;re stuck.</p>
+        <p>Month-to-month, with no lock-in long term contracts. You stay because it&rsquo;s working really well (not because you&rsquo;re stuck).</p>
       </article>
     </div>
   </div>
@@ -241,7 +326,7 @@ export default function About() {
     <div className="shead">
       <span className="shead-chip rv"><span className="chip-plus">+</span> Client reviews</span>
       <div className="shead-main">
-        <h2 className="shead-t rv">In our clients&rsquo; <span className="dim">own words.</span></h2>
+        <h2 className="shead-t rv">Words from the people <span className="dim">behind the work.</span></h2>
       </div>
     </div>
     <div className="ab-reviews rv">
@@ -271,7 +356,7 @@ export default function About() {
       <span className="sec-tag">Get started</span>
       <h2>Want two ex-Googlers on your account?</h2>
       <p>Get a free growth plan. We&rsquo;ll show you where your Google Ads are leaking money and exactly what we&rsquo;d do about it. No pitch, no pressure.</p>
-      <div className="cta-btns"><a href={`${BASE}/book/`} className="btn-p">Get Your Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></div>
+      <div className="cta-btns"><a href={`${BASE}/book/`} className="btn-p">Get Your Free Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></div>
       <div className="cta-micro" style={{'justifyContent':'center'}}>
         <span className="cm-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Free &amp; no obligation</span>
         <span className="cm-sep"></span>
@@ -316,7 +401,7 @@ export default function About() {
           <li><a href={`${BASE}/about/`}>About</a></li>
           <li><a href={`${BASE}/#faq`}>FAQ</a></li>
           <li><a href={`${BASE}/partners/`}>Partners</a></li>
-          <li><a href={`${BASE}/book/`}>Get Your Growth Plan</a></li>
+          <li><a href={`${BASE}/book/`}>Get Your Free Growth Plan</a></li>
         </ul>
       </div>
     </div>
@@ -332,7 +417,7 @@ export default function About() {
     <span className="fcta-dot" aria-hidden="true"></span>
     <p className="fcta-copy">Ready when you are<span>, no obligation either way</span></p>
     <div className="fcta-btns">
-      <a href={`${BASE}/book/`} className="fcta-primary">Get Your Growth Plan</a>
+      <a href={`${BASE}/book/`} className="fcta-primary"><span className="cta-shine">Get Your Free Growth Plan</span></a>
     </div>
   </div>
 </div>

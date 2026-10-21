@@ -1,11 +1,12 @@
 function __onload(fn){if(document.readyState==='complete'){setTimeout(fn,0);}else{window.addEventListener('load',fn);}}
+// The page may be scaled with CSS zoom (desktop renders at 80%, see lp.css). Element rects
+// come back in zoomed pixels while inline styles are unzoomed, so convert before mixing them.
+// Top level so every block below can use it (the card glow block calls it too).
+function pageZoom() { var z = parseFloat(getComputedStyle(document.documentElement).zoom); return z > 0 ? z : 1; }
 /* Adalytical, interactions */
 (function () {
   'use strict';
 
-  // The page may be scaled with CSS zoom (desktop renders at 80%, see lp.css). Element rects
-  // come back in zoomed pixels while inline styles are unzoomed, so convert before mixing them.
-  function pageZoom() { var z = parseFloat(getComputedStyle(document.documentElement).zoom); return z > 0 ? z : 1; }
   function zrect(el) {
     var r = el.getBoundingClientRect(), z = pageZoom();
     return { left: r.left / z, right: r.right / z, top: r.top / z, bottom: r.bottom / z, width: r.width / z, height: r.height / z };
