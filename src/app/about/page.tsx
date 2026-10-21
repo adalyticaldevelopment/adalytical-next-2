@@ -196,7 +196,7 @@ export default function About() {
   media={<div className="hm-card">
       <span className="hm-tag">Founders</span>
       <div className="hm-founders">
-        <span className="avs"><img src={`${BASE}/images/jackson-wallace.webp`} alt="Jackson Wallace" width="68" height="68" /><img src={`${BASE}/images/jackson-sharp.webp`} alt="Jackson Sharp" width="68" height="68" /></span>
+        <span className="avs"><img src={`${BASE}/images/jackson-wallace-about.webp`} alt="Jackson Wallace" width="68" height="68" /><img src={`${BASE}/images/jackson-sharp-about-avatar.webp`} alt="Jackson Sharp" width="68" height="68" /></span>
         <div><strong>Jackson Wallace &amp; Jackson Sharp</strong><span className="hm-muted">Co-founders &middot; Ex-Google growth team</span></div>
       </div>
       <ul className="hm-list">
@@ -236,7 +236,7 @@ export default function About() {
     </div>
     <div className="ab-founders rv">
       <article className="ab-founder">
-        <img src={`${BASE}/images/jackson-wallace.webp`} alt="Jackson Wallace" width="560" height="560" />
+        <img src={`${BASE}/images/jackson-wallace-about.webp`} alt="Jackson Wallace" width="560" height="560" />
         <div className="ab-founder-body">
           <span className="ab-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg> Ex-Google growth team</span>
           <h3>Jackson Wallace</h3>
@@ -245,7 +245,7 @@ export default function About() {
         </div>
       </article>
       <article className="ab-founder">
-        <img src={`${BASE}/images/jackson-sharp.webp`} alt="Jackson Sharp" width="560" height="560" />
+        <img src={`${BASE}/images/jackson-sharp-about.webp`} alt="Jackson Sharp" width="560" height="560" />
         <div className="ab-founder-body">
           <span className="ab-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg> Ex-Google growth team</span>
           <h3>Jackson Sharp</h3>
