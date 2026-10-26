@@ -379,7 +379,7 @@ export default function LeadGeneration() {
       <div className="proj rv">
         <div className="proj-bar">
           <span className="proj-name">Into Blinds</span>
-          <span className="proj-tag">/Blinds</span>
+          <span className="proj-tag">/Home Improvement</span>
           <span className="proj-dots"><i></i><i></i><i></i></span>
         </div>
         <div className="proj-media">

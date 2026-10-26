@@ -190,7 +190,7 @@ export const COMING_SOON: ComingSoon[] = [
 export type LeadGenResult = { business: string; category: string; niche: string; img: string; headline: string; label: string; cpl: string[]; extra?: string[] };
 
 export const LEADGEN_RESULTS: LeadGenResult[] = [
-  { business: "Into Blinds", category: "Google Ads", niche: "Window furnishings", img: "case-into-blinds.webp", headline: "38%", label: "lower CPL", cpl: ["$80.95", "Aug 2025", "$50.20", "Aug 2026"], extra: ["435 → 1,149", "Monthly leads", "Aug 2025 → Aug 2026"] },
+  { business: "Into Blinds", category: "Google Ads", niche: "Home Improvement", img: "case-into-blinds.webp", headline: "38%", label: "lower CPL", cpl: ["$80.95", "Aug 2025", "$50.20", "Aug 2026"], extra: ["435 → 1,149", "Monthly leads", "Aug 2025 → Aug 2026"] },
   { business: "ONQ", category: "Google Ads", niche: "Media", img: "case-onq.webp", headline: "64%", label: "lower CPL", cpl: ["$189.64", "March 2026", "$69.03", "August 2026"] },
   { business: "Prime Group", category: "Google Ads", niche: "Construction", img: "case-prime-group.webp", headline: "From 0 to 31 leads/month", label: "In 60 days", cpl: ["$184.77", "First full month · Aug 2026", "$139.49", "Sep-to-date · as at 10 Sep 2026"] },
   { business: "Peninsula Heat Pumps", category: "Website results", niche: "Plumbing", img: "case-peninsula.webp", headline: "60%", label: "lower CPL", cpl: ["$87.12", "March", "$34.59", "August"], extra: ["5.6% → 14.6%", "Conversion rate", "March → August"] },
