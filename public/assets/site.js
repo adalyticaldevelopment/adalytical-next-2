@@ -711,3 +711,128 @@ document.querySelectorAll('.vtst').forEach(function(card){
     open();
   });
 })();
+
+/* ---- What We Do (homepage): collapsed height = first row + half of the second ---- */
+(function () {
+  var grid = document.querySelector('.wwd-wrap .wwd-grid');
+  if (!grid) return;
+  function measure() {
+    var cards = grid.children;
+    if (!cards.length) return;
+    var top = cards[0].offsetTop, second = null;
+    for (var i = 0; i < cards.length; i++) {
+      if (cards[i].offsetTop > top + 4) { second = cards[i]; break; }
+    }
+    if (!second) { grid.style.removeProperty('--wwd-peek'); return; }
+    grid.style.setProperty('--wwd-peek', Math.round(second.offsetTop - top + second.offsetHeight * 0.5) + 'px');
+  }
+  measure();
+  window.addEventListener('resize', measure);
+  window.addEventListener('load', measure);
+})();
+
+/* ---- Case studies carousel (homepage): arrow buttons scroll one card; disabled at the ends ---- */
+(function () {
+  var wrap = document.querySelector('.cs-carousel');
+  if (!wrap) return;
+  var track = wrap.querySelector('.proj-track');
+  var prev = wrap.querySelector('.cs-prev'), next = wrap.querySelector('.cs-next');
+  function step() {
+    var card = track.querySelector('.proj');
+    return card ? card.getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 0) : track.clientWidth;
+  }
+  function update() {
+    var max = track.scrollWidth - track.clientWidth - 8;
+    prev.disabled = track.scrollLeft <= 8;
+    next.disabled = track.scrollLeft >= max;
+    wrap.classList.toggle('cs-static', max <= 0);
+    wrap.classList.toggle('cs-at-start', track.scrollLeft <= 8);
+    wrap.classList.toggle('cs-at-end', track.scrollLeft >= max);
+  }
+  prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+  next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
+  track.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();
+
+/* ---- Client reviews (homepage): collapsed height cuts through the next review down ----
+   Several columns: every column's first review shows in full, then the wall cuts through
+   the second row. One column (phones): the first two show, cut through the third. */
+(function () {
+  var wall = document.querySelector('.rvw-wrap .rvw-wall');
+  if (!wall) return;
+  function measure() {
+    var top = wall.getBoundingClientRect().top;
+    var figs = Array.prototype.slice.call(wall.querySelectorAll('figure')).map(function (f) {
+      var r = f.getBoundingClientRect();
+      return { left: Math.round(r.left), top: r.top - top, bottom: r.bottom - top, h: r.height };
+    }).filter(function (f) { return f.h > 0; });
+    if (!figs.length) return;
+    var cols = {};
+    figs.forEach(function (f) { (cols[f.left] = cols[f.left] || []).push(f); });
+    var keys = Object.keys(cols);
+    keys.forEach(function (k) { cols[k].sort(function (a, b) { return a.top - b.top; }); });
+    var peek;
+    if (keys.length === 1) {
+      var c = cols[keys[0]];
+      peek = c[2] ? c[2].top + c[2].h * 0.5 : c[c.length - 1].bottom;
+    } else {
+      var firstBottom = 0, secondMid = Infinity;
+      keys.forEach(function (k) {
+        firstBottom = Math.max(firstBottom, cols[k][0].bottom);
+        if (cols[k][1]) secondMid = Math.min(secondMid, cols[k][1].top + cols[k][1].h * 0.5);
+      });
+      peek = Math.max(firstBottom + 140, secondMid === Infinity ? firstBottom : secondMid);
+    }
+    wall.style.setProperty('--rvw-peek', Math.round(peek) + 'px');
+  }
+  measure();
+  window.addEventListener('resize', measure);
+  window.addEventListener('load', measure);
+})();
+
+/* ---- "Show more" toggles (What We Do, Client reviews): flip the hidden checkbox without
+   focusing it. A plain label click focuses the checkbox, and the browser then scrolls the
+   page up to where the checkbox sits (the top of the section). ---- */
+(function () {
+  document.querySelectorAll('label.wwd-more-btn, label.fcol-head').forEach(function (label) {
+    var box = document.getElementById(label.htmlFor);
+    if (!box) return;
+    label.addEventListener('click', function (e) {
+      e.preventDefault();
+      // Opening: keep the page where it is (the cards unfold below). Closing: keep the
+      // button where it is on screen, so the cards fold up above it instead of the page
+      // jumping. Re-applied for a few frames to beat the browser's own scroll anchoring.
+      var opening = !box.checked;
+      var y = window.scrollY, btnTop = label.getBoundingClientRect().top;
+      box.checked = opening;
+      box.dispatchEvent(new Event('change', { bubbles: true }));
+      function hold() {
+        // instant, not smooth: the page has scroll-behavior:smooth, which would animate the fix
+        if (opening) window.scrollTo({ top: y, behavior: 'instant' });
+        else window.scrollBy({ top: label.getBoundingClientRect().top - btnTop, behavior: 'instant' });
+      }
+      hold();
+      requestAnimationFrame(function () { hold(); requestAnimationFrame(function () { hold(); setTimeout(hold, 80); }); });
+    });
+  });
+})();
+
+/* ---- Footer menus (wide screens): only one open at a time; click elsewhere or Esc closes ---- */
+(function () {
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('.fcol-toggle'));
+  if (!boxes.length) return;
+  boxes.forEach(function (b) {
+    b.addEventListener('change', function () {
+      if (b.checked) boxes.forEach(function (o) { if (o !== b) o.checked = false; });
+    });
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target.closest && e.target.closest('.fcol')) return;
+    boxes.forEach(function (b) { b.checked = false; });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') boxes.forEach(function (b) { b.checked = false; });
+  });
+})();

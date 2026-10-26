@@ -8,6 +8,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { AirVent, ArrowRight, Calculator, HardHat, House, Landmark, Scale, Smile, SprayCan, Star, Stethoscope, Trees, Wrench, Zap } from "lucide-react";
+import { LEADGEN_RESULTS as CASES } from "../case-studies/data";
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
 // Meta pixel: "Adalytical Main Pixel" (same as /growth-plan), in Adalytical NEW (act_921312640727906).
@@ -23,13 +24,6 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false }, // paid-traffic page
 };
 
-const CASES = [
-  { business: "Into Blinds", category: "Google Ads", img: "case-into-blinds.webp", headline: "38%", label: "lower CPL", cpl: ["$80.95", "Aug 2025", "$50.20", "Aug 2026"], extra: ["435 → 1,149", "Monthly leads", "Aug 2025 → Aug 2026"] },
-  { business: "ONQ", category: "Google Ads", img: "case-onq.webp", headline: "64%", label: "lower CPL", cpl: ["$189.64", "March 2026", "$69.03", "August 2026"] },
-  { business: "Prime Group", category: "Google Ads", img: "case-prime-group.webp", headline: "From 0 to 31 leads/month", label: "In 60 days", cpl: ["$184.77", "First full month · Aug 2026", "$139.49", "Sep-to-date · as at 10 Sep 2026"] },
-  { business: "Peninsula Heat Pumps", category: "Website results", img: "case-peninsula.webp", headline: "60%", label: "lower CPL", cpl: ["$87.12", "March", "$34.59", "August"], extra: ["5.6% → 14.6%", "Conversion rate", "March → August"] },
-  { business: "Geelong Heat Pumps", category: "Website results", img: "case-geelong.webp", headline: "48%", label: "lower CPL", cpl: ["$57.19", "March", "$29.99", "August"], extra: ["4.6% → 12.7%", "Conversion rate", "March → August"] },
-];
 
 // Same order as the original page: Rankify and Adalytical reviews alternate, first 9 shown
 type Review = { tag: "Rankify" | "Adalytical"; quote: string; name: string; role: string; photo?: string };
@@ -203,7 +197,7 @@ export default function LeadGenOffer() {
   <div className="ctr">
     <div className="bk-head rv">
       <span className="sec-tag">Client reviews</span>
-      <h2>Words from the people <span className="dim">behind the work.</span></h2>
+      <h2>What it&rsquo;s like <span className="dim">working with us.</span></h2>
     </div>
     <div className="rv"><ReviewWall items={REVIEWS.slice(0, 9)} /></div>
     <details className="rvw-more">

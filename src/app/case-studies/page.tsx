@@ -8,10 +8,25 @@ export const metadata: Metadata = {
 };
 
 import Script from "next/script";
+import type { ReactNode } from "react";
 import { PageHero } from "@/components/PageHero";
-import { CASE_STUDIES } from "./data";
+import { CASE_STUDIES, COMING_SOON, LEADGEN_RESULTS } from "./data";
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
+// Card order on this page. Names match CASE_STUDIES / LEADGEN_RESULTS / COMING_SOON in ./data;
+// anything not listed goes after the list, and Geelong Heat Pumps always last.
+const CARD_ORDER = [
+  "The Watch Factory", "Bushdoof Lighting", "Aaria London", "ONQ", "BeforeYouSpeak Coffee",
+  "Redlight Innovation", "Lokolash", "Winland Home & Garden", "Prime Group", "Personalised Favours",
+  "Peninsula Heat Pumps", "Kiwi Treats", "Bellissima", "Booze & Barrels", "Into Blinds",
+  "Hedonist", "Hydrotech", "Health Heiress",
+];
+const CARD_LAST = ["Geelong Heat Pumps"];
+function orderCards(cards: (readonly [string, ReactNode])[]) {
+  const rank = (n: string) => CARD_LAST.includes(n) ? 1e6 + CARD_LAST.indexOf(n) : CARD_ORDER.includes(n) ? CARD_ORDER.indexOf(n) : 1e3;
+  return cards.map((c, i) => ({ c, i })).sort((a, b) => rank(a.c[0]) - rank(b.c[0]) || a.i - b.i).map(({ c }) => c[1]);
+}
 
 export default function CaseStudies() {
   return (
@@ -165,17 +180,39 @@ export default function CaseStudies() {
 <section className="sec sec-cream rvsec" style={{'paddingTop':'clamp(20px,calc(3 * var(--vw)),40px)'}}>
   <div className="ctr">
     <div className="cs-index rv">
-      {CASE_STUDIES.map((c) => (
-        <a href={`${BASE}/case-studies/${c.slug}/`} className="csx" key={c.slug}>
-          <div className="csx-img"><img src={`${BASE}/images/${c.image}`} alt={c.name} /><span className="csx-stat">{c.cardStat}</span></div>
-          <div className="csx-body">
-            <span className="csx-tag">{c.tag}</span>
-            <h3>{c.name}</h3>
-            <p>{c.cardBlurb}</p>
-            <span className="csx-more">Read story <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
+      {orderCards([
+        ...CASE_STUDIES.map((c) => [c.name, (
+          <a href={`${BASE}/case-studies/${c.slug}/`} className="csx" key={c.slug}>
+            <div className="csx-img"><img src={`${BASE}/images/${c.image}`} alt={c.name} /><span className="csx-stat">{c.cardStat}</span></div>
+            <div className="csx-body">
+              <span className="csx-tag">{c.tag}</span>
+              <h3>{c.name}</h3>
+              <p>{c.cardBlurb}</p>
+              <span className="csx-more">Read story <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
+            </div>
+          </a>
+        )] as const),
+        ...LEADGEN_RESULTS.map((c) => [c.business, (
+          <div className="csx csx-soon" key={c.business}>
+            <div className="csx-img"><img src={`${BASE}/images/leadgen/${c.img}`} alt={c.business} loading="lazy" /><span className="csx-stat">{c.headline.length > 4 ? c.headline : `${c.headline} ${c.label}`}</span></div>
+            <div className="csx-body">
+              <span className="csx-tag">Lead generation · {c.niche}</span>
+              <h3>{c.business}</h3>
+              <p>Cost per lead {c.cpl[0]} ({c.cpl[1]}) &rarr; {c.cpl[2]} ({c.cpl[3]}).{c.extra && <> {c.extra[1]} {c.extra[0]} ({c.extra[2]}).</>}</p>
+            </div>
           </div>
-        </a>
-      ))}
+        )] as const),
+        ...COMING_SOON.map((c) => [c.name, (
+          <div className="csx csx-soon" key={c.name}>
+            <div className="csx-img">{c.image && <img src={`${BASE}/images/${c.image}`} alt={c.name} style={c.imagePosition ? { objectPosition: c.imagePosition } : undefined} />}<span className="csx-stat">Coming soon</span></div>
+            <div className="csx-body">
+              <span className="csx-tag">{c.tag}</span>
+              <h3>{c.name}</h3>
+              <p>Case study coming soon.</p>
+            </div>
+          </div>
+        )] as const),
+      ])}
     </div>
   </div>
 </section>
@@ -186,7 +223,7 @@ export default function CaseStudies() {
     <div className="shead">
       <span className="shead-chip rv"><span className="chip-plus">+</span> Client reviews</span>
       <div className="shead-main">
-        <h2 className="shead-t rv">Words from the people <span className="dim">behind the work.</span></h2>
+        <h2 className="shead-t rv">What it&rsquo;s like <span className="dim">working with us.</span></h2>
       </div>
     </div>
     <div className="rvw-wall rv">
@@ -303,9 +340,11 @@ export default function CaseStudies() {
       <div className="footer-brand">
         <a href={`${BASE}/`} className="logo"><img className="logo-img" src={`${BASE}/images/adalytical-logo-white.svg`} alt="Adalytical" /></a>
         <p>Helping brands scale with proven, profitable Google Ads strategies, built on ex-Google insider knowledge.</p>
+        <a href={`${BASE}/book/`} className="footer-cta">Get Your Free Growth Plan</a>
       </div>
-      <div>
-        <h5>Services</h5>
+      <div className="fcol">
+        <input type="checkbox" id="fc-services" className="fcol-toggle" />
+        <label htmlFor="fc-services" className="fcol-head"><h5>Services</h5><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></label>
         <ul className="footer-links">
           <li><a href={`${BASE}/#services`}>Google Ads Management</a></li>
           <li><a href={`${BASE}/ecommerce/#merchant-center`}>Merchant Center</a></li>
@@ -313,8 +352,9 @@ export default function CaseStudies() {
           <li><a href={`${BASE}/web-development/`}>Web Development</a></li>
         </ul>
       </div>
-      <div>
-        <h5>Who we help</h5>
+      <div className="fcol">
+        <input type="checkbox" id="fc-who" className="fcol-toggle" />
+        <label htmlFor="fc-who" className="fcol-head"><h5>Who we help</h5><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></label>
         <ul className="footer-links">
           <li><a href={`${BASE}/ecommerce/`}>E-commerce</a></li>
           <li><a href={`${BASE}/lead-generation/`}>Lead Generation</a></li>
@@ -322,27 +362,26 @@ export default function CaseStudies() {
           <li><a href={`${BASE}/case-studies/`}>Case Studies</a></li>
         </ul>
       </div>
-      <div>
-        <h5>Company</h5>
+      <div className="fcol">
+        <input type="checkbox" id="fc-company" className="fcol-toggle" />
+        <label htmlFor="fc-company" className="fcol-head"><h5>Company</h5><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></label>
         <ul className="footer-links">
           <li><a href={`${BASE}/about/`}>About</a></li>
           <li><a href={`${BASE}/#faq`}>FAQ</a></li>
           <li><a href={`${BASE}/partners/`}>Partners</a></li>
-          <li><a href={`${BASE}/book/`}>Get Your Free Growth Plan</a></li>
         </ul>
       </div>
+      <div className="footer-plan-col"><a href={`${BASE}/book/`} className="footer-plan">Get Your Free Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></div>
     </div>
     <div className="footer-bottom">
       <span>© <span id="year">2026</span> adalytical. All rights reserved.</span>
-      <span>Terms and Conditions · Privacy Policy</span>
     </div>
   </div>
 </footer>
 
 <div className="float-cta">
   <div className="fcta-bar">
-    <span className="fcta-dot" aria-hidden="true"></span>
-    <p className="fcta-copy">Ready when you are<span>, no obligation either way</span></p>
+    <p className="fcta-copy">Ready when you are<span> (no obligation either way)</span><span className="fcta-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></p>
     <div className="fcta-btns">
       <a href={`${BASE}/book/`} className="fcta-primary"><span className="cta-shine">Get Your Free Growth Plan</span></a>
     </div>

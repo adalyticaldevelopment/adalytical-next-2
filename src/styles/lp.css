@@ -224,6 +224,8 @@
 .csx-body p{font-size:.9rem;color:var(--g600);line-height:1.6}
 .csx-more{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:.85rem;font-weight:700;color:var(--brand)}
 .csx-more svg{width:15px;height:15px}
+/* placeholder cards for case studies not written yet: not links, so no lift on hover */
+.csx-soon,.csx-soon:hover{transform:none;box-shadow:var(--shadow-s);cursor:default}
 @media(max-width:720px){.cs-index{grid-template-columns:1fr}}
 
 /* ---- SECTION RHYTHM: alternate white/grey to break the block-after-block feel ---- */

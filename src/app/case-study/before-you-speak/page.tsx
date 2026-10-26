@@ -197,8 +197,7 @@ export default function CaseStudyBeforeYouSpeak() {
 
 <div className="float-cta">
   <div className="fcta-bar">
-    <span className="fcta-dot" aria-hidden="true"></span>
-    <p className="fcta-copy">Ready when you are<span>, no obligation either way</span></p>
+    <p className="fcta-copy">Ready when you are<span> (no obligation either way)</span><span className="fcta-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></p>
     <div className="fcta-btns">
       <a href={`${BASE}/book/`} className="fcta-primary">Book a Strategy Call</a>
     </div>

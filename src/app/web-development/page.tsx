@@ -318,9 +318,11 @@ export default function WebDevelopment() {
       <div className="footer-brand">
         <a href={`${BASE}/`} className="logo"><img className="logo-img" src={`${BASE}/images/adalytical-logo-white.svg`} alt="Adalytical" /></a>
         <p>Helping brands scale with proven, profitable Google Ads strategies, built on ex-Google insider knowledge.</p>
+        <a href={`${BASE}/book/`} className="footer-cta">Get Your Free Growth Plan</a>
       </div>
-      <div>
-        <h5>Services</h5>
+      <div className="fcol">
+        <input type="checkbox" id="fc-services" className="fcol-toggle" />
+        <label htmlFor="fc-services" className="fcol-head"><h5>Services</h5><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></label>
         <ul className="footer-links">
           <li><a href={`${BASE}/#services`}>Google Ads Management</a></li>
           <li><a href={`${BASE}/ecommerce/#merchant-center`}>Merchant Center</a></li>
@@ -328,8 +330,9 @@ export default function WebDevelopment() {
           <li><a href={`${BASE}/web-development/`}>Web Development</a></li>
         </ul>
       </div>
-      <div>
-        <h5>Who we help</h5>
+      <div className="fcol">
+        <input type="checkbox" id="fc-who" className="fcol-toggle" />
+        <label htmlFor="fc-who" className="fcol-head"><h5>Who we help</h5><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></label>
         <ul className="footer-links">
           <li><a href={`${BASE}/ecommerce/`}>E-commerce</a></li>
           <li><a href={`${BASE}/lead-generation/`}>Lead Generation</a></li>
@@ -337,27 +340,26 @@ export default function WebDevelopment() {
           <li><a href={`${BASE}/case-studies/`}>Case Studies</a></li>
         </ul>
       </div>
-      <div>
-        <h5>Company</h5>
+      <div className="fcol">
+        <input type="checkbox" id="fc-company" className="fcol-toggle" />
+        <label htmlFor="fc-company" className="fcol-head"><h5>Company</h5><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></label>
         <ul className="footer-links">
           <li><a href={`${BASE}/about/`}>About</a></li>
           <li><a href={`${BASE}/#faq`}>FAQ</a></li>
           <li><a href={`${BASE}/partners/`}>Partners</a></li>
-          <li><a href={`${BASE}/book/`}>Get Your Free Growth Plan</a></li>
         </ul>
       </div>
+      <div className="footer-plan-col"><a href={`${BASE}/book/`} className="footer-plan">Get Your Free Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></div>
     </div>
     <div className="footer-bottom">
       <span>© <span id="year">2026</span> adalytical. All rights reserved.</span>
-      <span>Terms and Conditions · Privacy Policy</span>
     </div>
   </div>
 </footer>
 
 <div className="float-cta">
   <div className="fcta-bar">
-    <span className="fcta-dot" aria-hidden="true"></span>
-    <p className="fcta-copy">Ready when you are<span>, no obligation either way</span></p>
+    <p className="fcta-copy">Ready when you are<span> (no obligation either way)</span><span className="fcta-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></p>
     <div className="fcta-btns">
       <a href={`${BASE}/book/`} className="fcta-primary"><span className="cta-shine">Get Your Free Growth Plan</span></a>
     </div>

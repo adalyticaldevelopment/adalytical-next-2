@@ -97,7 +97,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     slug: "booze-and-barrels",
     name: "Booze & Barrels",
-    tag: "E-commerce · Decanters & gifts",
+    tag: "E-commerce · Alcohol",
     image: "case-booze-barrels.webp",
     cardStat: "$16K → $68K",
     cardBlurb: "Segmented gifting and product campaigns reduced reliance on brand demand: +329% revenue at a 4.08 ROAS.",
@@ -134,7 +134,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     slug: "redlight-innovation",
     name: "Redlight Innovation",
-    tag: "E-commerce · Red light therapy",
+    tag: "E-commerce · Health",
     image: "case-redlight.webp",
     cardStat: "4+ ROAS",
     cardBlurb: "Tighter intent control restored efficiency, then made further scale possible: ROAS from ~2.0 to 4+, and +115% net profit.",
@@ -165,6 +165,36 @@ export const CASE_STUDIES: CaseStudy[] = [
       ],
     },
   },
+];
+
+// Clients whose case study isn't written yet: shown as non-clickable "coming soon" cards on
+// /case-studies/ (no page, no figures). Move a client into CASE_STUDIES once its real story
+// and numbers are in. `image` is optional; without it the card shows a blank image area.
+export type ComingSoon = { name: string; tag: string; image?: string; imagePosition?: string };
+
+export const COMING_SOON: ComingSoon[] = [
+  { name: "Personalised Favours", tag: "E-commerce · Gifts", image: "case-personalised-favours.webp" },
+  { name: "Winland Home & Garden", tag: "E-commerce · Gardening", image: "case-winland.webp" },
+  { name: "Bushdoof Lighting", tag: "E-commerce · Automotive", image: "case-bushdoof.webp", imagePosition: "50% 45%" },
+  { name: "Aaria London", tag: "E-commerce · Jewellery", image: "case-aaria-london.webp" },
+  { name: "Health Heiress", tag: "E-commerce · Supplements", image: "case-health-heiress.webp" },
+  { name: "Bellissima", tag: "E-commerce · Haircare", image: "case-bellissima.webp" },
+  { name: "Lokolash", tag: "E-commerce · Cosmetics", image: "case-lokolash.webp" },
+  { name: "Hedonist", tag: "E-commerce · Wellness", image: "case-hedonist.webp" },
+  { name: "Hydrotech", tag: "E-commerce · Wellness", image: "case-hydrotech.webp" },
+  { name: "Kiwi Treats", tag: "E-commerce · Snacks", image: "case-kiwi-treats.webp" },
+];
+
+// Lead gen results, shown on /lead-gen-offer/ and as cards on /case-studies/ (no page of their own).
+// `img` is in public/images/leadgen. cpl = [before, when, after, when]; extra = [value, label, period].
+export type LeadGenResult = { business: string; category: string; niche: string; img: string; headline: string; label: string; cpl: string[]; extra?: string[] };
+
+export const LEADGEN_RESULTS: LeadGenResult[] = [
+  { business: "Into Blinds", category: "Google Ads", niche: "Window furnishings", img: "case-into-blinds.webp", headline: "38%", label: "lower CPL", cpl: ["$80.95", "Aug 2025", "$50.20", "Aug 2026"], extra: ["435 → 1,149", "Monthly leads", "Aug 2025 → Aug 2026"] },
+  { business: "ONQ", category: "Google Ads", niche: "Media", img: "case-onq.webp", headline: "64%", label: "lower CPL", cpl: ["$189.64", "March 2026", "$69.03", "August 2026"] },
+  { business: "Prime Group", category: "Google Ads", niche: "Construction", img: "case-prime-group.webp", headline: "From 0 to 31 leads/month", label: "In 60 days", cpl: ["$184.77", "First full month · Aug 2026", "$139.49", "Sep-to-date · as at 10 Sep 2026"] },
+  { business: "Peninsula Heat Pumps", category: "Website results", niche: "Plumbing", img: "case-peninsula.webp", headline: "60%", label: "lower CPL", cpl: ["$87.12", "March", "$34.59", "August"], extra: ["5.6% → 14.6%", "Conversion rate", "March → August"] },
+  { business: "Geelong Heat Pumps", category: "Website results", niche: "Plumbing", img: "case-geelong.webp", headline: "48%", label: "lower CPL", cpl: ["$57.19", "March", "$29.99", "August"], extra: ["4.6% → 12.7%", "Conversion rate", "March → August"] },
 ];
 
 export function getCaseStudy(slug: string) {
