@@ -168,21 +168,30 @@ export default function CaseStudies() {
   eyebrow="Case studies"
   media={<div className="hm-stack">
       <div className="hm-card hm-res"><b>The Watch Factory</b><span className="hm-big">+33%</span><span className="hm-muted">Revenue YoY, biggest Q4 ever, ROAS +25%</span></div>
-      <div className="hm-card hm-res"><b>Personalised Favours</b><span className="hm-big">+$334k</span><span className="hm-muted">Revenue after ad spend in 2025, ROAS 4.8 &rarr; 5.66</span></div>
       <div className="hm-card hm-res"><b>Lokolash</b><span className="hm-big">5x</span><span className="hm-muted">Return by month 2, from zero Google history</span></div>
+      <div className="hm-card hm-res"><b>Personalised Favours</b><span className="hm-big">+6 figures</span><span className="hm-muted">In incremental revenue from Google Ads (for an already established brand and Google Ads account)</span></div>
     </div>}
-  title={<>Real clients. <span className="accent">Real performance.</span></>}
-  sub={<>We’ve helped brands across e-commerce, lead generation and SaaS grow profitably with Google Ads. Here are a few of the results.</>}
+  title={<>We’ve helped <span className="accent">tons of brands.</span></>}
+  sub={<>Across a wide range of industries, we’ve helped<br className="br-wide" /> businesses across e-commerce and lead generation grow profitably with Google Ads.</>}
   actions={<><a href={`${BASE}/book/`} className="btn-p">Get Your Free Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></>}
 />
 
 {/* ============ CASE GRID ============ */}
 <section className="sec sec-cream rvsec" style={{'paddingTop':'clamp(20px,calc(3 * var(--vw)),40px)'}}>
   <div className="ctr">
+    <div className="cs-filter-wrap">
+    <input type="radio" name="cs-filter" id="csf-all" className="csf-radio" defaultChecked />
+    <input type="radio" name="cs-filter" id="csf-eco" className="csf-radio" />
+    <input type="radio" name="cs-filter" id="csf-lg" className="csf-radio" />
+    <div className="cs-filter rv" role="group" aria-label="Filter case studies">
+      <label htmlFor="csf-all">All</label>
+      <label htmlFor="csf-eco">E-commerce</label>
+      <label htmlFor="csf-lg">Lead generation</label>
+    </div>
     <div className="cs-index rv">
       {orderCards([
         ...CASE_STUDIES.map((c) => [c.name, (
-          <a href={`${BASE}/case-studies/${c.slug}/`} className="csx" key={c.slug}>
+          <a href={`${BASE}/case-studies/${c.slug}/`} className="csx cat-eco" key={c.slug}>
             <div className="csx-img"><img src={`${BASE}/images/${c.image}`} alt={c.name} /><span className="csx-stat">{c.cardStat}</span></div>
             <div className="csx-body">
               <span className="csx-tag">{c.tag}</span>
@@ -193,7 +202,7 @@ export default function CaseStudies() {
           </a>
         )] as const),
         ...LEADGEN_RESULTS.map((c) => [c.business, (
-          <div className="csx csx-soon" key={c.business}>
+          <div className="csx csx-soon cat-lg" key={c.business}>
             <div className="csx-img"><img src={`${BASE}/images/leadgen/${c.img}`} alt={c.business} loading="lazy" /><span className="csx-stat">{c.headline.length > 4 ? c.headline : `${c.headline} ${c.label}`}</span></div>
             <div className="csx-body">
               <span className="csx-tag">Lead generation · {c.niche}</span>
@@ -203,7 +212,7 @@ export default function CaseStudies() {
           </div>
         )] as const),
         ...COMING_SOON.map((c) => [c.name, (
-          <div className="csx csx-soon" key={c.name}>
+          <div className={`csx csx-soon ${c.tag.startsWith("E-commerce") ? "cat-eco" : "cat-lg"}`} key={c.name}>
             <div className="csx-img">{c.image && <img src={`${BASE}/images/${c.image}`} alt={c.name} style={c.imagePosition ? { objectPosition: c.imagePosition } : undefined} />}<span className="csx-stat">Coming soon</span></div>
             <div className="csx-body">
               <span className="csx-tag">{c.tag}</span>
@@ -213,6 +222,7 @@ export default function CaseStudies() {
           </div>
         )] as const),
       ])}
+    </div>
     </div>
   </div>
 </section>
@@ -226,25 +236,27 @@ export default function CaseStudies() {
         <h2 className="shead-t rv">What it&rsquo;s like <span className="dim">working with us.</span></h2>
       </div>
     </div>
+    <div className="rvw-wrap">
+    <input type="checkbox" id="rvw-more" className="rvw-toggle" />
     <div className="rvw-wall rv">
       <div className="rvw-col">
-      <figure className="rvw-card">
-        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
-        <blockquote>Adalytical <strong>helped us scale our Google spend</strong> by over 300%, all while keeping profitability front and centre.</blockquote>
-        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/sivan.webp`} alt="" width="38" height="38" /></span><div><strong>Sivan</strong><span>Founder, Bushdoof Lighting</span></div></figcaption>
-      </figure>
-      <figure className="rvw-vid" data-vimeo="1165554472">
-        <img className="rvw-thumb" src={`${BASE}/images/reviews/vid-matthew.webp`} alt="" />
-        <span className="rvw-badge">Video</span>
-        <button className="rvw-play" type="button" aria-label="Play video review from Matthew"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
-        <figcaption><strong>Matthew</strong><span>CEO, Personalised Favours</span></figcaption>
-      </figure>
-      <figure className="rvw-card">
+      <figure className="rvw-card mo-1">
         <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
         <blockquote><strong>Helped us compete against the giants</strong> in the extremely competitive and crowded drinks industry. Highly recommend!</blockquote>
         <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/rachel.webp`} alt="" width="38" height="38" /></span><div><strong>Rachel</strong><span>Founder, Blume</span></div></figcaption>
       </figure>
       <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <blockquote>Adalytical <strong>helped us scale our Google spend</strong> by over 300%, all while keeping profitability front and centre.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/sivan.webp`} alt="" width="38" height="38" /></span><div><strong>Sivan</strong><span>Founder, Bushdoof Lighting</span></div></figcaption>
+      </figure>
+      <figure className="rvw-vid mo-2" data-vimeo="1170457963">
+        <img className="rvw-thumb" src={`${BASE}/images/reviews/vid-ariana.webp`} alt="" />
+        <span className="rvw-badge">Video</span>
+        <button className="rvw-play" type="button" aria-label="Play video review from Ariana"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <figcaption><strong>Ariana</strong><span>Founder, Aaria London</span></figcaption>
+      </figure>
+      <figure className="rvw-card mo-4">
         <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
         <blockquote>Jackson&rsquo;s <strong>expertise in Google Ads is unmatched</strong>. He and the team helped us overcome multiple very niche Google Ads challenges.</blockquote>
         <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/rob.webp`} alt="" width="38" height="38" /></span><div><strong>Rob</strong><span>Marketing Director, Beverage Food Group</span></div></figcaption>
@@ -255,14 +267,19 @@ export default function CaseStudies() {
         <button className="rvw-play" type="button" aria-label="Play video review from Rick"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
         <figcaption><strong>Rick</strong><span>Winland Home &amp; Garden</span></figcaption>
       </figure>
-      </div>
-      <div className="rvw-col">
       <figure className="rvw-card">
         <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
-        <blockquote>Adalytical helped us with our <strong>biggest Q4 ever</strong>! Revenue was +33% and ROAS +25% YOY. Already seeing <strong>massive revenue and ROAS gains</strong> for Q1 and Q2.</blockquote>
-        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/jay.webp`} alt="" width="38" height="38" /></span><div><strong>Jay</strong><span>Head of Marketing, The Watch Factory</span></div></figcaption>
+        <blockquote>We were finding it difficult to get new high-value leads using other channels, and decided to work with Adalytical. <strong>Immediately saw incredible results.</strong></blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/myles.webp`} alt="" width="38" height="38" /></span><div><strong>Myles</strong><span>CEO, ONQ</span></div></figcaption>
       </figure>
-      <figure className="rvw-vid" data-vimeo="1167218749">
+      </div>
+      <div className="rvw-col">
+      <figure className="rvw-card mo-3">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <blockquote>Adalytical has been extremely helpful in getting us <strong>way more, and way cheaper leads</strong>. Super great to work with.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/cam.webp`} alt="" width="38" height="38" /></span><div><strong>Cam</strong><span>Director, Geelong Heat Pumps</span></div></figcaption>
+      </figure>
+      <figure className="rvw-vid mo-5" data-vimeo="1167218749">
         <img className="rvw-thumb" src={`${BASE}/images/reviews/vid-rio.webp`} alt="" />
         <span className="rvw-badge">Video</span>
         <button className="rvw-play" type="button" aria-label="Play video review from Rio"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
@@ -273,14 +290,24 @@ export default function CaseStudies() {
         <blockquote>Quickly grasped our unique challenges and FMCG space to <strong>deliver an effective Google and YouTube Ads strategy</strong>.</blockquote>
         <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/abdul.webp`} alt="" width="38" height="38" /></span><div><strong>Abdul</strong><span>Founder, Pinkish Pods</span></div></figcaption>
       </figure>
-      <figure className="rvw-vid" data-vimeo="1170457963">
-        <img className="rvw-thumb" src={`${BASE}/images/reviews/vid-ariana.webp`} alt="" />
+      <figure className="rvw-vid" data-vimeo="1165554472">
+        <img className="rvw-thumb" src={`${BASE}/images/reviews/vid-matthew.webp`} alt="" />
         <span className="rvw-badge">Video</span>
-        <button className="rvw-play" type="button" aria-label="Play video review from Ariana"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
-        <figcaption><strong>Ariana</strong><span>Founder, Aaria London</span></figcaption>
+        <button className="rvw-play" type="button" aria-label="Play video review from Matthew"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <figcaption><strong>Matthew</strong><span>CEO, Personalised Favours</span></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <blockquote>Lead quality and volume is extremely important to us, and the team at Adalytical have helped us immensely with Google Ads to improve this (and <strong>smash our monthly targets</strong>).</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/john.webp`} alt="" width="38" height="38" /></span><div><strong>John</strong><span>Owner, Into Blinds</span></div></figcaption>
       </figure>
       </div>
       <div className="rvw-col">
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <blockquote>Adalytical helped us with our <strong>biggest Q4 ever</strong>! Revenue was +33% and ROAS +25% YOY. Already seeing <strong>massive revenue and ROAS gains</strong> for Q1 and Q2.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/jay.webp`} alt="" width="38" height="38" /></span><div><strong>Jay</strong><span>Head of Marketing, The Watch Factory</span></div></figcaption>
+      </figure>
       <figure className="rvw-card">
         <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
         <blockquote>The team&rsquo;s <strong>ex-Google brainpower</strong> unlocked heaps of extra insights and fast-tracked support, but more importantly, <strong>helped us hit our biggest Q4</strong>.</blockquote>
@@ -307,7 +334,14 @@ export default function CaseStudies() {
         <blockquote>Can absolutely vouch for these guys! We&rsquo;ve worked with Adalytical on our Google Ads and the level of <strong>knowledge, persistence and support</strong> has been incredible. They&rsquo;ve gone above and beyond for our account, especially navigating some very frustrating Google policy issues. Definitely worth having a chat with them if you&rsquo;re running ecommerce ads.</blockquote>
         <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/kylie.webp`} alt="" width="38" height="38" /></span><div><strong>Kylie Alexander</strong><span>CEO, Health Heiress</span></div></figcaption>
       </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <blockquote>They helped us reduce cost per lead significantly! Getting lots of good leads coming through and for way less. <strong>Very happy, would recommend!</strong></blockquote>
+        <figcaption><span className="rvw-av">K</span><div><strong>Kelly</strong><span>Co-founder, Evo Solar</span></div></figcaption>
+      </figure>
       </div>
+    </div>
+    <label htmlFor="rvw-more" className="wwd-more-btn rvw-more-btn"><span className="wwd-more-open">Show more reviews</span><span className="wwd-more-close">Show fewer reviews</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></label>
     </div>
   </div>
 </section>

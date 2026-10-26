@@ -186,12 +186,13 @@ export default function Contact() {
 </section>
 
 {/* ============ PROOF ============ */}
-<section className="sec sec-cream rvsec bk-sec">
+<section className="band-wrap rvsec bk-band">
+  <div className="band">
   <div className="ctr">
     <div className="bk-stats rv">
       <div><b>$100M+</b><span>Ad spend managed on Google Ads</span></div>
       <div><b>1,000+</b><span>Google Ads accounts audited</span></div>
-      <div><b>30+</b><span>Top agencies trained by our team</span></div>
+      <div><b>50+</b><span>Top agencies trained by our team</span></div>
       <div><b>4+</b><span>Years on Google&rsquo;s Ads team</span></div>
     </div>
     <div className="bk-quotes rv">
@@ -212,6 +213,7 @@ export default function Contact() {
       </figure>
     </div>
   </div>
+  </div>
 </section>
 
 {/* ============ WHAT WE REVIEW ============ */}
@@ -222,6 +224,8 @@ export default function Contact() {
       <h2>A full Google Ads review, <span className="dim">not just a quick look.</span></h2>
       <p>We analyse your account, Merchant Center and tracking setup to uncover issues and opportunities that can improve performance and profitability.</p>
     </div>
+    <div className="bk-review-wrap">
+    <input type="checkbox" id="bk-review-more" className="bk-review-toggle" />
     <div className="bk-review rv">
       <div><b>Wasted ad spend</b><span>Search terms, campaigns and traffic you&rsquo;re paying for unnecessarily.</span></div>
       <div><b>Campaign structure</b><span>Whether your Search, Shopping and Performance Max campaigns are structured properly.</span></div>
@@ -229,6 +233,8 @@ export default function Contact() {
       <div><b>Conversion tracking</b><span>Duplicate conversions, missing revenue, bad attribution and misleading data.</span></div>
       <div><b>Merchant Center</b><span>Feed quality, titles, product segmentation and missed Shopping opportunities.</span></div>
       <div><b>Scaling opportunities</b><span>Where we&rsquo;d confidently put the next $1 of your budget.</span></div>
+    </div>
+    <label htmlFor="bk-review-more" className="wwd-more-btn bk-review-btn"><span className="wwd-more-open">Show more</span><span className="wwd-more-close">Show less</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></label>
     </div>
   </div>
 </section>
@@ -276,7 +282,7 @@ export default function Contact() {
       <details><summary>Do you need access to my Google Ads account?</summary><p>To complete a meaningful review, we need view-only access to your Google Ads account and, where relevant, Merchant Center.</p></details>
       <details><summary>Can you make changes to my account?</summary><p>No. Access is view-only. We cannot make changes unless this is separately agreed with you.</p></details>
       <details><summary>Will this just be a sales call?</summary><p>No. We use the call to walk through the issues and opportunities found in your account, then you can decide what happens next.</p></details>
-      <details><summary>How long does the review take?</summary><p>We review the account before your scheduled call and use that time to focus on the most material findings.</p></details>
+      <details><summary>How long does the review take?</summary><p>We conduct a comprehensive review of your Google Ads account and Merchant Center before your scheduled call. This typically takes 2 business days, allowing us to thoroughly assess your setup, identify opportunities for improvement, and focus our call on the findings that will have the biggest impact on your results.</p></details>
       <details><summary>Do you also review Merchant Center?</summary><p>Yes. Where Merchant Center is part of your Google Ads activity, we review feed quality, product segmentation and Shopping opportunities.</p></details>
       <details><summary>What types of businesses do you work with?</summary><p>Established ecommerce and lead generation businesses that are already investing meaningfully in Google Ads.</p></details>
     </div>

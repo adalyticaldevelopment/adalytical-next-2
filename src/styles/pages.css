@@ -1015,3 +1015,37 @@ html.gpb-lock,html.gpb-lock body{overflow:hidden}
 .lgf-done{margin:0 0 14px}
 .lgf .gpb-err{margin:0}
 @media(max-width:900px){.gpb-card.lgf{padding:24px 18px 18px;border-radius:22px}.lgf-tabs span{font-size:.8rem}.lgf input:not(.gpb-hp),.lgf select{padding:15px 16px;font-size:1rem}.lgf-phone select{padding:15px 6px 15px 10px!important}.lgf-btn{padding:16px}}
+
+/* book page: stats + reviews on the dark green band (same band as the homepage sections) */
+.bk-band{margin:clamp(24px,calc(3 * var(--vw)),40px) 0}
+.bk-band .band{padding:clamp(36px,calc(4.5 * var(--vw)),64px) 0}
+.bk-band .bk-stats div{border-color:rgba(255,255,255,.1)}
+
+/* book page "What we review": on phones show the first two, the rest behind "Show more" */
+.bk-review-toggle{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
+.bk-review-btn{display:none}
+.bk-review-wrap .wwd-more-close{display:none}
+@media(max-width:900px){
+  .bk-review-wrap{position:relative}
+  .bk-review-wrap:not(:has(.bk-review-toggle:checked)) .bk-review>div:nth-child(n+3){display:none}
+  .bk-review-btn{display:flex}
+  .bk-review-toggle:checked~.bk-review-btn .wwd-more-open{display:none}
+  .bk-review-toggle:checked~.bk-review-btn .wwd-more-close{display:inline}
+  .bk-review-toggle:checked~.bk-review-btn svg{transform:rotate(180deg)}
+}
+
+/* case studies filter: radio buttons hold the choice (no JS); the pills are their labels */
+.cs-filter-wrap{position:relative}
+.csf-radio{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
+.cs-filter{display:inline-flex;gap:4px;padding:4px;border-radius:50px;background:#fff;border:1px solid var(--g200);box-shadow:var(--shadow-s)}
+.cs-filter label{padding:9px 18px;border-radius:50px;font-size:.88rem;font-weight:600;color:var(--g600);cursor:pointer;transition:background .2s,color .2s}
+.cs-filter label:hover{color:var(--forest)}
+#csf-all:checked~.cs-filter label[for=csf-all],
+#csf-eco:checked~.cs-filter label[for=csf-eco],
+#csf-lg:checked~.cs-filter label[for=csf-lg]{background:var(--forest);color:#fff}
+.csf-radio:focus-visible~.cs-filter{outline:2px solid var(--brand);outline-offset:3px}
+#csf-eco:checked~.cs-index .cat-lg,#csf-lg:checked~.cs-index .cat-eco{display:none}
+@media(max-width:560px){.cs-filter{display:flex;width:100%}.cs-filter label{flex:1 1 auto;text-align:center;padding:9px 6px;font-size:.8rem;white-space:nowrap}}
+
+/* line breaks that only apply on wider screens */
+@media(max-width:560px){.br-wide{display:none}}
