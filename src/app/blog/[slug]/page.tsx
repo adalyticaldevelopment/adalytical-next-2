@@ -40,7 +40,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       <img src={`${BASE}/images/${AUTHOR.photo}`} alt={AUTHOR.name} />
       <div><strong>{AUTHOR.name}</strong><span>{AUTHOR.role}</span></div>
       <span className="bp-dot" />
-      <span className="bp-meta">{p.date} &middot; {p.minutes} min read</span>
+      <span className="bp-meta">{p.minutes} min read</span>
     </div>
   </header>
 
@@ -77,7 +77,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             <span className="post-cat">{x.category}</span>
             <h3>{x.title}</h3>
             <p>{x.summary}</p>
-            <div className="post-meta"><img className="post-av-img" src={`${BASE}/images/${AUTHOR.photo}`} alt="" /><span className="post-mt"><strong>{AUTHOR.name}</strong><span>{x.date}</span></span><span className="post-read">{x.minutes} min read</span></div>
+            <div className="post-meta"><img className="post-av-img" src={`${BASE}/images/${AUTHOR.photo}`} alt="" /><span className="post-mt"><strong>{AUTHOR.name}</strong></span><span className="post-read">{x.minutes} min read</span></div>
           </div>
         </a>
       ))}

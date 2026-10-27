@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Book a Strategy Call | Adalytical",
+  title: "Book a Free Strategy Call | Adalytical",
   description: "Pick a time for a 30-minute Google Ads strategy call with Adalytical.",
   alternates: { canonical: "/book/" },
 };
@@ -87,10 +87,36 @@ export default function Contact() {
           </div>
         </div>
       </li>
-      <li><a href={`${BASE}/case-studies/`}>Case Studies</a></li>
-      <li><a href={`${BASE}/blog/`}>Blog</a></li>
-      <li><a href={`${BASE}/tools/`}>Tools</a></li>
-      <li><a href={`${BASE}/about/`}>About</a></li>
+      <li className="has-mega">
+        <a href="#">Extra <svg className="nav-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
+        <div className="mega mega--extra">
+          <div className="mega-card">
+            <a href={`${BASE}/about/`} className="mega-tile">
+              <span className="mt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5" strokeLinecap="round"/><path d="M16 6a3 3 0 0 1 0 6M21 20c0-2.4-1.4-4-3.4-4.7" strokeLinecap="round"/></svg></span>
+              <span className="mt-body"><strong>ABOUT US <span aria-hidden="true">&rarr;</span></strong><span>The ex-Googlers behind Adalytical and how we work.</span></span>
+            </a>
+            <a href={`${BASE}/blog/`} className="mega-tile">
+              <span className="mt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5" strokeLinecap="round"/></svg></span>
+              <span className="mt-body"><strong>BLOG <span aria-hidden="true">&rarr;</span></strong><span>Google Ads guides, benchmarks and insights.</span></span>
+            </a>
+            <a href={`${BASE}/case-studies/`} className="mega-tile">
+              <span className="mt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><path d="M3 3v18h18" strokeLinecap="round"/><path d="M7 14l4-4 3 3 5-6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
+              <span className="mt-body"><strong>CASE STUDIES <span aria-hidden="true">&rarr;</span></strong><span>Real results for e-commerce and lead generation brands.</span></span>
+            </a>
+            <a href={`${BASE}/tools/`} className="mega-tile">
+              <span className="mt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.8 2.8-2-2z" strokeLinejoin="round"/></svg></span>
+              <span className="mt-body"><strong>TOOLS <span aria-hidden="true">&rarr;</span></strong><span>Free tools to sharpen your Google Ads.</span></span>
+            </a>
+            <a href={`${BASE}/book/`} className="mega-feat">
+              <div>
+                <span className="mf-tag">Free audit</span>
+                <h5>See exactly where your Google Ads account is leaking budget.</h5>
+              </div>
+              <span className="mf-link">Get Your Free Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
+            </a>
+          </div>
+        </div>
+      </li>
     </ul>
     <div className="nav-r">
       <a href={`${BASE}/book/`} className="nav-cta">Get Your Free Growth Plan</a>
@@ -134,13 +160,13 @@ export default function Contact() {
       <details className="mgroup">
         <summary><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></svg></span>Extra<svg className="mdc mdc-dn" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></summary>
         <ul className="msub">
+          <li><a href={`${BASE}/about/`}>About Us</a></li>
           <li><a href={`${BASE}/blog/`}>Blog</a></li>
-          <li><a href={`${BASE}/tools/`}>Tools</a></li>
           <li><a href={`${BASE}/case-studies/`}>Case Studies</a></li>
+          <li><a href={`${BASE}/tools/`}>Tools</a></li>
         </ul>
       </details>
     </li>
-    <li><a href={`${BASE}/about/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5" strokeLinecap="round"/><path d="M16 6a3 3 0 0 1 0 6M21 20c0-2.4-1.4-4-3.4-4.7" strokeLinecap="round"/></svg></span>About<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
   </ul>
   <div className="mdrawer-cta">
     <a href={`${BASE}/book/`} className="mc-quote">Get Your Free Growth Plan</a>
@@ -221,7 +247,7 @@ export default function Contact() {
   <div className="ctr">
     <div className="bk-head rv">
       <span className="sec-tag">What we review</span>
-      <h2>A full Google Ads review, <span className="dim">not just a quick look.</span></h2>
+      <h2>A full Google Ads review<br /><span className="dim">(not just a quick look).</span></h2>
       <p>We analyse your account, Merchant Center and tracking setup to uncover issues and opportunities that can improve performance and profitability.</p>
     </div>
     <div className="bk-review-wrap">
@@ -234,7 +260,7 @@ export default function Contact() {
       <div><b>Merchant Center</b><span>Feed quality, titles, product segmentation and missed Shopping opportunities.</span></div>
       <div><b>Scaling opportunities</b><span>Where we&rsquo;d confidently put the next $1 of your budget.</span></div>
     </div>
-    <label htmlFor="bk-review-more" className="wwd-more-btn bk-review-btn"><span className="wwd-more-open">Show more</span><span className="wwd-more-close">Show less</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></label>
+    <label htmlFor="bk-review-more" className="wwd-more-btn bk-review-btn"><span className="wwd-more-open">Show More</span><span className="wwd-more-close">Show Less</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></label>
     </div>
   </div>
 </section>
@@ -244,7 +270,6 @@ export default function Contact() {
   <div className="ctr">
     <div className="bk-head rv">
       <span className="sec-tag">Is it a fit?</span>
-      <h2>Built for businesses <span className="dim">already investing in Google Ads.</span></h2>
     </div>
     <div className="bk-fit rv">
       <div className="bk-fit-yes">
@@ -275,8 +300,9 @@ export default function Contact() {
   <div className="ctr">
     <div className="bk-head rv">
       <span className="sec-tag">FAQs</span>
-      <h2>A few useful details.</h2>
     </div>
+    <div className="bk-faq-wrap">
+    <input type="checkbox" id="bk-faq-more" className="bk-faq-toggle" />
     <div className="bk-faq rv">
       <details><summary>Is it actually free?</summary><p>Yes. The application and review call are free, with no obligation.</p></details>
       <details><summary>Do you need access to my Google Ads account?</summary><p>To complete a meaningful review, we need view-only access to your Google Ads account and, where relevant, Merchant Center.</p></details>
@@ -286,18 +312,34 @@ export default function Contact() {
       <details><summary>Do you also review Merchant Center?</summary><p>Yes. Where Merchant Center is part of your Google Ads activity, we review feed quality, product segmentation and Shopping opportunities.</p></details>
       <details><summary>What types of businesses do you work with?</summary><p>Established ecommerce and lead generation businesses that are already investing meaningfully in Google Ads.</p></details>
     </div>
+    <label htmlFor="bk-faq-more" className="wwd-more-btn bk-faq-btn"><span className="wwd-more-open">Show More</span><span className="wwd-more-close">Show Less</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></label>
+    </div>
   </div>
 </section>
 
 {/* ============ FINAL NUDGE: back to the calendar ============ */}
-<section className="sec sec-cream rvsec bk-sec">
+<section className="sec sec-cream cta framed rvsec" id="get-started" style={{paddingTop:"clamp(28px,calc(3.5 * var(--vw)),48px)"}}>
+  <span className="xmark xm-sl" aria-hidden="true"></span>
+  <span className="xmark xm-sr" aria-hidden="true"></span>
   <div className="ctr">
-    <div className="bk-final rv">
-      <div>
-        <h2>Find out what&rsquo;s really happening inside your Google Ads account.</h2>
-        <p>Get a second opinion from two former Google Ads strategists.</p>
+    <div className="cta-card cta-brand rv">
+      <span className="sec-tag">Get started</span>
+      <h2>Scale your brand with Google Ads.</h2>
+      <p><span className="cta-lead">Get more profit with smarter Google Ads.</span><br />Book a free strategy call and we’ll map out exactly where your account is leaving money on the table.</p>
+      <div className="cta-btns"><a href="#calendar" className="btn-p">Get Your Free Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
       </div>
-      <a href="#calendar" className="btn-p">Get Your Free Growth Plan</a>
+      <div className="cta-micro rv" style={{'justifyContent':'center'}}>
+        <span className="cm-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Free &amp; no obligation</span>
+        <span className="cm-sep"></span>
+        <span className="cm-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>No lock-in contracts</span>
+        <span className="cm-sep"></span>
+        <span className="cm-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Ex-Google Ads team</span>
+      </div>
+      <ul className="cta-stats">
+        <li><b>$100m+</b><span>ad spend managed</span></li>
+        <li><b>1,000+</b><span>accounts audited</span></li>
+        <li><b>50+</b><span>top agencies trained by us</span></li>
+      </ul>
     </div>
   </div>
 </section>
@@ -330,16 +372,16 @@ export default function Contact() {
           <li><a href={`${BASE}/ecommerce/`}>E-commerce</a></li>
           <li><a href={`${BASE}/lead-generation/`}>Lead Generation</a></li>
           <li><a href={`${BASE}/saas/`}>SaaS</a></li>
-          <li><a href={`${BASE}/case-studies/`}>Case Studies</a></li>
         </ul>
       </div>
       <div className="fcol">
         <input type="checkbox" id="fc-company" className="fcol-toggle" />
-        <label htmlFor="fc-company" className="fcol-head"><h5>Company</h5><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></label>
+        <label htmlFor="fc-company" className="fcol-head"><h5>Extra</h5><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></label>
         <ul className="footer-links">
-          <li><a href={`${BASE}/about/`}>About</a></li>
-          <li><a href={`${BASE}/#faq`}>FAQ</a></li>
-          <li><a href={`${BASE}/partners/`}>Partners</a></li>
+          <li><a href={`${BASE}/about/`}>About Us</a></li>
+          <li><a href={`${BASE}/blog/`}>Blog</a></li>
+          <li><a href={`${BASE}/case-studies/`}>Case Studies</a></li>
+          <li><a href={`${BASE}/tools/`}>Tools</a></li>
         </ul>
       </div>
       <div className="footer-plan-col"><a href={`${BASE}/book/`} className="footer-plan">Get Your Free Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></div>

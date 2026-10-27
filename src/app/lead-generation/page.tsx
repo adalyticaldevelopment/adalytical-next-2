@@ -87,10 +87,36 @@ export default function LeadGeneration() {
           </div>
         </div>
       </li>
-      <li><a href={`${BASE}/case-studies/`}>Case Studies</a></li>
-      <li><a href={`${BASE}/blog/`}>Blog</a></li>
-      <li><a href={`${BASE}/tools/`}>Tools</a></li>
-      <li><a href={`${BASE}/about/`}>About</a></li>
+      <li className="has-mega">
+        <a href="#">Extra <svg className="nav-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
+        <div className="mega mega--extra">
+          <div className="mega-card">
+            <a href={`${BASE}/about/`} className="mega-tile">
+              <span className="mt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5" strokeLinecap="round"/><path d="M16 6a3 3 0 0 1 0 6M21 20c0-2.4-1.4-4-3.4-4.7" strokeLinecap="round"/></svg></span>
+              <span className="mt-body"><strong>ABOUT US <span aria-hidden="true">&rarr;</span></strong><span>The ex-Googlers behind Adalytical and how we work.</span></span>
+            </a>
+            <a href={`${BASE}/blog/`} className="mega-tile">
+              <span className="mt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5" strokeLinecap="round"/></svg></span>
+              <span className="mt-body"><strong>BLOG <span aria-hidden="true">&rarr;</span></strong><span>Google Ads guides, benchmarks and insights.</span></span>
+            </a>
+            <a href={`${BASE}/case-studies/`} className="mega-tile">
+              <span className="mt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><path d="M3 3v18h18" strokeLinecap="round"/><path d="M7 14l4-4 3 3 5-6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
+              <span className="mt-body"><strong>CASE STUDIES <span aria-hidden="true">&rarr;</span></strong><span>Real results for e-commerce and lead generation brands.</span></span>
+            </a>
+            <a href={`${BASE}/tools/`} className="mega-tile">
+              <span className="mt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.8 2.8-2-2z" strokeLinejoin="round"/></svg></span>
+              <span className="mt-body"><strong>TOOLS <span aria-hidden="true">&rarr;</span></strong><span>Free tools to sharpen your Google Ads.</span></span>
+            </a>
+            <a href={`${BASE}/book/`} className="mega-feat">
+              <div>
+                <span className="mf-tag">Free audit</span>
+                <h5>See exactly where your Google Ads account is leaking budget.</h5>
+              </div>
+              <span className="mf-link">Get Your Free Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
+            </a>
+          </div>
+        </div>
+      </li>
     </ul>
     <div className="nav-r">
       <a href={`${BASE}/book/`} className="nav-cta">Get Your Free Growth Plan</a>
@@ -134,13 +160,13 @@ export default function LeadGeneration() {
       <details className="mgroup">
         <summary><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></svg></span>Extra<svg className="mdc mdc-dn" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></summary>
         <ul className="msub">
+          <li><a href={`${BASE}/about/`}>About Us</a></li>
           <li><a href={`${BASE}/blog/`}>Blog</a></li>
-          <li><a href={`${BASE}/tools/`}>Tools</a></li>
           <li><a href={`${BASE}/case-studies/`}>Case Studies</a></li>
+          <li><a href={`${BASE}/tools/`}>Tools</a></li>
         </ul>
       </details>
     </li>
-    <li><a href={`${BASE}/about/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5" strokeLinecap="round"/><path d="M16 6a3 3 0 0 1 0 6M21 20c0-2.4-1.4-4-3.4-4.7" strokeLinecap="round"/></svg></span>About<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
   </ul>
   <div className="mdrawer-cta">
     <a href={`${BASE}/book/`} className="mc-quote">Get Your Free Growth Plan</a>
@@ -176,7 +202,7 @@ export default function LeadGeneration() {
           </span>
         </div>
         <h1 className="rv">More qualified leads, <span className="accent">lower cost per lead.</span></h1>
-        <p className="hero-sub rv">High-intent Search campaigns with proper call and form tracking, so every lead is measured and every dollar is accountable. No guesswork, no vanity metrics.</p>
+        <p className="hero-sub rv">High-intent Search campaigns with proper call and form tracking, so every lead is measured and every dollar is accountable.</p>
         <div className="hero-btns rv">
           <a href={`${BASE}/book/`} className="btn-p btn-hero"><span className="cta-shine">Get Your Free Growth Plan</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -243,7 +269,6 @@ export default function LeadGeneration() {
         <span className="shead-chip lite"><span className="chip-plus lite">+</span> Who this is for</span>
         <div className="band-title2">
           <h2>Who We Help.</h2>
-          <span className="band-count">(3)</span>
         </div>
       </div>
       <div className="srows">
@@ -305,6 +330,8 @@ export default function LeadGeneration() {
       <h2>Everything you need to turn clicks into <span className="dim">booked jobs.</span></h2>
       <p>The campaigns, the tracking, the pages and the site itself, built so every dollar is pointed at qualified enquiries, not raw traffic.</p>
     </div>
+    <div className="cg-wrap">
+    <input type="checkbox" id="cg-more" className="cg-toggle" />
     <div className="cg-grid">
       <a href={`${BASE}/book/`} className="cg-card rv" id="google-ads">
         <div className="cg-top">
@@ -363,35 +390,69 @@ export default function LeadGeneration() {
         <span className="cg-link">Explore web development <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
       </a>
     </div>
+    <label htmlFor="cg-more" className="wwd-more-btn cg-more-btn"><span className="wwd-more-open">Show More</span><span className="wwd-more-close">Show Less</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></label>
+    </div>
   </div>
 </section>
 
 {/* ============ CASE STUDIES, PROJECT CARDS ============ */}
-<section className="sec sec-cream sec-w framed rvsec" id="results">
+<section className="band-wrap rvsec cs-band" id="results">
+  <div className="band">
   <div className="ctr">
     <div className="cs-head">
-      <span className="shead-chip rv"><span className="chip-plus">+</span> Case studies</span>
+      <span className="shead-chip lite rv"><span className="chip-plus lite">+</span> Case studies</span>
       <h2 className="shead-t rv">We’ve helped <span className="dim">tons of brands.</span></h2>
       <p className="shead-sub sub-2l rv"><span>Across a wide range of industries, we&rsquo;ve helped</span> <span>businesses grow profitably with Google Ads.</span></p>
     </div>
 
-    <div className="proj-grid">
-      <div className="proj rv">
+    <div className="cs-carousel">
+    <div className="proj-grid proj-track" aria-label="Case studies">
+      <a href={`${BASE}/case-studies/watch-factory/`} className="proj rv">
         <div className="proj-bar">
-          <span className="proj-name">Into Blinds</span>
-          <span className="proj-tag">/Home Improvement</span>
+          <span className="proj-name">The Watch Factory</span>
+          <span className="proj-tag">/Watches</span>
           <span className="proj-dots"><i></i><i></i><i></i></span>
         </div>
         <div className="proj-media">
-          <div className="proj-bg bg1"><img src={`${BASE}/images/leadgen/case-into-blinds.webp`} alt="" /></div>
+          <div className="proj-bg bg2"><img src={`${BASE}/images/case-watch-factory.webp`} alt="" /></div>
           <div className="proj-logo">
-            <strong>38% lower CPL</strong>
-            <span>$80.95 → $50.20 cost per lead, monthly leads 435 → 1,149 (Aug 2025 → Aug 2026)</span>
+            <strong>+2,966%</strong>
+            <span>sales from new customers, a full structural overhaul</span>
           </div>
         </div>
-      </div>
+      </a>
 
-      <div className="proj rv">
+      <a href={`${BASE}/case-studies/`} className="proj rv">
+        <div className="proj-bar">
+          <span className="proj-name">Aaria London</span>
+          <span className="proj-tag">/Jewellery</span>
+          <span className="proj-dots"><i></i><i></i><i></i></span>
+        </div>
+        <div className="proj-media">
+          <div className="proj-bg bg1"><img src={`${BASE}/images/case-aaria-london.webp`} alt="" /></div>
+          <div className="proj-logo">
+            <strong>Aaria London</strong>
+            <span>E-commerce &middot; Jewellery. Case study coming soon</span>
+          </div>
+        </div>
+      </a>
+
+      <a href={`${BASE}/case-studies/`} className="proj rv">
+        <div className="proj-bar">
+          <span className="proj-name">Bushdoof Lighting</span>
+          <span className="proj-tag">/Automotive</span>
+          <span className="proj-dots"><i></i><i></i><i></i></span>
+        </div>
+        <div className="proj-media">
+          <div className="proj-bg bg2"><img src={`${BASE}/images/case-bushdoof.webp`} alt="" /></div>
+          <div className="proj-logo">
+            <strong>Bushdoof</strong>
+            <span>E-commerce &middot; Automotive. Case study coming soon</span>
+          </div>
+        </div>
+      </a>
+
+      <a href={`${BASE}/case-studies/`} className="proj rv">
         <div className="proj-bar">
           <span className="proj-name">ONQ</span>
           <span className="proj-tag">/Media</span>
@@ -404,69 +465,29 @@ export default function LeadGeneration() {
             <span>$189.64 → $69.03 cost per lead, March → August 2026</span>
           </div>
         </div>
-      </div>
+      </a>
 
-      <div className="proj rv">
+      <a href={`${BASE}/case-studies/`} className="proj proj-more rv">
         <div className="proj-bar">
-          <span className="proj-name">Prime Group</span>
-          <span className="proj-tag">/Construction</span>
-          <span className="proj-dots"><i></i><i></i><i></i></span>
-        </div>
-        <div className="proj-media">
-          <div className="proj-bg bg3"><img src={`${BASE}/images/leadgen/case-prime-group.webp`} alt="" /></div>
-          <div className="proj-logo">
-            <strong>0 → 31 leads</strong>
-            <span>per month within 60 days, cost per lead $184.77 → $139.49</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="proj rv">
-        <div className="proj-bar">
-          <span className="proj-name">Peninsula Heat Pumps</span>
-          <span className="proj-tag">/Heat Pumps</span>
-          <span className="proj-dots"><i></i><i></i><i></i></span>
-        </div>
-        <div className="proj-media">
-          <div className="proj-bg bg1"><img src={`${BASE}/images/leadgen/case-peninsula.webp`} alt="" /></div>
-          <div className="proj-logo">
-            <strong>60% lower CPL</strong>
-            <span>website results: $87.12 → $34.59 cost per lead, conversion rate 5.6% → 14.6%</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="proj rv">
-        <div className="proj-bar">
-          <span className="proj-name">Geelong Heat Pumps</span>
-          <span className="proj-tag">/Heat Pumps</span>
-          <span className="proj-dots"><i></i><i></i><i></i></span>
-        </div>
-        <div className="proj-media">
-          <div className="proj-bg bg2"><img src={`${BASE}/images/leadgen/case-geelong.webp`} alt="" /></div>
-          <div className="proj-logo">
-            <strong>48% lower CPL</strong>
-            <span>website results: $57.19 → $29.99 cost per lead, conversion rate 4.6% → 12.7%</span>
-          </div>
-        </div>
-      </div>
-
-      <a href={`${BASE}/book/`} className="proj proj-cta rv">
-        <div className="proj-bar">
-          <span className="proj-name">Your Brand</span>
-          <span className="proj-tag">/Next</span>
+          <span className="proj-name">You could be next</span>
           <span className="proj-dots"><i></i><i></i><i></i></span>
         </div>
         <div className="proj-media">
           <div className="proj-bg bg4"></div>
           <div className="proj-logo">
-            <strong>Your brand next.</strong>
-            <span>Get Your Free Growth Plan</span>
+            <strong>See <em>many more</em><br />case studies</strong>
+            <span>Results across different brands and industries</span>
             <span className="proj-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
           </div>
         </div>
       </a>
     </div>
+    <div className="cs-nav">
+      <button type="button" className="cs-prev" aria-label="Previous case study"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M19 12H5M11 18l-6-6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></button>
+      <button type="button" className="cs-next" aria-label="Next case study"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></button>
+    </div>
+    </div>
+  </div>
   </div>
 </section>
 
@@ -508,7 +529,7 @@ export default function LeadGeneration() {
         <img className="rvw-thumb" src={`${BASE}/images/reviews/vid-winland.webp`} alt="" />
         <span className="rvw-badge">Video</span>
         <button className="rvw-play" type="button" aria-label="Play video review from Rick"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
-        <figcaption><strong>Rick</strong><span>Winland Home &amp; Garden</span></figcaption>
+        <figcaption><strong>Rick</strong><span>CEO, Winland Home &amp; Garden</span></figcaption>
       </figure>
       <figure className="rvw-card">
         <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
@@ -543,6 +564,12 @@ export default function LeadGeneration() {
         <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
         <blockquote>Lead quality and volume is extremely important to us, and the team at Adalytical have helped us immensely with Google Ads to improve this (and <strong>smash our monthly targets</strong>).</blockquote>
         <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/john.webp`} alt="" width="38" height="38" /></span><div><strong>John</strong><span>Owner, Into Blinds</span></div></figcaption>
+      </figure>
+      <figure className="rvw-vid" data-vimeo="1239683451">
+        <img className="rvw-thumb" src={`${BASE}/images/reviews/vid-hydrotech.webp`} alt="" />
+        <span className="rvw-badge">Video</span>
+        <button className="rvw-play" type="button" aria-label="Play video review from Jordan"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <figcaption><strong>Jordan</strong><span>Co-Founder, Hydrotech</span></figcaption>
       </figure>
       </div>
       <div className="rvw-col">
@@ -590,14 +617,30 @@ export default function LeadGeneration() {
 </section>
 
 {/* ============ FINAL CTA ============ */}
-<section className="sec sec-cream cta rvsec" id="book">
-  <div className="ctr"><div className="cta-card rv">
-    <span className="sec-tag">Get started</span>
-    <h2>Turn more of your budget into qualified leads.</h2>
-    <p>Get your Growth Plan and we&rsquo;ll show you exactly where your lead-gen spend is being wasted and how to fix it.</p>
-    <div className="cta-btns"><a href={`${BASE}/book/`} className="btn-p">Get Your Free Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></div>
-    <div className="cta-micro" style={{'justifyContent':'center'}}><span className="cm-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Free &amp; no obligation</span><span className="cm-sep"></span><span className="cm-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>No lock-in contracts</span><span className="cm-sep"></span><span className="cm-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Ex-Google Ads team</span></div>
-  </div></div>
+<section className="sec sec-cream cta framed rvsec" id="book" style={{paddingTop:"clamp(28px,calc(3.5 * var(--vw)),48px)"}}>
+  <span className="xmark xm-sl" aria-hidden="true"></span>
+  <span className="xmark xm-sr" aria-hidden="true"></span>
+  <div className="ctr">
+    <div className="cta-card cta-brand rv">
+      <span className="sec-tag">Get started</span>
+      <h2>Scale your brand with Google Ads.</h2>
+      <p><span className="cta-lead">Get more profit with smarter Google Ads.</span><br />Book a free strategy call and we’ll map out exactly where your account is leaving money on the table.</p>
+      <div className="cta-btns"><a href={`${BASE}/book/`} className="btn-p">Get Your Free Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
+      </div>
+      <div className="cta-micro rv" style={{'justifyContent':'center'}}>
+        <span className="cm-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Free &amp; no obligation</span>
+        <span className="cm-sep"></span>
+        <span className="cm-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>No lock-in contracts</span>
+        <span className="cm-sep"></span>
+        <span className="cm-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6"><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>Ex-Google Ads team</span>
+      </div>
+      <ul className="cta-stats">
+        <li><b>$100m+</b><span>ad spend managed</span></li>
+        <li><b>1,000+</b><span>accounts audited</span></li>
+        <li><b>50+</b><span>top agencies trained by us</span></li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 {/* ============ FOOTER ============ */}
@@ -627,16 +670,16 @@ export default function LeadGeneration() {
           <li><a href={`${BASE}/ecommerce/`}>E-commerce</a></li>
           <li><a href={`${BASE}/lead-generation/`}>Lead Generation</a></li>
           <li><a href={`${BASE}/saas/`}>SaaS</a></li>
-          <li><a href={`${BASE}/case-studies/`}>Case Studies</a></li>
         </ul>
       </div>
       <div className="fcol">
         <input type="checkbox" id="fc-company" className="fcol-toggle" />
-        <label htmlFor="fc-company" className="fcol-head"><h5>Company</h5><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></label>
+        <label htmlFor="fc-company" className="fcol-head"><h5>Extra</h5><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></label>
         <ul className="footer-links">
-          <li><a href={`${BASE}/about/`}>About</a></li>
-          <li><a href={`${BASE}/#faq`}>FAQ</a></li>
-          <li><a href={`${BASE}/partners/`}>Partners</a></li>
+          <li><a href={`${BASE}/about/`}>About Us</a></li>
+          <li><a href={`${BASE}/blog/`}>Blog</a></li>
+          <li><a href={`${BASE}/case-studies/`}>Case Studies</a></li>
+          <li><a href={`${BASE}/tools/`}>Tools</a></li>
         </ul>
       </div>
       <div className="footer-plan-col"><a href={`${BASE}/book/`} className="footer-plan">Get Your Free Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></div>

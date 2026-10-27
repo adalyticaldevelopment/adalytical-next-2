@@ -29,8 +29,8 @@
 .mega-feat:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,30,20,.25)}
 .mega-feat:hover .mf-link svg{transform:translateX(3px)}
 /* Who We Help + What We Do: four whole-card links in a 2x2 grid, the Free audit card down the right */
-:is(.mega--ind,.mega--svc) .mega-card{grid-template-columns:1fr 1fr minmax(240px,.75fr);gap:14px}
-:is(.mega--ind,.mega--svc) .mega-feat{grid-column:3;grid-row:1/3}
+:is(.mega--ind,.mega--svc,.mega--extra) .mega-card{grid-template-columns:1fr 1fr minmax(240px,.75fr);gap:14px}
+:is(.mega--ind,.mega--svc,.mega--extra) .mega-feat{grid-column:3;grid-row:1/3}
 .mega-tile{display:flex;align-items:flex-start;gap:18px;padding:20px 22px;border-radius:16px;background:rgba(255,255,255,.55);border:1px solid rgba(30,55,40,.1);color:var(--forest);transition:background .2s,border-color .2s,transform .25s var(--ease)}
 .mega-tile:hover{background:#fff;border-color:rgba(30,55,40,.18);transform:translateY(-2px)}
 .mt-ic{flex:none;width:52px;height:52px;border-radius:13px;background:#fff;border:1px solid rgba(30,55,40,.1);display:flex;align-items:center;justify-content:center;color:var(--brand)}
@@ -1028,6 +1028,9 @@ html.gpb-lock,html.gpb-lock body{overflow:hidden}
 @media(max-width:900px){
   .bk-review-wrap{position:relative}
   .bk-review-wrap:not(:has(.bk-review-toggle:checked)) .bk-review>div:nth-child(n+3){display:none}
+  /* peek: most of the second box hidden, the button pulled up over the fade */
+  .bk-review-wrap:not(:has(.bk-review-toggle:checked)) .bk-review>div:nth-child(2){max-height:64px;overflow:hidden;-webkit-mask:linear-gradient(180deg,#000 10%,transparent 90%);mask:linear-gradient(180deg,#000 10%,transparent 90%)}
+  .bk-review-wrap:not(:has(.bk-review-toggle:checked)) .bk-review-btn{margin-top:-22px;position:relative}
   .bk-review-btn{display:flex}
   .bk-review-toggle:checked~.bk-review-btn .wwd-more-open{display:none}
   .bk-review-toggle:checked~.bk-review-btn .wwd-more-close{display:inline}
@@ -1049,3 +1052,55 @@ html.gpb-lock,html.gpb-lock body{overflow:hidden}
 
 /* line breaks that only apply on wider screens */
 @media(max-width:560px){.br-wide{display:none}}
+
+/* ecommerce "What we do": on phones show Google Ads, the rest behind "Show more services" */
+.cg-toggle{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
+.cg-more-btn{display:none}
+.cg-wrap .wwd-more-close{display:none}
+@media(max-width:560px){
+  .cg-wrap{position:relative}
+  .cg-wrap:not(:has(.cg-toggle:checked)) .cg-grid>.cg-card:nth-child(n+3){display:none}
+  /* peek at the second card so it's clear there are more */
+  .cg-wrap:not(:has(.cg-toggle:checked)) .cg-grid>.cg-card:nth-child(2){max-height:120px;overflow:hidden;pointer-events:none;-webkit-mask:linear-gradient(180deg,#000 15%,transparent 95%);mask:linear-gradient(180deg,#000 15%,transparent 95%)}
+  .cg-more-btn{display:flex}
+  .cg-toggle:checked~.cg-more-btn .wwd-more-open{display:none}
+  .cg-toggle:checked~.cg-more-btn .wwd-more-close{display:inline}
+  .cg-toggle:checked~.cg-more-btn svg{transform:rotate(180deg)}
+}
+
+/* book page FAQs: same phone collapse as "What we review" (first question + a peek of the next) */
+.bk-faq-toggle{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
+.bk-faq-btn{display:none}
+.bk-faq-wrap .wwd-more-close{display:none}
+@media(max-width:900px){
+  .bk-faq-wrap{position:relative}
+  .bk-faq-wrap:not(:has(.bk-faq-toggle:checked)) .bk-faq>details:nth-child(n+3){display:none}
+  .bk-faq-wrap:not(:has(.bk-faq-toggle:checked)) .bk-faq>details:nth-child(2){max-height:40px;overflow:hidden;pointer-events:none;-webkit-mask:linear-gradient(180deg,#000 10%,transparent 90%);mask:linear-gradient(180deg,#000 10%,transparent 90%)}
+  .bk-faq-btn{display:flex}
+  .bk-faq-wrap:not(:has(.bk-faq-toggle:checked)) .bk-faq-btn{margin-top:-10px;position:relative}
+  .bk-faq-toggle:checked~.bk-faq-btn .wwd-more-open{display:none}
+  .bk-faq-toggle:checked~.bk-faq-btn .wwd-more-close{display:inline}
+  .bk-faq-toggle:checked~.bk-faq-btn svg{transform:rotate(180deg)}
+}
+
+/* book page only (sections after the calendar): tighter rhythm between sections */
+.bk-cal-sec{padding-bottom:clamp(20px,calc(2.5 * var(--vw)),32px)}
+.bk-cal-sec~.bk-sec{padding:clamp(22px,calc(2.6 * var(--vw)),36px) 0}
+.bk-cal-sec~.bk-band{margin:clamp(8px,calc(1 * var(--vw)),16px) 0}
+.bk-cal-sec~.bk-sec .bk-head{margin-bottom:clamp(18px,calc(2.2 * var(--vw)),28px)}
+.bk-cal-sec~#get-started{padding-top:clamp(16px,calc(2 * var(--vw)),28px)}
+
+/* about "How we work": on phones the first card plus a peek of the second, rest behind "Show More" */
+.ab-why-toggle{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
+.ab-why-btn{display:none}
+.ab-why-wrap .wwd-more-close{display:none}
+@media(max-width:560px){
+  .ab-why-wrap{position:relative}
+  .ab-why-wrap:not(:has(.ab-why-toggle:checked)) .ab-why>.why-card:nth-child(n+3){display:none}
+  .ab-why-wrap:not(:has(.ab-why-toggle:checked)) .ab-why>.why-card:nth-child(2){max-height:84px;overflow:hidden;pointer-events:none;-webkit-mask:linear-gradient(180deg,#000 15%,transparent 95%);mask:linear-gradient(180deg,#000 15%,transparent 95%)}
+  .ab-why-btn{display:flex}
+  .ab-why-wrap:not(:has(.ab-why-toggle:checked)) .ab-why-btn{margin-top:-18px;position:relative}
+  .ab-why-toggle:checked~.ab-why-btn .wwd-more-open{display:none}
+  .ab-why-toggle:checked~.ab-why-btn .wwd-more-close{display:inline}
+  .ab-why-toggle:checked~.ab-why-btn svg{transform:rotate(180deg)}
+}

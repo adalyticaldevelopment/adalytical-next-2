@@ -86,10 +86,36 @@ export default function LandingPages() {
           </div>
         </div>
       </li>
-      <li><a href={`${BASE}/case-studies/`}>Case Studies</a></li>
-      <li><a href={`${BASE}/blog/`}>Blog</a></li>
-      <li><a href={`${BASE}/tools/`}>Tools</a></li>
-      <li><a href={`${BASE}/about/`}>About</a></li>
+      <li className="has-mega">
+        <a href="#">Extra <svg className="nav-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
+        <div className="mega mega--extra">
+          <div className="mega-card">
+            <a href={`${BASE}/about/`} className="mega-tile">
+              <span className="mt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5" strokeLinecap="round"/><path d="M16 6a3 3 0 0 1 0 6M21 20c0-2.4-1.4-4-3.4-4.7" strokeLinecap="round"/></svg></span>
+              <span className="mt-body"><strong>ABOUT US <span aria-hidden="true">&rarr;</span></strong><span>The ex-Googlers behind Adalytical and how we work.</span></span>
+            </a>
+            <a href={`${BASE}/blog/`} className="mega-tile">
+              <span className="mt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5" strokeLinecap="round"/></svg></span>
+              <span className="mt-body"><strong>BLOG <span aria-hidden="true">&rarr;</span></strong><span>Google Ads guides, benchmarks and insights.</span></span>
+            </a>
+            <a href={`${BASE}/case-studies/`} className="mega-tile">
+              <span className="mt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><path d="M3 3v18h18" strokeLinecap="round"/><path d="M7 14l4-4 3 3 5-6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
+              <span className="mt-body"><strong>CASE STUDIES <span aria-hidden="true">&rarr;</span></strong><span>Real results for e-commerce and lead generation brands.</span></span>
+            </a>
+            <a href={`${BASE}/tools/`} className="mega-tile">
+              <span className="mt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.8 2.8-2-2z" strokeLinejoin="round"/></svg></span>
+              <span className="mt-body"><strong>TOOLS <span aria-hidden="true">&rarr;</span></strong><span>Free tools to sharpen your Google Ads.</span></span>
+            </a>
+            <a href={`${BASE}/book/`} className="mega-feat">
+              <div>
+                <span className="mf-tag">Free audit</span>
+                <h5>See exactly where your Google Ads account is leaking budget.</h5>
+              </div>
+              <span className="mf-link">Get Your Free Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
+            </a>
+          </div>
+        </div>
+      </li>
     </ul>
     <div className="nav-r">
       <a href={`${BASE}/book/`} className="nav-cta">Get Your Free Growth Plan</a>
@@ -133,13 +159,13 @@ export default function LandingPages() {
       <details className="mgroup">
         <summary><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></svg></span>Extra<svg className="mdc mdc-dn" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></summary>
         <ul className="msub">
+          <li><a href={`${BASE}/about/`}>About Us</a></li>
           <li><a href={`${BASE}/blog/`}>Blog</a></li>
-          <li><a href={`${BASE}/tools/`}>Tools</a></li>
           <li><a href={`${BASE}/case-studies/`}>Case Studies</a></li>
+          <li><a href={`${BASE}/tools/`}>Tools</a></li>
         </ul>
       </details>
     </li>
-    <li><a href={`${BASE}/about/`}><span className="mdi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5" strokeLinecap="round"/><path d="M16 6a3 3 0 0 1 0 6M21 20c0-2.4-1.4-4-3.4-4.7" strokeLinecap="round"/></svg></span>About<svg className="mdc" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
   </ul>
   <div className="mdrawer-cta">
     <a href={`${BASE}/book/`} className="mc-quote">Get Your Free Growth Plan</a>
@@ -368,16 +394,16 @@ export default function LandingPages() {
           <li><a href={`${BASE}/ecommerce/`}>E-commerce</a></li>
           <li><a href={`${BASE}/lead-generation/`}>Lead Generation</a></li>
           <li><a href={`${BASE}/saas/`}>SaaS</a></li>
-          <li><a href={`${BASE}/case-studies/`}>Case Studies</a></li>
         </ul>
       </div>
       <div className="fcol">
         <input type="checkbox" id="fc-company" className="fcol-toggle" />
-        <label htmlFor="fc-company" className="fcol-head"><h5>Company</h5><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></label>
+        <label htmlFor="fc-company" className="fcol-head"><h5>Extra</h5><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></label>
         <ul className="footer-links">
-          <li><a href={`${BASE}/about/`}>About</a></li>
-          <li><a href={`${BASE}/#faq`}>FAQ</a></li>
-          <li><a href={`${BASE}/partners/`}>Partners</a></li>
+          <li><a href={`${BASE}/about/`}>About Us</a></li>
+          <li><a href={`${BASE}/blog/`}>Blog</a></li>
+          <li><a href={`${BASE}/case-studies/`}>Case Studies</a></li>
+          <li><a href={`${BASE}/tools/`}>Tools</a></li>
         </ul>
       </div>
       <div className="footer-plan-col"><a href={`${BASE}/book/`} className="footer-plan">Get Your Free Growth Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></a></div>

@@ -1003,3 +1003,7 @@ section[id],footer[id]{scroll-margin-top:88px}
   .hero-split.hero-split--vsl{grid-template-columns:1fr;gap:8px}
   .hero-split--vsl .hero-visual{max-width:none}
 }
+
+/* about "Our story" on the green band: white body copy, mint emphasis */
+.story-band .prose p{color:rgba(255,255,255,.78)}
+.story-band .prose strong{color:#cdf3dc}

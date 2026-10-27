@@ -186,7 +186,7 @@ export default function GrowthPlan() {
         <img className="rvw-thumb" src={`${BASE}/images/reviews/vid-winland.webp`} alt="" />
         <span className="rvw-badge">Video</span>
         <button className="rvw-play" type="button" aria-label="Play video review from Rick"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
-        <figcaption><strong>Rick</strong><span>Winland Home &amp; Garden</span></figcaption>
+        <figcaption><strong>Rick</strong><span>CEO, Winland Home &amp; Garden</span></figcaption>
       </figure>
       </div>
       <div className="rvw-col">

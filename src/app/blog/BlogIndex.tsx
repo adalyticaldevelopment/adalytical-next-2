@@ -9,7 +9,7 @@ function Meta({ p }: { p: Post }) {
   return (
     <div className="post-meta">
       <img className="post-av-img" src={`${BASE}/images/${AUTHOR.photo}`} alt="" />
-      <span className="post-mt"><strong>{AUTHOR.name}</strong><span>{p.date}</span></span>
+      <span className="post-mt"><strong>{AUTHOR.name}</strong></span>
       <span className="post-read">{p.minutes} min read</span>
     </div>
   );
