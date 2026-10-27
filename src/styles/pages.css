@@ -1104,3 +1104,15 @@ html.gpb-lock,html.gpb-lock body{overflow:hidden}
   .ab-why-toggle:checked~.ab-why-btn .wwd-more-close{display:inline}
   .ab-why-toggle:checked~.ab-why-btn svg{transform:rotate(180deg)}
 }
+
+/* case study results without a number: the label carries the point */
+.csp-result-text span{font-size:.98rem;font-weight:600;color:var(--forest);line-height:1.4}
+
+/* lead gen offer results: the supporting numbers listed under the headline */
+.lgo-case-more{list-style:none;margin:auto 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
+.lgo-case-more li{display:flex;align-items:baseline;gap:8px;font-size:.82rem;color:var(--g600);line-height:1.35}
+.lgo-case-more b{font-size:1rem;font-weight:800;letter-spacing:-.02em;color:var(--brand);flex:none}
+
+/* Book page: numbers on the green band */
+.bk-num-band .stat-val{color:#fff}
+.bk-num-band .stat-label{color:rgba(255,255,255,.7)}

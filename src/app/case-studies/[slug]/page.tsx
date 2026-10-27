@@ -35,7 +35,9 @@ const Check = () => (
 export default async function CaseStudyPage({ params }: { params: Promise<{ slug: string }> }) {
   const cs = getCaseStudy((await params).slug);
   if (!cs) notFound();
-  const more = CASE_STUDIES.filter((c) => c.slug !== cs.slug).slice(0, 2); // two cards fill the 2-column grid
+  // "More case studies": these two first; on their own pages the next one in MORE_PICKS fills in.
+  const MORE_PICKS = ["lokolash", "peninsula-heat-pumps", "watch-factory", "bushdoof-lighting"];
+  const more = MORE_PICKS.filter((s) => s !== cs.slug).slice(0, 2).map((s) => CASE_STUDIES.find((c) => c.slug === s)!); // two cards fill the 2-column grid
 
   return (
     <>
@@ -54,13 +56,12 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
   <div className="csp-body rvsec">
     <aside className="csp-side rv">
       <div className="csp-glance">
-        <div className="csp-glance-img"><img src={`${BASE}/images/${cs.image}`} alt={cs.name} /></div>
+        <div className="csp-glance-img">{cs.image && <img src={`${BASE}/images/${cs.image}`} alt={cs.name} />}</div>
         <dl className="csp-glance-list">
           <div><dt>Client</dt><dd>{cs.name}</dd></div>
           <div><dt>Industry</dt><dd>{cs.tag}</dd></div>
           <div><dt>Channel</dt><dd>Google Ads</dd></div>
-          <div><dt>Timeframe</dt><dd>{cs.timeframe}</dd></div>
-          <div><dt>Services</dt><dd>{cs.services.join(", ")}</dd></div>
+                    {cs.services && <div><dt>Services</dt><dd>{cs.services.join(", ")}</dd></div>}
         </dl>
         <a href={`${BASE}/book/`} className="btn-p csp-glance-cta">Get Your Free Growth Plan <Arrow /></a>
       </div>
@@ -84,7 +85,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       <p>{cs.results.body}</p>
       <div className="csp-results">
         {cs.results.stats.map((s) => (
-          <div className="csp-result" key={s.label}><strong>{s.value}</strong><span>{s.label}</span></div>
+          <div className={`csp-result${s.value ? "" : " csp-result-text"}`} key={s.label}>{s.value && <strong>{s.value}</strong>}<span>{s.label}</span></div>
         ))}
       </div>
     </div>
@@ -104,7 +105,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
     <div className="cs-index rv">
       {more.map((c) => (
         <a href={`${BASE}/case-studies/${c.slug}/`} className="csx" key={c.slug}>
-          <div className="csx-img"><img src={`${BASE}/images/${c.image}`} alt={c.name} /><span className="csx-stat">{c.cardStat}</span></div>
+          <div className="csx-img">{c.image && <img src={`${BASE}/images/${c.image}`} alt={c.name} />}<span className="csx-stat">{c.cardStat}</span></div>
           <div className="csx-body">
             <span className="csx-tag">{c.tag}</span>
             <h3>{c.name}</h3>

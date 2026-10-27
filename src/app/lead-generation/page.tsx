@@ -416,13 +416,13 @@ export default function LeadGeneration() {
         <div className="proj-media">
           <div className="proj-bg bg2"><img src={`${BASE}/images/case-watch-factory.webp`} alt="" /></div>
           <div className="proj-logo">
-            <strong>+2,966%</strong>
-            <span>sales from new customers, a full structural overhaul</span>
+            <strong>31x</strong>
+            <span>sales from new customers</span>
           </div>
         </div>
       </a>
 
-      <a href={`${BASE}/case-studies/`} className="proj rv">
+      <a href={`${BASE}/case-studies/aaria-london/`} className="proj rv">
         <div className="proj-bar">
           <span className="proj-name">Aaria London</span>
           <span className="proj-tag">/Jewellery</span>
@@ -431,13 +431,13 @@ export default function LeadGeneration() {
         <div className="proj-media">
           <div className="proj-bg bg1"><img src={`${BASE}/images/case-aaria-london.webp`} alt="" /></div>
           <div className="proj-logo">
-            <strong>Aaria London</strong>
-            <span>E-commerce &middot; Jewellery. Case study coming soon</span>
+            <strong>+439%</strong>
+            <span>annual Google Ads revenue</span>
           </div>
         </div>
       </a>
 
-      <a href={`${BASE}/case-studies/`} className="proj rv">
+      <a href={`${BASE}/case-studies/bushdoof-lighting/`} className="proj rv">
         <div className="proj-bar">
           <span className="proj-name">Bushdoof Lighting</span>
           <span className="proj-tag">/Automotive</span>
@@ -446,13 +446,13 @@ export default function LeadGeneration() {
         <div className="proj-media">
           <div className="proj-bg bg2"><img src={`${BASE}/images/case-bushdoof.webp`} alt="" /></div>
           <div className="proj-logo">
-            <strong>Bushdoof</strong>
-            <span>E-commerce &middot; Automotive. Case study coming soon</span>
+            <strong>5.3x</strong>
+            <span>annual Google Ads revenue</span>
           </div>
         </div>
       </a>
 
-      <a href={`${BASE}/case-studies/`} className="proj rv">
+      <a href={`${BASE}/case-studies/onq/`} className="proj rv">
         <div className="proj-bar">
           <span className="proj-name">ONQ</span>
           <span className="proj-tag">/Media</span>
@@ -461,8 +461,8 @@ export default function LeadGeneration() {
         <div className="proj-media">
           <div className="proj-bg bg2"><img src={`${BASE}/images/leadgen/case-onq.webp`} alt="" /></div>
           <div className="proj-logo">
-            <strong>64% lower CPL</strong>
-            <span>$189.64 → $69.03 cost per lead, March → August 2026</span>
+            <strong>22.5x</strong>
+            <span>more qualified calls per month</span>
           </div>
         </div>
       </a>

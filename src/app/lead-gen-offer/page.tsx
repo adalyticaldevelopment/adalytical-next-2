@@ -168,7 +168,7 @@ export default function LeadGenOffer() {
     </div>
     <div className="lgo-cases rv">
       {CASES.map((c) => (
-        <article className={`lgo-case${c.headline.length > 4 ? " lgo-case-long" : ""}`} key={c.business}>
+        <article className="lgo-case" key={c.business}>
           <div className="lgo-case-img">
             <img src={`${BASE}/images/leadgen/${c.img}`} alt="" loading="lazy" />
             <div className="lgo-case-name"><span>{c.category}</span><strong>{c.business}</strong></div>
@@ -176,14 +176,11 @@ export default function LeadGenOffer() {
           <div className="lgo-case-body">
             <span className="lgo-case-kicker">{c.category}</span>
             <div className="lgo-case-head"><b>{c.headline}</b><span>{c.label}</span></div>
-            <div className="lgo-case-cpl">
-              <span className="lgo-case-lbl">Cost per lead</span>
-              <div className="lgo-cpl">
-                <div><b>{c.cpl[0]}</b><small>{c.cpl[1]}</small></div>
-                <div className="lgo-cpl-new"><i aria-hidden="true">&rarr;</i><div><b>{c.cpl[2]}</b><small>{c.cpl[3]}</small></div></div>
-              </div>
-            </div>
-            {c.extra && <div className="lgo-case-extra"><p><b>{c.extra[0]}</b><span>{c.extra[1]}</span></p><small>{c.extra[2]}</small></div>}
+            {c.more.length > 0 && (
+              <ul className="lgo-case-more">
+                {c.more.map((r) => <li key={r.label}>{r.value && <b>{r.value}</b>}<span>{r.label}</span></li>)}
+              </ul>
+            )}
           </div>
         </article>
       ))}

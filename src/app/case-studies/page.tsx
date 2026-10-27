@@ -10,17 +10,17 @@ export const metadata: Metadata = {
 import Script from "next/script";
 import type { ReactNode } from "react";
 import { PageHero } from "@/components/PageHero";
-import { CASE_STUDIES, COMING_SOON, LEADGEN_RESULTS } from "./data";
+import { CASE_STUDIES, COMING_SOON } from "./data";
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
-// Card order on this page. Names match CASE_STUDIES / LEADGEN_RESULTS / COMING_SOON in ./data;
+// Card order on this page. Names match CASE_STUDIES / COMING_SOON in ./data;
 // anything not listed goes after the list, and Geelong Heat Pumps always last.
 const CARD_ORDER = [
-  "The Watch Factory", "Bushdoof Lighting", "Aaria London", "ONQ", "BeforeYouSpeak Coffee",
+  "The Watch Factory", "Aaria London", "Bushdoof Lighting", "ONQ", "BeforeYouSpeak Coffee",
   "Redlight Innovation", "Lokolash", "Winland Home & Garden", "Prime Group", "Personalised Favours",
-  "Peninsula Heat Pumps", "Kiwi Treats", "Bellissima", "Booze & Barrels", "Into Blinds",
-  "Hedonist", "Hydrotech", "Health Heiress",
+  "Peninsula Heat Pumps", "Kiwi Treats", "Bellissima", "Booze & Barrels", "Into Blinds", "Hedonist",
+  "Evo Solar", "Hydrotech", "Health Heiress",
 ];
 const CARD_LAST = ["Geelong Heat Pumps"];
 function orderCards(cards: (readonly [string, ReactNode])[]) {
@@ -193,9 +193,9 @@ export default function CaseStudies() {
 <PageHero
   eyebrow="Case studies"
   media={<div className="hm-stack">
-      <div className="hm-card hm-res"><b>The Watch Factory</b><span className="hm-big">+33%</span><span className="hm-muted">Revenue YoY, biggest Q4 ever, ROAS +25%</span></div>
-      <div className="hm-card hm-res"><b>Lokolash</b><span className="hm-big">5x</span><span className="hm-muted">Return by month 2, from zero Google history</span></div>
-      <div className="hm-card hm-res"><b>Personalised Favours</b><span className="hm-big">+6 figures</span><span className="hm-muted">In incremental revenue from Google Ads (for an already established brand and Google Ads account)</span></div>
+      <div className="hm-card hm-res"><b>Bellissima</b><span className="hm-big">+266% ROAS</span><span className="hm-muted">While also growing revenue +226%</span></div>
+      <div className="hm-card hm-res"><b>Lokolash</b><span className="hm-big">+6 figures</span><span className="hm-muted">In incremental revenue from a brand-new Google Ads account</span></div>
+      <div className="hm-card hm-res"><b>Evo Solar</b><span className="hm-big">52% cheaper</span><span className="hm-muted">Cost per lead, while also generating 26% more leads</span></div>
     </div>}
   title={<>We’ve helped <span className="accent">tons of brands.</span></>}
   sub={<>Across a wide range of industries, we’ve helped<br className="br-wide" /> businesses across e-commerce and lead generation grow profitably with Google Ads.</>}
@@ -217,8 +217,8 @@ export default function CaseStudies() {
     <div className="cs-index rv">
       {orderCards([
         ...CASE_STUDIES.map((c) => [c.name, (
-          <a href={`${BASE}/case-studies/${c.slug}/`} className="csx cat-eco" key={c.slug}>
-            <div className="csx-img"><img src={`${BASE}/images/${c.image}`} alt={c.name} /><span className="csx-stat">{c.cardStat}</span></div>
+          <a href={`${BASE}/case-studies/${c.slug}/`} className={`csx ${c.tag.startsWith("E-commerce") ? "cat-eco" : "cat-lg"}`} key={c.slug}>
+            <div className="csx-img">{c.image && <img src={`${BASE}/images/${c.image}`} alt={c.name} />}<span className="csx-stat">{c.cardStat}</span></div>
             <div className="csx-body">
               <span className="csx-tag">{c.tag}</span>
               <h3>{c.name}</h3>
@@ -226,16 +226,6 @@ export default function CaseStudies() {
               <span className="csx-more">Read story <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
             </div>
           </a>
-        )] as const),
-        ...LEADGEN_RESULTS.map((c) => [c.business, (
-          <div className="csx csx-soon cat-lg" key={c.business}>
-            <div className="csx-img"><img src={`${BASE}/images/leadgen/${c.img}`} alt={c.business} loading="lazy" /><span className="csx-stat">{c.headline.length > 4 ? c.headline : `${c.headline} ${c.label}`}</span></div>
-            <div className="csx-body">
-              <span className="csx-tag">Lead generation · {c.niche}</span>
-              <h3>{c.business}</h3>
-              <p>Cost per lead {c.cpl[0]} ({c.cpl[1]}) &rarr; {c.cpl[2]} ({c.cpl[3]}).{c.extra && <> {c.extra[1]} {c.extra[0]} ({c.extra[2]}).</>}</p>
-            </div>
-          </div>
         )] as const),
         ...COMING_SOON.map((c) => [c.name, (
           <div className={`csx csx-soon ${c.tag.startsWith("E-commerce") ? "cat-eco" : "cat-lg"}`} key={c.name}>

@@ -1007,3 +1007,8 @@ section[id],footer[id]{scroll-margin-top:88px}
 /* about "Our story" on the green band: white body copy, mint emphasis */
 .story-band .prose p{color:rgba(255,255,255,.78)}
 .story-band .prose strong{color:#cdf3dc}
+
+/* case study tiles (not the "See many more" tile): stat sits low on the photo, over a
+   darker bottom fade so it stays readable and the photo shows clearly above it */
+.proj:not(.proj-more) .proj-logo{justify-content:flex-end;padding-bottom:clamp(24px,calc(3 * var(--vw)),40px)}
+.proj:not(.proj-more) .proj-bg.bg1::before,.proj:not(.proj-more) .proj-bg.bg2::before,.proj:not(.proj-more) .proj-bg.bg3::before{background:linear-gradient(180deg,rgba(10,18,12,.08) 0%,rgba(10,18,12,.12) 40%,rgba(10,18,12,.72) 100%)}

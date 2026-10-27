@@ -211,17 +211,102 @@ export default function Contact() {
   </div>
 </section>
 
-{/* ============ PROOF ============ */}
-<section className="band-wrap rvsec bk-band">
+{/* ============ NUMBERS ============ */}
+<section className="band-wrap rvsec bk-band bk-num-band">
   <div className="band">
   <div className="ctr">
-    <div className="bk-stats rv">
-      <div><b>$100M+</b><span>Ad spend managed on Google Ads</span></div>
-      <div><b>1,000+</b><span>Google Ads accounts audited</span></div>
-      <div><b>50+</b><span>Top agencies trained by our team</span></div>
-      <div><b>4+</b><span>Years on Google&rsquo;s Ads team</span></div>
+    <div className="stats">
+      <div className="stat rv"><span className="stat-val">$100M+</span><span className="stat-label">Google Ads spend<br />managed</span></div>
+      <div className="stat rv"><span className="stat-val"><span className="cnt" data-target="1000" data-group="1" data-suffix="+">1,000+</span></span><span className="stat-label">Google Ads accounts<br />audited</span></div>
+      <div className="stat rv"><span className="stat-val"><span className="cnt" data-target="300" data-suffix="+">300+</span></span><span className="stat-label">Google Ads accounts<br />worked on</span></div>
+      <div className="stat rv"><span className="stat-val"><span className="cnt" data-target="50" data-suffix="+">50+</span></span><span className="stat-label">Agencies we&rsquo;ve trained<br />on Google Ads</span></div>
     </div>
-    <div className="bk-quotes rv">
+  </div>
+  </div>
+</section>
+
+{/* ============ REVIEWS ============ */}
+<section className="sec sec-cream framed rvsec" id="testimonials" style={{paddingTop:"clamp(28px,calc(3.5 * var(--vw)),48px)",paddingBottom:"clamp(28px,calc(3.5 * var(--vw)),48px)"}}>
+  <div className="ctr">
+    <div className="shead">
+      <span className="shead-chip rv"><span className="chip-plus">+</span> Client reviews</span>
+      <div className="shead-main">
+        <h2 className="shead-t rv">What it&rsquo;s like <span className="dim">working with us.</span></h2>
+      </div>
+    </div>
+    <div className="rvw-wrap">
+    <input type="checkbox" id="rvw-more" className="rvw-toggle" />
+    <div className="rvw-wall rv">
+      <div className="rvw-col">
+      <figure className="rvw-card mo-1">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <blockquote><strong>Helped us compete against the giants</strong> in the extremely competitive and crowded drinks industry. Highly recommend!</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/rachel.webp`} alt="" width="38" height="38" /></span><div><strong>Rachel</strong><span>Founder, Blume</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <blockquote>Adalytical <strong>helped us scale our Google spend</strong> by over 300%, all while keeping profitability front and centre.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/sivan.webp`} alt="" width="38" height="38" /></span><div><strong>Sivan</strong><span>Founder, Bushdoof Lighting</span></div></figcaption>
+      </figure>
+      <figure className="rvw-vid mo-2" data-vimeo="1170457963">
+        <img className="rvw-thumb" src={`${BASE}/images/reviews/vid-ariana.webp`} alt="" />
+        <span className="rvw-badge">Video</span>
+        <button className="rvw-play" type="button" aria-label="Play video review from Ariana"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <figcaption><strong>Ariana</strong><span>Founder, Aaria London</span></figcaption>
+      </figure>
+      <figure className="rvw-card mo-4">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <blockquote>Jackson&rsquo;s <strong>expertise in Google Ads is unmatched</strong>. He and the team helped us overcome multiple very niche Google Ads challenges.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/rob.webp`} alt="" width="38" height="38" /></span><div><strong>Rob</strong><span>Marketing Director, Beverage Food Group</span></div></figcaption>
+      </figure>
+      <figure className="rvw-vid" data-vimeo="1232899165">
+        <img className="rvw-thumb" src={`${BASE}/images/reviews/vid-winland.webp`} alt="" />
+        <span className="rvw-badge">Video</span>
+        <button className="rvw-play" type="button" aria-label="Play video review from Rick"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <figcaption><strong>Rick</strong><span>CEO, Winland Home &amp; Garden</span></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <blockquote>We were finding it difficult to get new high-value leads using other channels, and decided to work with Adalytical. <strong>Immediately saw incredible results.</strong></blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/myles.webp`} alt="" width="38" height="38" /></span><div><strong>Myles</strong><span>CEO, ONQ</span></div></figcaption>
+      </figure>
+      </div>
+      <div className="rvw-col">
+      <figure className="rvw-card mo-3">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <blockquote>Adalytical has been extremely helpful in getting us <strong>way more, and way cheaper leads</strong>. Super great to work with.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/cam.webp`} alt="" width="38" height="38" /></span><div><strong>Cam</strong><span>Director, Geelong Heat Pumps</span></div></figcaption>
+      </figure>
+      <figure className="rvw-vid mo-5" data-vimeo="1167218749">
+        <img className="rvw-thumb" src={`${BASE}/images/reviews/vid-rio.webp`} alt="" />
+        <span className="rvw-badge">Video</span>
+        <button className="rvw-play" type="button" aria-label="Play video review from Rio"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <figcaption><strong>Rio</strong><span>Founder, G80 Cosmetics</span></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <blockquote>Quickly grasped our unique challenges and FMCG space to <strong>deliver an effective Google and YouTube Ads strategy</strong>.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/abdul.webp`} alt="" width="38" height="38" /></span><div><strong>Abdul</strong><span>Founder, Pinkish Pods</span></div></figcaption>
+      </figure>
+      <figure className="rvw-vid" data-vimeo="1165554472">
+        <img className="rvw-thumb" src={`${BASE}/images/reviews/vid-matthew.webp`} alt="" />
+        <span className="rvw-badge">Video</span>
+        <button className="rvw-play" type="button" aria-label="Play video review from Matthew"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <figcaption><strong>Matthew</strong><span>CEO, Personalised Favours</span></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <blockquote>Lead quality and volume is extremely important to us, and the team at Adalytical have helped us immensely with Google Ads to improve this (and <strong>smash our monthly targets</strong>).</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/john.webp`} alt="" width="38" height="38" /></span><div><strong>John</strong><span>Owner, Into Blinds</span></div></figcaption>
+      </figure>
+      <figure className="rvw-vid" data-vimeo="1239683451">
+        <img className="rvw-thumb" src={`${BASE}/images/reviews/vid-hydrotech.webp`} alt="" />
+        <span className="rvw-badge">Video</span>
+        <button className="rvw-play" type="button" aria-label="Play video review from Jordan"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <figcaption><strong>Jordan</strong><span>Co-Founder, Hydrotech</span></figcaption>
+      </figure>
+      </div>
+      <div className="rvw-col">
       <figure className="rvw-card">
         <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
         <blockquote>Adalytical helped us with our <strong>biggest Q4 ever</strong>! Revenue was +33% and ROAS +25% YOY. Already seeing <strong>massive revenue and ROAS gains</strong> for Q1 and Q2.</blockquote>
@@ -229,18 +314,42 @@ export default function Contact() {
       </figure>
       <figure className="rvw-card">
         <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
-        <blockquote>Adalytical <strong>helped us scale our Google spend</strong> by over 300%, all while keeping profitability front and centre.</blockquote>
-        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/sivan.webp`} alt="" width="38" height="38" /></span><div><strong>Sivan</strong><span>Founder, Bushdoof Lighting</span></div></figcaption>
-      </figure>
-      <figure className="rvw-card">
-        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
         <blockquote>The team&rsquo;s <strong>ex-Google brainpower</strong> unlocked heaps of extra insights and fast-tracked support, but more importantly, <strong>helped us hit our biggest Q4</strong>.</blockquote>
         <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/matthew.webp`} alt="" width="38" height="38" /></span><div><strong>Matthew</strong><span>CEO, Personalised Favours</span></div></figcaption>
       </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <blockquote>Adalytical helped us with segmenting our audience which changed how we ran our campaigns and <strong>brought in a wave of new customers</strong>.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/rio.webp`} alt="" width="38" height="38" /></span><div><strong>Rio</strong><span>Founder, G80 Cosmetics</span></div></figcaption>
+      </figure>
+      <figure className="rvw-vid" data-vimeo="1170457933">
+        <img className="rvw-thumb" src={`${BASE}/images/reviews/vid-meryl.webp`} alt="" />
+        <span className="rvw-badge">Video</span>
+        <button className="rvw-play" type="button" aria-label="Play video review from Meryl"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <figcaption><strong>Meryl</strong><span>Co-founder, Hedonist</span></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <blockquote>We saw a <strong>better ROAS straight away</strong> and helped us expand into other markets! Always have the answers and strats for Google Ads.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/ariana.webp`} alt="" width="38" height="38" /></span><div><strong>Ariana</strong><span>Founder, Aaria London</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <blockquote>Can absolutely vouch for these guys! We&rsquo;ve worked with Adalytical on our Google Ads and the level of <strong>knowledge, persistence and support</strong> has been incredible. They&rsquo;ve gone above and beyond for our account, especially navigating some very frustrating Google policy issues. Definitely worth having a chat with them if you&rsquo;re running ecommerce ads.</blockquote>
+        <figcaption><span className="rvw-av"><img src={`${BASE}/images/reviews/kylie.webp`} alt="" width="38" height="38" /></span><div><strong>Kylie Alexander</strong><span>CEO, Health Heiress</span></div></figcaption>
+      </figure>
+      <figure className="rvw-card">
+        <span className="rvw-quote" aria-hidden="true">&ldquo;</span>
+        <blockquote>They helped us reduce cost per lead significantly! Getting lots of good leads coming through and for way less. <strong>Very happy, would recommend!</strong></blockquote>
+        <figcaption><span className="rvw-av">K</span><div><strong>Kelly</strong><span>Co-founder, Evo Solar</span></div></figcaption>
+      </figure>
+      </div>
+    </div>
+    <label htmlFor="rvw-more" className="wwd-more-btn rvw-more-btn"><span className="wwd-more-open">Show more reviews</span><span className="wwd-more-close">Show fewer reviews</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg></label>
     </div>
   </div>
-  </div>
 </section>
+
 
 {/* ============ WHAT WE REVIEW ============ */}
 <section className="sec sec-cream rvsec bk-sec">
@@ -394,6 +503,16 @@ export default function Contact() {
 
 
 
+
+{/* ============ FLOATING CTA ============ */}
+<div className="float-cta">
+  <div className="fcta-bar">
+    <p className="fcta-copy">Ready when you are<span> (no obligation either way)</span><span className="fcta-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></p>
+    <div className="fcta-btns">
+      <a href="#calendar" className="fcta-primary"><span className="cta-shine">Book Now</span></a>
+    </div>
+  </div>
+</div>
 
       <Script src={`${BASE}/assets/site.js`} strategy="afterInteractive" />
     </>
